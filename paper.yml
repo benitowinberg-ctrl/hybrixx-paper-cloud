@@ -1,0 +1,30 @@
+name: HYBRIXX Paper Observation
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: hybrixx-state
+  cancel-in-progress: false
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch XRP quote and update paper state
+        run: python paper.py
+      - name: Save journal to repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update HYBRIXX paper observation'
+            git push
+          fi
