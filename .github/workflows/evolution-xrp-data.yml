@@ -6,7 +6,7 @@ on:
       - '.github/workflows/evolution-xrp-data.yml'
   workflow_dispatch:
   schedule:
-    - cron: "23 1 * * *"
+    - cron: "23 * * * *"
 permissions:
   contents: write
 concurrency:
