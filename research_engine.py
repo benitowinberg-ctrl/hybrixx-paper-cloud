@@ -2,6 +2,7 @@
 """HYBRIXX unattended research: walk-forward PAPER evaluations; no orders."""
 import csv,json,math
 from intelligence_core import evaluate
+from learning_history import update_history,trends
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
@@ -70,6 +71,8 @@ def main():
          "special_situations":{"status":"AWAITING_PRIMARY_FILINGS","message":"Fundamental filings and capital structure data not yet connected; no fabricated company scores."},
          "autonomous_learning":{"status":"AUTOMATED_PARAMETER_RESEARCH","message":"Scheduled re-evaluation of public candles, not a trained predictive AI model."}}
     out["intelligence_core"]=evaluate(out)
+    history=update_history(ROOT/"learning_history.json",out)
+    out["learning_history"]=trends(history)
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Updated research_state.json:",n,"candles,",len(folds),"walk-forward folds")
 if __name__=="__main__":main()
