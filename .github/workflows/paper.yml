@@ -2,7 +2,7 @@ name: HYBRIXX Paper Trading (Simulation)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '*/15 * * * *'
   push:
     branches:
       - main
