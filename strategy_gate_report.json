@@ -1,0 +1,89 @@
+{
+  "mode": "RESEARCH_ONLY_NO_ORDERS",
+  "source_generated_utc": "2026-10-15T18:08:05.397955+00:00",
+  "assets": {
+    "BTC": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "ETH": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "XRP": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "SOL": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "ADA": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "DOGE": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "DOT": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "LINK": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "LTC": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    },
+    "AVAX": {
+      "decision": "NO_TRADE",
+      "reasons": [
+        "NONPOSITIVE_NET_RETURN",
+        "EXCESSIVE_DRAWDOWN",
+        "INSUFFICIENT_BENCHMARK_EDGE"
+      ],
+      "selected_strategy": "ma_12_48",
+      "note": "Research screening only, never an automatic trading authorization."
+    }
+  },
+  "missing_or_failed_assets": {}
+}
