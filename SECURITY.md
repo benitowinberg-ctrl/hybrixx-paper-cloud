@@ -57,3 +57,27 @@
 - Kein automatisches Entsperren: die Rücknahme braucht später einen eigenen privaten Admin-Prozess mit Authentisierung und detailliertem Audit.
 - Bei Echtgeld muss ein **privater, stets erreichbarer** Order-Gateway in Echtzeit vor jede Order geschaltet werden. Jeder verdächtige Zugriff -> neue Orders sofort serverseitig blockieren, vorhandene offene Orders ggf. stornieren, Handelsschlüssel sperren/rotieren, Alarm an den Eigentümer. Bei einem möglichen Kontoübergriff muss die Börse zusätzlich direkt kontaktiert werden.
 - Ein „automatischer Notfalltransfer“ auf ein anderes Konto ist **nicht implementiert** und wird **nicht durch ein frei zugängliches Dashboard oder verdächtigkeitsbasierte Ereignisse** ausgelöst. Transfers nur an vorab verifizierte Empfänger, nach separater stark authentisierter Zustimmung, mit Limits und Protokoll; API-Schlüssel für reine Handelsfunktionen erhalten **keine Auszahlungsrechte**.
+
+## Sicherheits-Härtung (Oktober 2026): teils aktiv, teils vorbereitet
+
+### Sofortiger Schutz im öffentlichen Paper-Projekt
+- Die statische HTML-Demo verwendet jetzt eine restriktive Content-Security-Policy und eigene Dateien `dashboard.js` / `styles.css`. Das reduziert das Risiko von eingeschleusten Skripten auf der Anzeigeseite. **Das ist keine Anmeldefirewall und schützt nicht vor einem kompromittierten GitHub-Konto.**
+- `paper_v2.py` lehnt einzelne XRP-Preissprünge über 25 % gegenüber der letzten Beobachtung ab. Der betroffene Lauf stoppt ohne Trading-Commit; eine legitime Marktlücke kann ebenfalls einen Stopp auslösen. Solche Schwellenwerte ersetzen keine Börsen-Datenvalidierung.
+- `security/production_guard.py` und die geprüfte `security/production_policy.json` verweigern im öffentlichen Projekt ausnahmslos LIVE-Bestellungen und Auszahlungen. Kein vorhandenes Programm besitzt eine Echtgeld-Order-API.
+- GitHub Actions wurden auf überprüfte vollständige Commit-SHAs gepinnt und Dependabot prüft wöchentlich Aktualisierungsvorschläge.
+- Ein unabhängiger CodeQL-Workflow untersucht Python- und JavaScript-Code auf potenzielle Schwachstellen. Ergebnisse unter [Code Security](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/security/code-scanning); wie alle Scanner kann er Fehler übersehen.
+
+### Firewall als Code – NICHT bereitgestellt
+- Unter `infra/cloud-armor/main.tf` liegt eine Google-Cloud-Armor-Vorlage mit XSS-/SQLi-Erkennung und IP-Ratenbegrenzung.
+- **Status: Entwurf, keine Cloud-Ressourcen angelegt, WAF-Regeln für XSS/SQLi bewusst im Preview-Modus und somit nicht blockierend.**
+- Die Vorlage benötigt einen separaten Google-Cloud-Account/Projekt mit Abrechnung, einen privaten Cloud-Run-Dienst, HTTPS Load Balancer, IAP und die explizite Zuordnung zum Backend Service.
+- Betreiber muss anschließend Authentisierung, Angriffs-/Lasttests, Fehlalarme und Kosten testen. Erst dann dürfen WAF-Regeln scharf geschaltet werden. Weder das öffentliche GitHub Pages noch GitHub Actions werden von dieser nicht bereitgestellten Firewall geschützt.
+- **Keine Prozentangabe bedeutet eine messbare Hacker-Abwehrquote.** Eine spätere Echtgeldfreigabe verlangt unabhängige Sicherheitsprüfung und nicht nur erfolgreiche Tests.
+
+### Vor einem späteren echten Handel noch zwingend
+1. GitHub-Konto mit Passkey/2FA, nur benötigte Apps, Branch Protection/Rulesets. **Achtung:** Das heutige `state.json` wird von GitHub Actions auf `main` geschrieben; strenge Branch Protection würde dies blockieren. Deshalb zuerst Paper-Daten in eine private Datenbank auslagern.
+2. Private Cloud-Ausführung, alleiniger Admin-Login mit starker Identitätsprüfung, API-Schlüssel in Secret Manager, keine Withdrawal-Scopes, privater Order-Gateway mit Audit, Limits und idempotenter Orderverarbeitung.
+3. Live-Überwachung über unabhängigen Alarmkanal und getrennten Not-Aus. Sofortiger Block für neue Orders bei Verdacht. Auszahlungen ausschließlich nach gesonderter starker Freigabe an zuvor geprüfte Ziele.
+4. Sicherheits-Funktionstests, Penetrationstest, Backup-/Wiederherstellungstest und Betriebs-/Kostenprüfung. Danach ausdrückliche manuelle Freigabe des Eigentümers.
+
+[Cloud-Armor-Ingress-Dokumentation](https://cloud.google.com/run/docs/securing/ingress) · [Cloud-Armor-Übersicht](https://cloud.google.com/armor/docs/security-policy-overview)

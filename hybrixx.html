@@ -1,24 +1,7 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; font-src 'self'">
 <title>HYBRIXX | Paper Cloud</title>
-<style>
-:root{font-family:Inter,system-ui,Arial,sans-serif;color:#f5f6ff;background:#0c1020}*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at 80% 0%,#26305b 0%,#0c1020 42%);min-height:100vh}
-.wrap{max-width:1100px;margin:auto;padding:30px 18px}header{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-.logo{font-size:30px;font-weight:900;letter-spacing:2px}.logo span{color:#d8b776}.muted{color:#aeb7cf;font-size:14px}
-.pill{border:1px solid #536078;border-radius:30px;padding:9px 15px;font-size:13px;background:#19233c}
-h1{font-size:clamp(27px,5vw,45px);margin:35px 0 5px}h2{font-size:18px;margin:0 0 17px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:23px 0}
-.card{background:#171e33;border:1px solid #2c3650;border-radius:22px;padding:23px;box-shadow:0 10px 30px #0002}
-.label{font-size:14px;color:#b8c2d8}.number{font-size:clamp(24px,3vw,37px);font-weight:800;margin:12px 0 5px}
-.gold{color:#e6c583}.green{color:#65dfb0}.wide{grid-column:span 2}
-button,select{background:#2d3958;color:#fff;border:1px solid #526180;padding:10px 14px;border-radius:12px;cursor:pointer}
-button:hover{background:#3b4c70}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-svg{width:100%;height:245px;margin-top:12px}svg .axis{stroke:#37425c;stroke-width:1}svg .line{fill:none;stroke:#e6c583;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
-.notice{border-left:3px solid #e6c583;padding:12px 15px;background:#202a43;border-radius:9px;color:#dce4f4;line-height:1.5}
-.emergency{margin-top:16px;background:#351e27;border:1px solid #a94458;border-radius:15px;padding:16px}.emergency a{display:inline-block;background:#a72c42;color:white;padding:11px 17px;border-radius:12px;text-decoration:none;font-weight:800;margin:8px 0}.emergency small{display:block;color:#f2c6d0;line-height:1.5}.emergency.locked{background:#601d2a;border:2px solid #f06c77}footer{color:#aeb7cf;font-size:12px;margin:30px 0}.tag{font-size:12px;color:#e6c583}
-@media(max-width:760px){.grid{grid-template-columns:1fr}.wide{grid-column:span 1}.wrap{padding:18px 12px}}
-</style></head>
+<link rel="stylesheet" href="./styles.css"></head>
 <body><main class="wrap"><header><div class="logo">HYBRI<span>XX</span><div class="muted">PAPER CLOUD · EINFACHE ÜBERSICHT</div></div><div class="pill" id="status">● Noch keine Live-Daten geladen</div></header>
 <div class="emergency" id="emergency-panel"><strong>🚨 HYBRIXX Notfallmodus</strong><div>Verdächtige Aktion? Öffne den geschützten GitHub-Notfallworkflow.</div><a href="https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/actions/workflows/emergency-stop.yml" rel="noopener noreferrer" target="_blank">NOTFALL-STOPP ÖFFNEN ↗</a><small>Erfordert deine GitHub-Anmeldung und anschließend „Run workflow“. Keine Sofortabschaltung beim bloßen Öffnen. Nur virtuelles Trading; keine Überweisung.</small></div>
 <h1>Dein Trading auf einen Blick.</h1><p class="muted">Einfach · Übersichtlich · Nur virtuelles Geld</p>
@@ -30,40 +13,9 @@ svg{width:100%;height:245px;margin-top:12px}svg .axis{stroke:#37425c;stroke-widt
 <div class="row"><div><div class="label">Letzter erfasster Kurs</div><div class="number" id="price">—</div></div><div class="tag" id="points">Keine historischen Daten geladen</div></div>
 <svg id="chart" viewBox="0 0 700 245" role="img" aria-label="Kursverlauf"><line class="axis" x1="10" y1="210" x2="690" y2="210"/><text x="350" y="115" text-anchor="middle" fill="#aeb7cf" font-size="17">Noch keine Kursreihe vorhanden</text></svg>
 </div>
-<div class="card"><h2>🤖 Cloud-Status</h2><div class="label">Letzte Beobachtung</div><div class="number" style="font-size:19px" id="updated">—</div><p class="muted" id="mode">Beobachtung, noch kein automatischer Handel.</p>
-<button id="reload">Daten aktualisieren</button><p class="muted" style="font-size:12px">Datenquelle: state.json</p></div>
+<div class="card"><h2>🤖 Cloud-Status</h2><div class="label">Letzte Beobachtung</div><div class="number" class="updated-text" id="updated">—</div><p class="muted" id="mode">Beobachtung, noch kein automatischer Handel.</p>
+<button id="reload">Daten aktualisieren</button><p class="muted" class="data-source">Datenquelle: state.json</p></div>
 </section>
 <div class="notice" id="notice">Diese Testoberfläche zeigt nur nachgewiesene Daten. Fehlende Werte werden nicht erfunden. Für den Cloud-Abruf muss die Seite später über eine geeignete Webadresse bereitgestellt werden.</div>
 <footer>HYBRIXX · PAPER ONLY · Keine echten Orders · Keine Anlageberatung</footer></main>
-<script>
-const $=id=>document.getElementById(id),money=n=>Number.isFinite(Number(n))?Number(n).toLocaleString('de-DE',{style:'currency',currency:'EUR'}):'—';
-let state=null;
-function pick(obj,keys){for(const k of keys){if(obj&&obj[k]!==undefined&&obj[k]!==null)return obj[k]}return null}
-function draw(items){const svg=$('chart');if(items.length<2){svg.innerHTML='<line class="axis" x1="10" y1="210" x2="690" y2="210"/><text x="350" y="115" text-anchor="middle" fill="#aeb7cf" font-size="17">Für eine Kurve fehlen noch Messpunkte</text>';return}
-const a=items.map(Number).filter(Number.isFinite),lo=Math.min(...a),hi=Math.max(...a),range=hi-lo||1;
-const pts=a.map((v,i)=>`${20+i*660/(a.length-1)},${215-(v-lo)/range*185}`).join(' ');
-svg.innerHTML=`<line class="axis" x1="10" y1="210" x2="690" y2="210"/><polyline class="line" points="${pts}"/>`;}
-function render(s){state=s;const observations=pick(s,['observations','history','quotes','price_history'])||[];
-const arr=Array.isArray(observations)?observations:[],coin=$('coin').value;
-const relevant=arr.filter(x=>!x.symbol||String(x.symbol).toUpperCase().includes(coin));
-const prices=relevant.map(x=>typeof x==='number'?x:pick(x,['price_eur','price','xrp_eur','rate'])).filter(x=>x!==null&&Number.isFinite(Number(x)));
-const latest=arr.at(-1)||{};
-const equity=pick(s,['paper_equity_eur','equity_eur','paper_equity','equity','balance_eur','balance','cash_eur']);
-$('equity').textContent=money(equity);
-$('invested').textContent=money(pick(s,['invested_eur','invested','open_positions_value_eur']));
-$('vault').textContent=money(pick(s,['profit_vault_eur','vault_eur','vault']));
-const lastPrice=coin==='XRP'?pick(s,['xrp_eur','xrp_price_eur','price_eur','last_price_eur','price'])??prices.at(-1)??pick(latest,['price_eur','price','xrp_eur']):prices.at(-1);
-$('price').textContent=lastPrice===null||lastPrice===undefined?'—':Number(lastPrice).toLocaleString('de-DE',{maximumFractionDigits:6})+' €';
-$('points').textContent=prices.length+' Messpunkte für '+coin;
-draw(prices);
-const when=pick(s,['last_update_utc','last_updated','updated_at','timestamp','last_observation','time'])??pick(latest,['time_utc','timestamp','time','date']);
-$('updated').textContent=when&&!Number.isNaN(Date.parse(when))?new Date(when).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'}):'Zeitstempel nicht vorhanden';
-const emergencyLock=s.emergency_lock&&s.emergency_lock.active===true;
-$('emergency-panel').classList.toggle('locked',emergencyLock);
-$('emergency-panel').querySelector('strong').textContent=emergencyLock?'🛑 NOTFALLSTOPP AKTIV – ALLE PAPER-TRADES GESPERRT':'🚨 HYBRIXX Notfallmodus';
-$('status').textContent=emergencyLock?'🛑 NOTFALLSTOPP AKTIV':'● Daten geladen · Paper-Test';
-const engine=s.paper_engine||{};$('mode').textContent=engine.version?'Paper v'+engine.version+' · Signal: '+(engine.signal||'—')+' · Letzte Aktion: '+(engine.last_action||'—')+(engine.safe_stop?' · SICHERHEITSSTOPP':''):'Kursbeobachtung · Paper-Handel noch nicht aktiviert.';
-$('notice').textContent='Nur PAPER: keine echten Orders. Kurswerte sind stündliche Momentaufnahmen, keine Live-Ticks. Trade-Gebühren und Ausführung sind simuliert. Gewinn-Tresor ist noch nicht implementiert.';}
-async function load(){try{const res=await fetch('./state.json?nocache='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);render(await res.json());}catch(e){$('status').textContent='● Noch keine Cloud-Verbindung';$('notice').textContent='state.json konnte nicht automatisch geladen werden. Das ist beim lokalen Öffnen einer HTML-Datei normal. Über eine Webadresse oder mit einem passenden lokalen Server kann der Abruf funktionieren. Fehler: '+e.message;}}
-$('reload').onclick=load;$('coin').onchange=()=>state&&render(state);load();
-</script></body></html>
+<script src="./dashboard.js" defer></script></body></html>

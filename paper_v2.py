@@ -85,6 +85,12 @@ def advance(previous_state, price, timestamp):
         raise ValueError("Invalid account balance")
     if state["observations"] and state["observations"][-1].get("time_utc") == timestamp:
         return state
+    # Fail closed on a very large single-tick price jump, including suspected
+    # market-data tampering. No orders or state updates are allowed on this tick.
+    if state["observations"]:
+        previous_price = positive_price(state["observations"][-1]["xrp_eur"])
+        if abs(price / previous_price - 1.0) > 0.25:
+            raise ValueError("Suspicious XRP quote jump above 25%; paper trading blocked")
 
     engine = state.setdefault("paper_engine", {})
     engine["version"] = "2.0"
