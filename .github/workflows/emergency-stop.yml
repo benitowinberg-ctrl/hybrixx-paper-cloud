@@ -1,0 +1,51 @@
+name: HYBRIXX EMERGENCY STOP (PAPER ONLY)
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Warum soll der komplette Paper-Handel gesperrt werden?"
+        type: choice
+        required: true
+        default: MANUAL_EMERGENCY
+        options:
+          - MANUAL_EMERGENCY
+          - SUSPICIOUS_ACTIVITY
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hybrixx-paper-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  emergency-stop:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh state before stopping
+        run: git pull --ff-only origin main
+      - name: Activate persistent emergency lock
+        env:
+          REASON: ${{ inputs.reason }}
+        run: python emergency_stop.py --reason "$REASON"
+      - name: Verify emergency state
+        run: |
+          python security_sentinel.py
+          python security_check.py
+      - name: Save lockdown (no exchange API access)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'SECURITY LOCK: suspend all HYBRIXX paper trades'
+            git push origin HEAD:main
+          else
+            echo 'Lock was already active.'
+          fi

@@ -16,10 +16,11 @@ button,select{background:#2d3958;color:#fff;border:1px solid #526180;padding:10p
 button:hover{background:#3b4c70}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 svg{width:100%;height:245px;margin-top:12px}svg .axis{stroke:#37425c;stroke-width:1}svg .line{fill:none;stroke:#e6c583;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
 .notice{border-left:3px solid #e6c583;padding:12px 15px;background:#202a43;border-radius:9px;color:#dce4f4;line-height:1.5}
-footer{color:#aeb7cf;font-size:12px;margin:30px 0}.tag{font-size:12px;color:#e6c583}
+.emergency{margin-top:16px;background:#351e27;border:1px solid #a94458;border-radius:15px;padding:16px}.emergency a{display:inline-block;background:#a72c42;color:white;padding:11px 17px;border-radius:12px;text-decoration:none;font-weight:800;margin:8px 0}.emergency small{display:block;color:#f2c6d0;line-height:1.5}.emergency.locked{background:#601d2a;border:2px solid #f06c77}footer{color:#aeb7cf;font-size:12px;margin:30px 0}.tag{font-size:12px;color:#e6c583}
 @media(max-width:760px){.grid{grid-template-columns:1fr}.wide{grid-column:span 1}.wrap{padding:18px 12px}}
 </style></head>
 <body><main class="wrap"><header><div class="logo">HYBRI<span>XX</span><div class="muted">PAPER CLOUD · EINFACHE ÜBERSICHT</div></div><div class="pill" id="status">● Noch keine Live-Daten geladen</div></header>
+<div class="emergency" id="emergency-panel"><strong>🚨 HYBRIXX Notfallmodus</strong><div>Verdächtige Aktion? Öffne den geschützten GitHub-Notfallworkflow.</div><a href="https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/actions/workflows/emergency-stop.yml" rel="noopener noreferrer" target="_blank">NOTFALL-STOPP ÖFFNEN ↗</a><small>Erfordert deine GitHub-Anmeldung und anschließend „Run workflow“. Keine Sofortabschaltung beim bloßen Öffnen. Nur virtuelles Trading; keine Überweisung.</small></div>
 <h1>Dein Trading auf einen Blick.</h1><p class="muted">Einfach · Übersichtlich · Nur virtuelles Geld</p>
 <section class="grid">
 <div class="card"><div class="label">💰 Virtuelles Guthaben</div><div class="number gold" id="equity">—</div><div class="muted">Aktueller Kontowert</div></div>
@@ -57,7 +58,10 @@ $('points').textContent=prices.length+' Messpunkte für '+coin;
 draw(prices);
 const when=pick(s,['last_update_utc','last_updated','updated_at','timestamp','last_observation','time'])??pick(latest,['time_utc','timestamp','time','date']);
 $('updated').textContent=when&&!Number.isNaN(Date.parse(when))?new Date(when).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'}):'Zeitstempel nicht vorhanden';
-$('status').textContent='● Daten geladen · Paper-Test';
+const emergencyLock=s.emergency_lock&&s.emergency_lock.active===true;
+$('emergency-panel').classList.toggle('locked',emergencyLock);
+$('emergency-panel').querySelector('strong').textContent=emergencyLock?'🛑 NOTFALLSTOPP AKTIV – ALLE PAPER-TRADES GESPERRT':'🚨 HYBRIXX Notfallmodus';
+$('status').textContent=emergencyLock?'🛑 NOTFALLSTOPP AKTIV':'● Daten geladen · Paper-Test';
 const engine=s.paper_engine||{};$('mode').textContent=engine.version?'Paper v'+engine.version+' · Signal: '+(engine.signal||'—')+' · Letzte Aktion: '+(engine.last_action||'—')+(engine.safe_stop?' · SICHERHEITSSTOPP':''):'Kursbeobachtung · Paper-Handel noch nicht aktiviert.';
 $('notice').textContent='Nur PAPER: keine echten Orders. Kurswerte sind stündliche Momentaufnahmen, keine Live-Ticks. Trade-Gebühren und Ausführung sind simuliert. Gewinn-Tresor ist noch nicht implementiert.';}
 async function load(){try{const res=await fetch('./state.json?nocache='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);render(await res.json());}catch(e){$('status').textContent='● Noch keine Cloud-Verbindung';$('notice').textContent='state.json konnte nicht automatisch geladen werden. Das ist beim lokalen Öffnen einer HTML-Datei normal. Über eine Webadresse oder mit einem passenden lokalen Server kann der Abruf funktionieren. Fehler: '+e.message;}}

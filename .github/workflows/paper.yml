@@ -9,6 +9,8 @@ on:
       - hybrixx-paper-trading-v2
     paths:
       - 'paper_v2.py'
+      - 'emergency_stop.py'
+      - '.github/workflows/emergency-stop.yml'
       - 'tests/**'
       - '.github/workflows/paper.yml'
       - 'security_check.py'
