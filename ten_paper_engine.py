@@ -66,7 +66,7 @@ def validate(rows):
     if any(not math.isfinite(x) or x<=0 for x in prices):raise ValueError("Invalid close")
     if any((b-a).total_seconds()!=3600 for a,b in zip(stamps,stamps[1:])):raise ValueError("Missing hourly candles")
     return stamps,prices
-def advance(path,stamps,prices):
+def advance(path,stamps,prices,locked=True):
     """One virtual decision per distinct closed candle; no external or existing paper state touched."""
     path=Path(path)
     old={"version":"1","mode":"TEN_ISOLATED_VIRTUAL_PAPER_ACCOUNTS","systems":{}}
@@ -85,7 +85,7 @@ def advance(path,stamps,prices):
         cash=float(prior.get("cash_eur",START));units=float(prior.get("units",0))
         trades=list(prior.get("trades",[]))
         if len(trades)>1000:raise ValueError("Ledger overflow")
-        if prior.get("last_candle_utc")!=stamp and prior.get("last_candle_utc"):
+        if not locked and prior.get("last_candle_utc")!=stamp and prior.get("last_candle_utc"):
             # Parameter from previous report, not freshly optimized on today's close.
             previous_param=prior["parameter"]
             action=signal(prices,mac,id,previous_param,len(prices)-2)
@@ -101,10 +101,10 @@ def advance(path,stamps,prices):
         systems[name]={"last_candle_utc":stamp,"parameter":param,"cash_eur":round(cash,8),
             "units":round(units,10),"equity_eur":round(equity,4),
             "pnl_eur":round(equity-START,4),"validation":validation,"historical_test":test,
-            "trades":trades,"status":"VIRTUAL_PAPER_ONLY"}
+            "trades":trades,"status":"EMERGENCY_LOCK_ACTIVE" if locked else "VIRTUAL_PAPER_ONLY"}
     result={"version":"1","mode":"TEN_ISOLATED_VIRTUAL_PAPER_ACCOUNTS",
             "market":"XRPEUR","last_candle_utc":stamp,"starting_eur_per_system":START,
-            "system_count":len(systems),"systems":systems,
+            "system_count":len(systems),"systems":systems,"emergency_lock_active":locked,
             "warning":"Ten independent 500 EUR virtual ledgers, not 500 EUR shared capital; no live orders. Only new closed candles create virtual decisions."}
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     return result
@@ -113,6 +113,6 @@ def main():
     with (root/"evolution-lab/data/xrp_eur_1h.csv").open(encoding="utf-8",newline="") as file:
         rows=list(csv.DictReader(file))
     stamps,prices=validate(rows)
-    result=advance(root/"ten_paper_state.json",stamps,prices)
+    lock=json.loads((root/"state.json").read_text(encoding="utf-8")).get("emergency_lock")\n    multi=json.loads((root/"multi_state.json").read_text(encoding="utf-8")).get("emergency_lock")\n    if lock is not None and (not isinstance(lock,dict) or lock.get("active") is not True):raise ValueError("Invalid legacy lock")\n    if multi is not None and (not isinstance(multi,dict) or multi.get("active") is not True):raise ValueError("Invalid multi lock")\n    result=advance(root/"ten_paper_state.json",stamps,prices,locked=lock is not None or multi is not None)
     print("Ten isolated virtual ledgers:",result["system_count"],"last candle:",result["last_candle_utc"])
 if __name__=="__main__":main()
