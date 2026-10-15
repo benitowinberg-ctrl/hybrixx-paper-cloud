@@ -8,6 +8,7 @@ import os
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from paper_trade_gate import load_approved
 
 COINS = {"BTC":"XBTEUR","ETH":"ETHEUR","XRP":"XRPEUR","SOL":"SOLEUR",
          "ADA":"ADAEUR","DOGE":"XDGEUR","DOT":"DOTEUR","LINK":"LINKEUR",
@@ -48,10 +49,13 @@ def signal(history):
     slow = sum(history[-12:]) / 12
     return "BUY" if fast > slow * 1.003 else ("SELL" if fast < slow * 0.997 else "HOLD")
 
-def advance(previous, prices, stamp):
+def advance(previous, prices, stamp, approved_buys=None):
     datetime.fromisoformat(stamp.replace("Z", "+00:00"))
     if set(prices) != set(COINS):
         raise ValueError("All ten quotes required; no partial trading")
+    approved_buys = set() if approved_buys is None else set(approved_buys)
+    if not approved_buys.issubset(COINS):
+        raise ValueError('Unknown authorized coin')
     s = copy.deepcopy(previous)
     if s.get("last_update_utc") == stamp:
         return s
@@ -92,6 +96,7 @@ def advance(previous, prices, stamp):
     locked = lock is not None
     signals = {c:signal(s["history"][c]) for c in COINS}
     s["signals"] = signals
+    s["buy_gate"] = {"mode":"FAIL_CLOSED_RESEARCH","approved_coins":sorted(approved_buys),"blocked_coins":sorted(set(COINS)-approved_buys)}
     tick_index = int(s.get("tick_index", 0)) + 1
     # Liquidations first; never open more than three concurrent positions.
     if not locked:
@@ -120,7 +125,7 @@ def advance(previous, prices, stamp):
         # Rank qualifying candidates by trend strength, not dictionary order.
         candidates = []
         for coin in COINS:
-            if coin in s["positions"] or signals[coin] != "BUY":
+            if coin in s["positions"] or coin not in approved_buys or signals[coin] != "BUY":
                 continue
             if tick_index - int(s["last_trade_index"].get(coin,-1000)) < 3:
                 continue
@@ -172,7 +177,9 @@ def main():
     else:
         from migrate_xrp_state import migrate
         previous = migrate(json.loads(Path("state.json").read_text(encoding="utf-8")))
-    updated = advance(previous, prices, datetime.now(timezone.utc).isoformat())
+    approved = load_approved()
+    print("RESEARCH BUY GATE", sorted(approved) if approved else "ALL NEW BUYS BLOCKED")
+    updated = advance(previous, prices, datetime.now(timezone.utc).isoformat(), approved_buys=approved)
     tmp = STATE.with_suffix(".tmp")
     tmp.write_text(json.dumps(updated, indent=2)+"\n", encoding="utf-8")
     os.replace(tmp, STATE)
