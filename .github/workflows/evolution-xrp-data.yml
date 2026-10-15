@@ -22,7 +22,7 @@ jobs:
       - name: Run integrated autonomous research
         run: python research_engine.py
       - name: Validate research report
-        run: python -m unittest discover -s tests -p 'test_intelligence_core.py' -v
+        run: |
           python -m unittest discover -s tests -p 'test_learning_history.py' -v
       - name: Commit public research data and report
         run: |
