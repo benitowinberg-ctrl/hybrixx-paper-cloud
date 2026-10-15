@@ -2,7 +2,7 @@ name: HYBRIXX Paper Trading (Simulation)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 0 1 1 *'
   push:
     branches:
       - main
@@ -57,7 +57,7 @@ jobs:
 
   paper:
     needs: test
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: false # superseded by multi-paper.yml; prevent double spending
     permissions:
       contents: write
     runs-on: ubuntu-latest
