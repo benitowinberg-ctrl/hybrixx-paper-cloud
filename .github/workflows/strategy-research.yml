@@ -1,0 +1,35 @@
+name: HYBRIXX Strategy Research (READ ONLY)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: hybrixx-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Enforce paper-only policy and test strategy logic
+        run: |
+          python security/production_guard.py
+          python -m unittest discover -s tests -p 'test_strategy_research.py' -v
+      - name: Evaluate closed Kraken OHLC candles
+        run: python strategy_research.py --interval 60 --output strategy_report.json
+      - name: Publish research report (no account changes)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add strategy_report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update read-only HYBRIXX strategy research report'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
