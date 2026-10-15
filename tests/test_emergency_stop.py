@@ -12,7 +12,11 @@ from security_sentinel import verify_state
 
 class EmergencyStopTests(unittest.TestCase):
     def test_lock_is_persistent_and_idempotent(self):
-        original = json.loads(Path("state.json").read_text(encoding="utf-8"))
+        original = {"cash_eur": 500.0, "xrp": 0.0, "trades": [],
+                    "observations": [{"time_utc": "2026-10-15T19:00:00+00:00", "xrp_eur": 1.0}],
+                    "last_update_utc": "2026-10-15T19:00:00+00:00",
+                    "equity_eur": 500.0, "paper_engine": {"version": "2.0",
+                    "safe_stop": False, "signal": "HOLD", "last_action": "HOLD"}}
         now = datetime.now(timezone.utc).isoformat()
         locked = lock_state(original, "MANUAL_EMERGENCY", now)
         self.assertNotIn("emergency_lock", original)
