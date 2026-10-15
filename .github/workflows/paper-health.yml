@@ -22,3 +22,5 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_risk_audit_suite.py' -v
           python risk_audit_suite.py
+      - name: Verify unified intelligence invariants
+        run: python -m unittest discover -s tests -p 'test_unified_intelligence.py' -v
