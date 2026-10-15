@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "records": [
+    {
+      "last_candle_utc": "2026-10-15T20:00:00Z",
+      "data_points": 720,
+      "strategy_mean_oos_pct": {
+        "Breakout": -0.0745,
+        "Donchian": -0.6701,
+        "Momentum": -1.0822,
+        "RSI": -2.7237,
+        "MA": -3.2903
+      },
+      "mode": "RESEARCH_ONLY"
+    }
+  ]
+}
