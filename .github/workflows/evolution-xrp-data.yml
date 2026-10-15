@@ -19,7 +19,11 @@ jobs:
           python-version: "3.11"
       - name: Fetch verified Kraken hourly XRP/EUR closes
         run: python evolution-lab/fetch_xrp_csv.py
-      - name: Run integrated autonomous research\n        run: python research_engine.py\n      - name: Commit public research data and report
+      - name: Run integrated autonomous research
+        run: python research_engine.py
+      - name: Validate research report
+        run: python -m unittest discover -s tests -p 'test_intelligence_core.py' -v
+      - name: Commit public research data and report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
