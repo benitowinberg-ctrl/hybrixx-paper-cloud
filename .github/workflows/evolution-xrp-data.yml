@@ -25,6 +25,8 @@ jobs:
         run: python evolution-lab/fetch_xrp_csv.py
       - name: Run integrated autonomous research
         run: python research_engine.py
+      - name: Run ten paper research systems
+        run: python ten_paper_engine.py
       - name: Validate research report
         run: |
           python -m unittest discover -s tests -p 'test_intelligence_core.py' -v
