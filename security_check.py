@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DANGEROUS_SUFFIXES = {".pem", ".p12", ".pfx", ".key"}
-TEXT_SUFFIXES = {".py", ".html", ".js", ".json", ".yaml", ".yml", ".md", ".txt", ".sh"}
+TEXT_SUFFIXES = {".py", ".html", ".js", ".json", ".yaml", ".yml", ".md", ".txt", ".sh", ".css", ".tf"}
 RULES = {
     "github-classic-token": re.compile(r"(?<![A-Za-z0-9])gh[pousr]_[A-Za-z0-9]{36,}"),
     "github-fine-grained-token": re.compile(r"github_pat_[A-Za-z0-9_]{35,}"),
