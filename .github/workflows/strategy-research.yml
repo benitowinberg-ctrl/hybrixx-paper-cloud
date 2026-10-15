@@ -23,11 +23,13 @@ jobs:
           python -m unittest discover -s tests -p 'test_strategy_research.py' -v
       - name: Evaluate closed Kraken OHLC candles
         run: python strategy_research.py --interval 60 --output strategy_report.json
+      - name: Evaluate conservative research gate
+        run: python strategy_gate.py
       - name: Publish research report (no account changes)
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add strategy_report.json
+          git add strategy_report.json strategy_gate_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update read-only HYBRIXX strategy research report'
             git pull --rebase origin main
