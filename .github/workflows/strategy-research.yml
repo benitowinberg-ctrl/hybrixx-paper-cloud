@@ -40,11 +40,13 @@ jobs:
         run: python shadow_arena.py
       - name: Run ten adaptive research diagnostics
         run: python adaptive_lab.py
+      - name: Synthesize unified research evidence
+        run: python unified_intelligence.py
       - name: Publish research report (no account changes)
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json
+          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json unified_intelligence_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update read-only HYBRIXX strategy research report'
             git pull --rebase origin main
