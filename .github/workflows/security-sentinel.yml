@@ -1,0 +1,92 @@
+name: HYBRIXX Security Sentinel
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '39 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hybrixx-security-sentinel
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    name: Security checks (fail closed)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan tracked sources for exposed credentials
+        run: python security_check.py
+      - name: Detect modified trading code and suspicious state
+        run: python security_sentinel.py
+      - name: Check security regression tests
+        run: python -m unittest discover -s tests -v
+
+  warn-owner:
+    name: Report security failure in GitHub Issues
+    needs: audit
+    if: ${{ always() && needs.audit.result == 'failure' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      issues: write
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_SERVER_URL: ${{ github.server_url }}
+      GITHUB_RUN_ID: ${{ github.run_id }}
+    steps:
+      - name: Create or update HYBRIXX security incident
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          base = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}"
+          token = os.environ["GITHUB_TOKEN"]
+          run_link = (f"{os.environ['GITHUB_SERVER_URL']}/"
+                      f"{os.environ['GITHUB_REPOSITORY']}/actions/runs/"
+                      f"{os.environ['GITHUB_RUN_ID']}")
+          title = "HYBRIXX SECURITY WARNING — audit failed"
+          body = (f"Automatische Sicherheitsprüfung fehlgeschlagen: {run_link}\n\n"
+                  "Dies ist ein Verdachtsalarm, kein Beweis eines Angriffs. "
+                  "Der betroffene Workflow muss überprüft werden. "
+                  "Echtgeldbetrieb bleibt deaktiviert. "
+                  "Keine Zugangsdaten in dieses öffentliche Issue schreiben.")
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "Content-Type": "application/json",
+          }
+
+          def request(method, url, payload=None):
+              data = json.dumps(payload).encode() if payload is not None else None
+              req = urllib.request.Request(url, data=data, headers=headers, method=method)
+              with urllib.request.urlopen(req, timeout=15) as response:
+                  return json.load(response)
+
+          issues = request("GET", base + "/issues?state=open&per_page=100")
+          issue = next((x for x in issues if x.get("title") == title and "pull_request" not in x), None)
+          if issue:
+              request("POST", base + f"/issues/{issue['number']}/comments", {"body": body})
+              print("Updated existing HYBRIXX security issue.")
+          else:
+              request("POST", base + "/issues", {"title": title, "body": body})
+              print("Created HYBRIXX security issue.")
+          PY

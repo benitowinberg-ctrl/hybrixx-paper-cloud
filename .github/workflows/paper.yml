@@ -12,6 +12,8 @@ on:
       - 'tests/**'
       - '.github/workflows/paper.yml'
       - 'security_check.py'
+      - 'security_sentinel.py'
+      - '.github/workflows/security-sentinel.yml'
       - 'SECURITY.md'
       - '.gitignore'
   pull_request:
@@ -36,6 +38,8 @@ jobs:
           python-version: '3.12'
       - name: Check no credentials are tracked or exposed
         run: python security_check.py
+      - name: Reject suspicious trading code and state changes
+        run: python security_sentinel.py
       - name: Test paper-only execution and risk controls
         run: python -m unittest discover -s tests -v
 
@@ -53,6 +57,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Block paper run if state or code looks tampered with
+        run: |
+          python security_check.py
+          python security_sentinel.py
       - name: Observe market and run virtual-only strategy
         run: python paper_v2.py
       - name: Commit paper journal

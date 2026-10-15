@@ -32,3 +32,19 @@
 - Separate menschliche Freigabe vor Aktivierung von Echtgeld. Ohne diese Schritte bleiben alle Börsenaufträge deaktiviert.
 
 **Achtung:** Diese Datei ist ein Sicherheitsplan und die Code-Checks sind eine erste Schutzmaßnahme. Sie erstellen **noch keinen geschützten HYBRIXX-Login**. GitHub Pages kann kein sicheres, nur im HTML eingebautes Passwort erzwingen.
+
+
+## Security Sentinel v1 – automatische Erkennung und Warnung
+- Workflow: [Security Sentinel](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/actions/workflows/security-sentinel.yml), geplant alle vier Stunden sowie bei Änderungen auf main. GitHub kann Zeitpläne verzögern oder auslassen.
+- Überprüft öffentlich eingecheckte Zugangsdaten, eine kleine Liste von riskanten Ausführungsfunktionen und nicht genehmigten URL-Konstanten in den Paper-Handelsdateien, sowie auffällige Änderungen am **öffentlichen** Paper-Zustand (Zeiten, Coin-Symbol, Guthaben, Trade-Felder).
+- **Fail closed:** Die Paper-Automatik prüft die Schutzregeln unmittelbar vor dem Start. Bei Fund wird der betroffene Lauf gestoppt. Ein gesonderter Warn-Workflow erstellt oder aktualisiert ein [GitHub Issue](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/issues) bei fehlgeschlagener Sentinel-Prüfung. Das Issue ist **öffentlich**, deshalb stehen dort keine Geheimnisse.
+- Der Warnmechanismus über GitHub Issues benötigt **Issues aktiviert** und die Schreibberechtigung des GitHub-Actions-Tokens; wenn das fehlt, bleibt der fehlgeschlagene Workflow im Actions-Protokoll sichtbar.
+- Warnungen an dein Handy/E-Mail hängen von den [GitHub-Benachrichtigungseinstellungen](https://github.com/settings/notifications) ab. Eine Push/SMS-Garantie existiert nicht.
+- Diese Signatur-/Schema-Prüfungen erkennen **nicht jeden Trojaner, unbemerkte Kontoübernahmen oder raffinierte Supply-Chain-/KI-Angriffe**. Es gibt **noch keine Netz-Firewall, keine Laufzeit-Verhaltensanalyse und keine echte Intrusion-Detection**. Wer den GitHub-Account mit Schreibrechten kontrolliert, könnte auch die Prüfungen ändern.
+- KI-/Prompt-Injection-Schutz: Informationen aus Kurs-APIs, Webseiten, Mails, Chats oder KI-Ausgaben sind stets **unvertrauenswürdige Daten**. Sie dürfen niemals als Programmcode oder Autorisierungsbefehl interpretiert oder ausgeführt werden; Handelsausführung benötigt eigene, serverseitige Freigaben.
+
+## Zusätzliche GitHub-Schutzfunktionen, die der Kontoinhaber einschalten muss
+1. In [Repository Advanced Security](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/settings/security_analysis) **CodeQL Default Setup**, Secret Scanning und Push Protection einschalten, sofern die entsprechenden Schalter angeboten werden. Das ist eine zusätzliche Prüfung, nicht durch Sentinel ersetzt.
+2. Unter [Rules / Branch Protection](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/settings/rules) \`main\` schützen: Pull Request und erfolgreiche Sicherheitschecks verlangen, unkontrollierte Force Pushes verbieten. Dabei muss der bereits vorhandene geplante GitHub-Actions-Schreibzugriff auf \`state.json\` berücksichtigt werden; ein strikter Branch-Schutz würde dessen automatisches Committen zunächst blockieren. Deshalb ist eine private Datenbank statt Git-Commits das Ziel.
+3. [GitHub Benachrichtigungen](https://github.com/settings/notifications) für Actions-Fehler und neue Issues prüfen.
+4. Vor Echtgeld: separater Server mit starker Identitätsprüfung, geschützt gespeicherten Schlüsseln, Netzwerkfilter, Anmelde-/Orderprotokollen und unabhängiger Alarmierung; diese Schutzfunktionen sind **noch nicht aktiv**.
