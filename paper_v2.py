@@ -115,6 +115,23 @@ def advance(previous_state, price, timestamp):
     if peak > 0 and equity_before <= peak * (1 - EQUITY_DRAWDOWN_LIMIT):
         engine["safe_stop"] = True
 
+    # Owner/security emergency lock: no simulated BUY or SELL under any signal.
+    # A malformed or partially removed lock fails closed instead of trading.
+    if "emergency_lock" in state:
+        lock = state["emergency_lock"]
+        if not isinstance(lock, dict) or lock.get("active") is not True:
+            raise ValueError("Invalid emergency lock: trading disabled")
+        engine["safe_stop"] = True
+        engine["signal"] = "LOCKED"
+        engine["last_action"] = "LOCKED"
+        state["cash_eur"] = round(cash, 8)
+        state["xrp"] = round(units, 8)
+        state["invested_eur"] = round(units * price, 2)
+        state["equity_eur"] = round(equity_before, 2)
+        state["last_update_utc"] = timestamp
+        engine["drawdown_pct"] = round((1 - equity_before / peak) * 100, 3) if peak else 0.0
+        return state
+
     entry = engine["entry_price_eur"]
     exit_reason = None
     if units > 0 and entry is not None:
