@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - 'research_engine.py'
+      - 'ten_paper_engine.py'
+      - 'tests/test_ten_paper_engine.py'
       - '.github/workflows/evolution-xrp-data.yml'
   workflow_dispatch:
   schedule:
