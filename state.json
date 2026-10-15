@@ -72,10 +72,15 @@
       "time_utc": "2026-10-15T17:28:34.634915+00:00",
       "symbol": "XRP/EUR",
       "xrp_eur": 1.19653
+    },
+    {
+      "time_utc": "2026-10-15T17:31:05.401869+00:00",
+      "symbol": "XRP/EUR",
+      "xrp_eur": 1.1958
     }
   ],
-  "last_update_utc": "2026-10-15T17:28:34.634915+00:00",
-  "equity_eur": 499.55,
+  "last_update_utc": "2026-10-15T17:31:05.401869+00:00",
+  "equity_eur": 499.48,
   "paper_engine": {
     "version": "2.0",
     "realized_pnl_eur": 0.0,
@@ -84,11 +89,11 @@
     "entry_price_eur": 1.19772653,
     "cost_basis_eur": 124.99999999951355,
     "last_trade_seq": 12,
-    "observation_seq": 12,
+    "observation_seq": 13,
     "peak_equity_eur": 500.0,
     "signal": "BUY",
-    "last_action": "BUY",
-    "drawdown_pct": 0.09
+    "last_action": "HOLD",
+    "drawdown_pct": 0.105
   },
-  "invested_eur": 124.55
+  "invested_eur": 124.48
 }
