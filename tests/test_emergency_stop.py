@@ -32,7 +32,7 @@ class EmergencyStopTests(unittest.TestCase):
         units_before = base["xrp"]
         cash_before = base["cash_eur"]
         locked = lock_state(base, "SUSPICIOUS_ACTIVITY", datetime.now(timezone.utc).isoformat())
-        updated = advance(locked, 0.5, (t0 + timedelta(minutes=30*13)).isoformat())
+        updated = advance(locked, 1.12, (t0 + timedelta(minutes=30*13)).isoformat())
         self.assertEqual(len(updated["trades"]), start_count)
         self.assertEqual(updated["xrp"], units_before)
         self.assertEqual(updated["cash_eur"], cash_before)
