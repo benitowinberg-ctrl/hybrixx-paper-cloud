@@ -113,6 +113,10 @@ def main():
     with (root/"evolution-lab/data/xrp_eur_1h.csv").open(encoding="utf-8",newline="") as file:
         rows=list(csv.DictReader(file))
     stamps,prices=validate(rows)
-    lock=json.loads((root/"state.json").read_text(encoding="utf-8")).get("emergency_lock")\n    multi=json.loads((root/"multi_state.json").read_text(encoding="utf-8")).get("emergency_lock")\n    if lock is not None and (not isinstance(lock,dict) or lock.get("active") is not True):raise ValueError("Invalid legacy lock")\n    if multi is not None and (not isinstance(multi,dict) or multi.get("active") is not True):raise ValueError("Invalid multi lock")\n    result=advance(root/"ten_paper_state.json",stamps,prices,locked=lock is not None or multi is not None)
+    lock=json.loads((root/"state.json").read_text(encoding="utf-8")).get("emergency_lock")
+    multi=json.loads((root/"multi_state.json").read_text(encoding="utf-8")).get("emergency_lock")
+    if lock is not None and (not isinstance(lock,dict) or lock.get("active") is not True):raise ValueError("Invalid legacy lock")
+    if multi is not None and (not isinstance(multi,dict) or multi.get("active") is not True):raise ValueError("Invalid multi lock")
+    result=advance(root/"ten_paper_state.json",stamps,prices,locked=lock is not None or multi is not None)
     print("Ten isolated virtual ledgers:",result["system_count"],"last candle:",result["last_candle_utc"])
 if __name__=="__main__":main()
