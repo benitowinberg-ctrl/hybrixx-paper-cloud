@@ -1,0 +1,14 @@
+{
+  "mode": "PAPER_ONLY",
+  "allow_real_trades": false,
+  "allow_withdrawals": false,
+  "public_dashboard_can_place_orders": false,
+  "require_strong_owner_authentication": true,
+  "require_manual_live_activation": true,
+  "allow_hardcoded_credentials": false,
+  "api_credentials_storage": "GOOGLE_SECRET_MANAGER_ONLY",
+  "waf_configuration_ready": true,
+  "waf_deployed": false,
+  "protected_backend_deployed": false,
+  "independent_alerting_enabled": false
+}
