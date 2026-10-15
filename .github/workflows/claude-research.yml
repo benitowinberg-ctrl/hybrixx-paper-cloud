@@ -1,0 +1,30 @@
+name: HYBRIXX Claude Research Adviser (READ ONLY)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  claude-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Verify paper-only policy and Claude bridge
+        run: |
+          python security/production_guard.py
+          python -m unittest discover -s tests -p 'test_claude_research_bridge.py' -v
+      - name: Run external read-only Claude audit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: python claude_research_bridge.py
+      - name: Upload audit as private workflow artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: claude-research-advisory
+          path: claude_advisory_report.json
+          retention-days: 7
+          if-no-files-found: error
