@@ -1,15 +1,29 @@
-name: HYBRIXX Paper Observation
+name: HYBRIXX Paper Trading (Simulation)
 on:
   workflow_dispatch:
   schedule:
     - cron: '17 * * * *'
+  push:
+    branches:
+      - main
+      - hybrixx-paper-trading-v2
+    paths:
+      - 'paper_v2.py'
+      - 'tests/**'
+      - '.github/workflows/paper.yml'
+  pull_request:
+    branches:
+      - main
+
 permissions:
-  contents: write
+  contents: read
+
 concurrency:
-  group: hybrixx-state
+  group: hybrixx-paper-${{ github.ref }}
   cancel-in-progress: false
+
 jobs:
-  observe:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -17,14 +31,32 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Fetch XRP quote and update paper state
-        run: python paper.py
-      - name: Save journal to repository
+      - name: Test paper-only execution and risk controls
+        run: python -m unittest discover -s tests -v
+
+  paper:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Observe market and run virtual-only strategy
+        run: python paper_v2.py
+      - name: Commit paper journal
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add state.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update HYBRIXX paper observation'
-            git push
+            git commit -m 'Update HYBRIXX paper state'
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
