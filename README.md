@@ -1,16 +1,27 @@
-# HYBRIXX Paper Cloud — kostenloser GitHub-Actions-Test
+# HYBRIXX Paper Cloud — simuliertes XRP/EUR-Trading
 
-Diese **neue Minimalversion** ruft stündlich den XRP/EUR-Kurs bei Kraken ab und speichert ihn in `state.json`. Das virtuelle Startkapital beträgt 500 EUR. **Noch keine automatischen BUY/SELL-Trades**: erst die Datenversorgung prüfen, dann eine Strategie mit Risikoregeln testen. Kein Echtgeldhandel, keine API-Schlüssel.
+**Nur virtuelles Geld.** Keine echten Börsenorders, kein Echtgeld, keine Handels-API-Schlüssel. Startsaldo **500 € virtuell**. Der öffentliche GitHub-Code speichert ausschließlich simulierte Kursmessungen und Trades.
 
-## Einrichtung
-1. Die drei Dateien bzw. Ordner aus diesem ZIP **entpacken** und den Inhalt (nicht die ZIP-Datei selbst) in das private GitHub-Repository hochladen: `Add file` → `Upload files` → Dateien inklusive `.github/workflows/paper.yml`.
-2. Repository → `Settings` → `Actions` → `General`: Actions erlauben und unter `Workflow permissions` **Read and write permissions** wählen, falls verfügbar; speichern.
-3. Repository → `Actions` → `HYBRIXX Paper Observation` → `Run workflow`.
-4. Nach erfolgreichem Lauf `state.json` prüfen. Der Zeitplan läuft ungefähr stündlich, kann aber verspätet sein oder ausfallen. Die Ausführung läuft unabhängig vom PC.
+## Automatischer Betrieb
+- GitHub Actions ruft den XRP/EUR-Kurs über Krakens öffentliche Kurs-API ab.
+- Die Engine `paper_v2.py` nutzt einen einfachen gleitenden-Durchschnitts-Vergleich (4/12 Beobachtungen) als **nicht validierte Teststrategie**.
+- Sie simuliert maximal 25 % Paper-Kapital in XRP pro Position, Gebühren (angenommene 0,26 %) und Slippage (angenommene 0,10 %), 5 % Stop-Loss und 10 % Gewinnmitnahme.
+- Ein 15-%-Drawdown des virtuellen Gesamtportfolios deaktiviert weitere Käufe (Safe Stop). Verkäufe zur Risikominderung bleiben möglich.
+- Alle Kurse und simulierten Trades stehen im `state.json`. Der Zustand wird auf jedem Lauf fortgesetzt.
+- Der Workflow `.github/workflows/paper.yml` führt zuerst Unit-Tests aus. Nur wenn alle Tests erfolgreich sind, wird die Paper-Engine ausgeführt.
+- Automatischer Start auf `main` nach einem relevanten Code-Push, anschließend ungefähr stündlich (geplant Minute 17). GitHub-Zeitpläne sind nicht garantiert.
+- Durch den Warm-up von 12 Kursbeobachtungen können **mehrere Stunden ohne Trade** vergehen. Kein Signal bedeutet nicht, dass die Engine ausgefallen ist.
 
-## Einschränkungen
-- GitHub Actions ist **kein ununterbrochener 24/7-Prozess**. Der Workflow läuft nach Zeitplan, normalerweise stündlich.
-- Bei privaten Repositories gelten GitHubs kostenlose Actions-Kontingente. Keine Kostenpflicht aktivieren.
-- GitHub kann geplante Workflows bei längerer Inaktivität deaktivieren. Bei Konflikten mit parallelen Commits kann ein Lauf scheitern.
-- Der Kursabruf erfordert Internetzugang zu Kraken; bei API-Fehlern schlägt der Lauf sichtbar fehl.
-- Nicht als Finanzberatung oder Renditenachweis verwenden.
+## Bedienung
+1. [Ergebnisse der GitHub Actions](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/actions) öffnen und den letzten Lauf **HYBRIXX Paper Trading (Simulation)** prüfen.
+2. [Paper-Status](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/blob/main/state.json) zeigt Guthaben, letzten Kurs, Signal und virtuelle Trades.
+3. [Dashboard](https://benitowinberg-ctrl.github.io/hybrixx-paper-cloud/) zeigt die in GitHub gespeicherten Daten. Es werden keine Live-Ticks versprochen.
+4. Für einen einmaligen Lauf: GitHub → **Actions** → **HYBRIXX Paper Trading (Simulation)** → **Run workflow**.
+
+## Entwicklung und Sicherheit
+- Tests: `python -m unittest discover -s tests -v` (keine Zusatzpakete).
+- Die Datei `paper.py` bleibt als historische Beobachtungsversion erhalten; aktiv ist `paper_v2.py`.
+- Historische Kursdaten im Zustand werden **nicht zurückgesetzt**.
+- Kursausfälle lassen den Workflow fehlschlagen statt stillschweigend Werte zu erfinden.
+- Keine Sicherheit, dass die Strategie gewinnbringend ist. Für reales Trading sind unabhängige historische Tests, robuste Verlustlimits, API-Rechteverwaltung und eine andere zuverlässige Ausführungsumgebung nötig.
+- GitHub Actions arbeitet in kurzen Läufen, **nicht als permanent laufender 24/7-Handelsprozess**.

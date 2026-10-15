@@ -25,7 +25,7 @@ footer{color:#aeb7cf;font-size:12px;margin:30px 0}.tag{font-size:12px;color:#e6c
 <div class="card"><div class="label">💰 Virtuelles Guthaben</div><div class="number gold" id="equity">—</div><div class="muted">Aktueller Kontowert</div></div>
 <div class="card"><div class="label">📥 Investiert</div><div class="number" id="invested">—</div><div class="muted">In offenen Paper-Positionen</div></div>
 <div class="card"><div class="label">🔒 Gewinn-Tresor</div><div class="number green" id="vault">—</div><div class="muted">Gesicherter Gewinn · erst aktiv, wenn programmiert</div></div>
-<div class="card wide"><div class="row"><h2>📈 Kursverlauf</h2><select id="coin"><option value="XRP">XRP</option><option value="BTC">Bitcoin</option><option value="KAS">Kaspa</option></select></div>
+<div class="card wide"><div class="row"><h2>📈 Kursverlauf</h2><select id="coin"><option value="XRP">XRP</option></select></div>
 <div class="row"><div><div class="label">Letzter erfasster Kurs</div><div class="number" id="price">—</div></div><div class="tag" id="points">Keine historischen Daten geladen</div></div>
 <svg id="chart" viewBox="0 0 700 245" role="img" aria-label="Kursverlauf"><line class="axis" x1="10" y1="210" x2="690" y2="210"/><text x="350" y="115" text-anchor="middle" fill="#aeb7cf" font-size="17">Noch keine Kursreihe vorhanden</text></svg>
 </div>
@@ -55,11 +55,11 @@ const lastPrice=coin==='XRP'?pick(s,['xrp_eur','xrp_price_eur','price_eur','last
 $('price').textContent=lastPrice===null||lastPrice===undefined?'—':Number(lastPrice).toLocaleString('de-DE',{maximumFractionDigits:6})+' €';
 $('points').textContent=prices.length+' Messpunkte für '+coin;
 draw(prices);
-const when=pick(s,['last_updated','updated_at','timestamp','last_observation','time'])??pick(latest,['timestamp','time','date']);
-$('updated').textContent=when?String(when):'Zeitstempel nicht vorhanden';
+const when=pick(s,['last_update_utc','last_updated','updated_at','timestamp','last_observation','time'])??pick(latest,['time_utc','timestamp','time','date']);
+$('updated').textContent=when&&!Number.isNaN(Date.parse(when))?new Date(when).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'}):'Zeitstempel nicht vorhanden';
 $('status').textContent='● Daten geladen · Paper-Test';
-$('mode').textContent='Kursbeobachtung aktivierbar; automatische Trades noch nicht nachgewiesen.';
-$('notice').textContent='Daten aus state.json geladen. Investitionen und Tresor werden erst angezeigt, wenn die Cloud-Engine diese Werte tatsächlich liefert.';}
+const engine=s.paper_engine||{};$('mode').textContent=engine.version?'Paper v'+engine.version+' · Signal: '+(engine.signal||'—')+' · Letzte Aktion: '+(engine.last_action||'—')+(engine.safe_stop?' · SICHERHEITSSTOPP':''):'Kursbeobachtung · Paper-Handel noch nicht aktiviert.';
+$('notice').textContent='Nur PAPER: keine echten Orders. Kurswerte sind stündliche Momentaufnahmen, keine Live-Ticks. Trade-Gebühren und Ausführung sind simuliert. Gewinn-Tresor ist noch nicht implementiert.';}
 async function load(){try{const res=await fetch('./state.json?nocache='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);render(await res.json());}catch(e){$('status').textContent='● Noch keine Cloud-Verbindung';$('notice').textContent='state.json konnte nicht automatisch geladen werden. Das ist beim lokalen Öffnen einer HTML-Datei normal. Über eine Webadresse oder mit einem passenden lokalen Server kann der Abruf funktionieren. Fehler: '+e.message;}}
 $('reload').onclick=load;$('coin').onchange=()=>state&&render(state);load();
 </script></body></html>
