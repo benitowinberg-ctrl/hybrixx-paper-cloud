@@ -48,7 +48,7 @@ async function loadResearch(){
   }
   const extras=document.createElement('p');extras.className='muted';
   extras.textContent='Copy Trading: '+r.copy_trading.status+' · Special Situations: '+r.special_situations.status+' · Orders: '+(core?.trade_permission===false?'GESPERRT':'NICHT FREIGEGEBEN');
-  out.replaceChildren(title,list,extras);
+  const learning=document.createElement('p');learning.className='muted';\n  const history=r.learning_history;\n  learning.textContent=history?'Lernhistorie: '+history.observations+' unterschiedliche Datenstände · '+(history.status==='DESCRIPTIVE_ONLY'?'Trendbeobachtung aktiv':'noch zu wenig neue Daten'):'Lernhistorie wird eingerichtet';\n  out.replaceChildren(title,list,learning,extras);
  }catch(e){status.textContent='Automatische Forschung noch nicht verfügbar: '+e.message;out.replaceChildren()}
 }
 loadResearch();
