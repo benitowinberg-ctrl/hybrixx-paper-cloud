@@ -54,9 +54,28 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json learning_engine_report.json learning_governance_report.json learning_governance_history.json unified_intelligence_report.json
-          if ! git diff --cached --quiet; then
+          # Preserve generated outputs; another workflow may have pushed since checkout.
+          reports=(strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json learning_engine_report.json learning_governance_report.json learning_governance_history.json unified_intelligence_report.json)
+          temp_dir="$(mktemp -d)"
+          trap 'rm -rf "$temp_dir"' EXIT
+          cp "${reports[@]}" "$temp_dir/"
+          # Rebase-free publishing prevents conflicts between scheduled and manual runs.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$temp_dir"/*.json .
+            git add "${reports[@]}"
+            if git diff --cached --quiet; then
+              echo "Reports already up to date"
+              exit 0
+            fi
             git commit -m 'Update read-only HYBRIXX strategy research report'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              echo "Reports published"
+              exit 0
+            fi
+            echo "Concurrent update detected; retrying publish ($attempt/3)"
+            sleep 2
+          done
+          echo "Unable to publish reports after three attempts" >&2
+          exit 1
