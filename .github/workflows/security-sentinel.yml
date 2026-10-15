@@ -43,13 +43,36 @@ jobs:
     timeout-minutes: 3
     permissions:
       issues: write
+      contents: write
+    concurrency:
+      group: hybrixx-paper-${{ github.ref }}
+      cancel-in-progress: false
     env:
       GITHUB_TOKEN: ${{ github.token }}
       GITHUB_REPOSITORY: ${{ github.repository }}
       GITHUB_SERVER_URL: ${{ github.server_url }}
       GITHUB_RUN_ID: ${{ github.run_id }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Lock paper trading after suspicious audit result
+        continue-on-error: true
+        run: |
+          git pull --ff-only origin main
+          python emergency_stop.py --reason SECURITY_AUDIT_FAILED
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'SECURITY LOCK: audit failure'
+            git push origin HEAD:main
+          fi
       - name: Create or update HYBRIXX security incident
+        if: always()
         shell: bash
         run: |
           python - <<'PY'
