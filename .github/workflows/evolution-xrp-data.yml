@@ -19,12 +19,12 @@ jobs:
           python-version: "3.11"
       - name: Fetch verified Kraken hourly XRP/EUR closes
         run: python evolution-lab/fetch_xrp_csv.py
-      - name: Commit public research CSV only
+      - name: Run integrated autonomous research\n        run: python research_engine.py\n      - name: Commit public research data and report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add evolution-lab/data/xrp_eur_1h.csv
+          git add evolution-lab/data/xrp_eur_1h.csv research_state.json
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh Evolution Lab public XRP/EUR research candles"
+            git commit -m "Refresh HYBRIXX market data and integrated research"
             git push
           fi
