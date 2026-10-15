@@ -19,9 +19,14 @@
       "time_utc": "2026-10-15T16:27:45.601842+00:00",
       "symbol": "XRP/EUR",
       "xrp_eur": 1.18794
+    },
+    {
+      "time_utc": "2026-10-15T16:36:45.906845+00:00",
+      "symbol": "XRP/EUR",
+      "xrp_eur": 1.18911
     }
   ],
-  "last_update_utc": "2026-10-15T16:27:45.601842+00:00",
+  "last_update_utc": "2026-10-15T16:36:45.906845+00:00",
   "equity_eur": 500.0,
   "paper_engine": {
     "version": "2.0",
@@ -31,7 +36,7 @@
     "entry_price_eur": null,
     "cost_basis_eur": 0.0,
     "last_trade_seq": -1000,
-    "observation_seq": 4,
+    "observation_seq": 5,
     "peak_equity_eur": 500.0,
     "signal": "WARMUP",
     "last_action": "HOLD",
