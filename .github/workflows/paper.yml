@@ -6,9 +6,15 @@ on:
   push:
     branches:
       - main
-      - hybrixx-paper-trading-v2
     paths:
       - 'paper_v2.py'
+      - 'security/production_guard.py'
+      - 'security/production_policy.json'
+      - 'infra/**'
+      - 'dashboard.js'
+      - 'styles.css'
+      - 'index.html'
+      - 'hybrixx.html'
       - 'emergency_stop.py'
       - '.github/workflows/emergency-stop.yml'
       - 'tests/**'
@@ -42,6 +48,8 @@ jobs:
         run: python security_check.py
       - name: Reject suspicious trading code and state changes
         run: python security_sentinel.py
+      - name: Enforce permanent PAPER ONLY policy
+        run: python security/production_guard.py
       - name: Test paper-only execution and risk controls
         run: python -m unittest discover -s tests -v
 
@@ -65,6 +73,10 @@ jobs:
           python security_sentinel.py
       - name: Observe market and run virtual-only strategy
         run: python paper_v2.py
+      - name: Verify completed paper journal before publishing
+        run: |
+          python security_sentinel.py
+          python security/production_guard.py
       - name: Commit paper journal
         run: |
           git config user.name 'github-actions[bot]'
