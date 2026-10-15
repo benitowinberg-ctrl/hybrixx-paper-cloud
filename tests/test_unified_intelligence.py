@@ -23,6 +23,10 @@ class CouncilTests(unittest.TestCase):
   self.assertEqual(result["research_status"],"EVIDENCE_COMPLETE")
   self.assertFalse(result["trade_authorization"])
   self.assertEqual(result["approved_paper_buys"],[])
+ def test_gate_source_timestamp_is_accepted(self):
+  data=inputs();data["gate"]={"source_generated_utc":NOW.isoformat()}
+  result=synthesize(state(),data,NOW)
+  self.assertNotIn("UNVERIFIED_GATE",result["veto_reasons"])
  def test_missing_evidence_veto(self):
   data=inputs();del data["adaptive"]
   self.assertIn("UNVERIFIED_ADAPTIVE",synthesize(state(),data,NOW)["veto_reasons"])
