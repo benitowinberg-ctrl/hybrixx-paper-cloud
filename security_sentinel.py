@@ -25,8 +25,8 @@ PRIVATE_STATE_KEYS = {
 }
 BANNED_SUFFIXES = {".exe", ".dll", ".so", ".dylib", ".pyd", ".class", ".jar"}
 CHECKED_CODE = ("paper.py", "paper_v2.py")
-VALID_SIGNALS = {"WARMUP", "HOLD", "BUY", "SELL"}
-VALID_ACTIONS = {"HOLD", "BUY", "SELL"}
+VALID_SIGNALS = {"WARMUP", "HOLD", "BUY", "SELL", "LOCKED"}
+VALID_ACTIONS = {"HOLD", "BUY", "SELL", "LOCKED"}
 
 
 def failure(code):
@@ -112,6 +112,24 @@ def verify_state(state):
         - units * latest_price
     ) > 0.05:
         failure("invested-mismatch")
+    if "emergency_lock" in state:
+        lock = state["emergency_lock"]
+        if not isinstance(lock, dict) or lock.get("active") is not True:
+            failure("invalid-emergency-lock")
+        if set(lock) != {"active", "reason_code", "activated_at_utc"}:
+            failure("unexpected-lock-fields")
+        if lock.get("reason_code") not in {
+            "MANUAL_EMERGENCY", "SUSPICIOUS_ACTIVITY", "SECURITY_AUDIT_FAILED"
+        }:
+            failure("unknown-emergency-reason")
+        parse_time(lock.get("activated_at_utc"), "lock")
+        if not isinstance(state.get("paper_engine"), dict):
+            failure("missing-engine-after-lock")
+        if state["paper_engine"].get("safe_stop") is not True:
+            failure("lock-safety-stop-not-active")
+        if state["paper_engine"].get("last_action") != "LOCKED":
+            failure("lock-allowing-trade")
+
     engine = state.get("paper_engine")
     if engine is not None:
         if not isinstance(engine, dict):
