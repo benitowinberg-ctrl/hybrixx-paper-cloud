@@ -39,7 +39,7 @@ async function loadResearch(){
   if(r.mode!=='RESEARCH_ONLY'||!Array.isArray(r.evolution?.ranking))throw Error('Ungültiger Forschungsbericht');
   const last=r.last_candle_utc?new Date(r.last_candle_utc).toLocaleString('de-DE'):'unbekannt';
   status.textContent='Automatische Auswertung · '+r.data_points+' XRP/EUR-Kerzen · Stand '+last;
-  const title=document.createElement('p');title.textContent='Walk-Forward-Forschung: '+r.evolution.ranking.length+' Strategien. Kein bestätigter Gewinnvorteil.';
+  const core=r.intelligence_core;\n  const title=document.createElement('p');title.textContent='Intelligence Core: '+(core?.operating_mode||'FORSCHUNG')+' · '+r.evolution.ranking.length+' Strategien · '+(core?.champion===null?'Kein freigegebener Champion':'Keine automatische Handelsfreigabe')+'.';
   const list=document.createElement('ol');
   for(const s of r.evolution.ranking){
    const li=document.createElement('li');
@@ -47,7 +47,7 @@ async function loadResearch(){
    list.appendChild(li);
   }
   const extras=document.createElement('p');extras.className='muted';
-  extras.textContent='Copy Trading: '+r.copy_trading.status+' · Special Situations: '+r.special_situations.status;
+  extras.textContent='Copy Trading: '+r.copy_trading.status+' · Special Situations: '+r.special_situations.status+' · Orders: '+(core?.trade_permission===false?'GESPERRT':'NICHT FREIGEGEBEN');
   out.replaceChildren(title,list,extras);
  }catch(e){status.textContent='Automatische Forschung noch nicht verfügbar: '+e.message;out.replaceChildren()}
 }
