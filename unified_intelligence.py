@@ -22,7 +22,7 @@ def synthesize(state,inputs,now=None):
     now=now or datetime.now(timezone.utc)
     risk=evaluate(state,now)
     checks={}
-    for name in ("strategy","walkforward","robustness","arena","adaptive","human","gate"):
+    for name in ("strategy","walkforward","robustness","arena","adaptive","human","gate","learning"):
         data=inputs.get(name)
         checks[name]={"present":isinstance(data,dict),"fresh":isinstance(data,dict) and freshness(data,now)}
     arena=inputs.get("arena") or {}
@@ -34,6 +34,11 @@ def synthesize(state,inputs,now=None):
       "evidence_ledger","investment_committee"))
     checks["adaptive"]["research_only"]=adaptive.get("trade_authorization") is False
     checks["arena"]["research_only"]=arena.get("trade_authorization") is False
+    learning=inputs.get("learning") or {}
+    checks["learning"]["ten_markets"]=set(learning.get("assets",{}))==set(COINS)
+    checks["learning"]["no_errors"]=not learning.get("errors",{"missing":True})
+    checks["learning"]["research_only"]=learning.get("trade_authorization") is False
+    checks["learning"]["holdout_frozen"]=all(v.get("holdout_model_frozen") is True and v.get("signal_authorized") is False and v.get("holdout_observations",0)>=25 for v in learning.get("assets",{}).values())
     reasons=[]
     if not risk.get("ok"):reasons.append("RISK_AUDIT_FAILED")
     for name,c in checks.items():
@@ -50,7 +55,7 @@ def synthesize(state,inputs,now=None):
 FILES={"strategy":"strategy_report.json","walkforward":"walkforward_report.json",
  "robustness":"robustness_report.json","arena":"shadow_arena_report.json",
  "adaptive":"adaptive_lab_report.json","human":"human_strategy_comparison.json",
- "gate":"strategy_gate_report.json"}
+ "gate":"strategy_gate_report.json","learning":"learning_engine_report.json"}
 def main():
     state=json.loads(Path("multi_state.json").read_text(encoding="utf-8"))
     inputs={}
