@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-10-15T19:04:22.361749+00:00",
+  "mode": "UNIFIED_RESEARCH_ONLY",
+  "risk_audit": {
+    "timestamp": "2026-10-15T19:04:22.361749+00:00",
+    "mode": "AUDIT_ONLY",
+    "ok": true,
+    "errors": [],
+    "treasury": {
+      "cash_eur": 375.0,
+      "equity_eur": 499.33,
+      "exposure_eur": 124.33,
+      "cash_reserve_pct": 75.1
+    },
+    "risk": {
+      "drawdown_pct": 0.134,
+      "drawdown_limit_pct": 15,
+      "daily_loss_limit_enforced": false
+    },
+    "accounting": {
+      "reconciliation_difference_eur": 0.0015,
+      "recorded_fees_eur": 0.3241571913013517
+    },
+    "trade_expectancy": {
+      "closed_trades": 0,
+      "average_realized_pnl_eur": null
+    },
+    "execution_quality": {
+      "independent_spread_verified": false,
+      "independent_slippage_verified": false
+    },
+    "exchange_reconciliation": {
+      "verified": false
+    },
+    "tax_ledger": {
+      "tax_ready": false
+    },
+    "kill_switch": {
+      "active": false,
+      "enforced_by_this_module": false
+    },
+    "trade_authorization": false
+  },
+  "evidence_checks": {
+    "strategy": {
+      "present": true,
+      "fresh": true
+    },
+    "walkforward": {
+      "present": true,
+      "fresh": true
+    },
+    "robustness": {
+      "present": true,
+      "fresh": true
+    },
+    "arena": {
+      "present": true,
+      "fresh": true,
+      "twenty_strategies": true,
+      "research_only": true
+    },
+    "adaptive": {
+      "present": true,
+      "fresh": true,
+      "ten_research_modules": true,
+      "research_only": true
+    },
+    "human": {
+      "present": true,
+      "fresh": true
+    },
+    "gate": {
+      "present": true,
+      "fresh": false
+    }
+  },
+  "research_status": "INSUFFICIENT_EVIDENCE",
+  "veto_reasons": [
+    "UNVERIFIED_GATE"
+  ],
+  "approved_real_trades": [],
+  "approved_paper_buys": [],
+  "trade_authorization": false,
+  "architecture": "One advisory council; independent execution gate unchanged",
+  "limitations": "Research reports may use different market snapshots; no consensus signal is authorized."
+}
