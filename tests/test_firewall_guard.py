@@ -40,8 +40,10 @@ class FirewallGuardTests(unittest.TestCase):
     def test_waf_config_has_auth_and_no_deployment_pretence(self):
         source = Path("infra/cloud-armor/main.tf").read_text(encoding="utf-8")
         self.assertIn("google_compute_security_policy", source)
-        self.assertIn("evaluatePreconfiguredWaf('sqli-v33-stable'", source)
-        self.assertIn("evaluatePreconfiguredWaf('xss-v33-stable'", source)
+        self.assertIn("evaluatePreconfiguredWaf('sqli-v422-stable'", source)
+        self.assertIn("evaluatePreconfiguredWaf('xss-v422-stable'", source)
+        self.assertIn("evaluatePreconfiguredWaf('rce-v422-stable'", source)
+        self.assertIn("evaluatePreconfiguredWaf('lfi-v422-stable'", source)
         self.assertIn('enforce_on_key = "IP"', source)
         self.assertIn("preview     = true", source)
         self.assertNotIn('resource "google_compute_backend_service"', source)
