@@ -42,7 +42,7 @@ resource "google_compute_security_policy" "hybrixx_admin" {
     preview     = true
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('sqli-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('sqli-v422-stable', {'sensitivity': 1})"
       }
     }
   }
@@ -54,7 +54,31 @@ resource "google_compute_security_policy" "hybrixx_admin" {
     preview     = true
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('xss-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('xss-v422-stable', {'sensitivity': 1})"
+      }
+    }
+  }
+
+  rule {
+    action      = "deny(403)"
+    priority    = 1020
+    description = "Remote code execution inspection: monitor first"
+    preview     = true
+    match {
+      expr {
+        expression = "evaluatePreconfiguredWaf('rce-v422-stable', {'sensitivity': 1})"
+      }
+    }
+  }
+
+  rule {
+    action      = "deny(403)"
+    priority    = 1030
+    description = "File inclusion inspection: monitor first"
+    preview     = true
+    match {
+      expr {
+        expression = "evaluatePreconfiguredWaf('lfi-v422-stable', {'sensitivity': 1})"
       }
     }
   }
