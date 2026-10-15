@@ -14,6 +14,25 @@ COINS = {"BTC":"XBTEUR","ETH":"ETHEUR","XRP":"XRPEUR","SOL":"SOLEUR",
          "ADA":"ADAEUR","DOGE":"XDGEUR","DOT":"DOTEUR","LINK":"LINKEUR",
          "LTC":"LTCEUR","AVAX":"AVAXEUR"}
 STATE = Path("multi_state.json")
+LEGACY_STATE = Path("state.json")
+
+def verify_global_emergency_lock(directory=Path(".")):
+    """Fail closed if the legacy or multi-market emergency lock is active or unreadable."""
+    for name in ("state.json", "multi_state.json"):
+        path = directory / name
+        if not path.is_file():
+            raise RuntimeError("Emergency lock source missing: " + name)
+        try:
+            record = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            raise RuntimeError("Emergency lock source unreadable: " + name) from exc
+        lock = record.get("emergency_lock")
+        if lock is not None:
+            if not isinstance(lock, dict) or lock.get("active") is not True:
+                raise RuntimeError("Malformed emergency lock in " + name)
+            raise RuntimeError("GLOBAL PAPER EMERGENCY LOCK ACTIVE in " + name)
+    return True
+
 FEE = 0.0026
 SLIPPAGE = 0.001
 STOP_LOSS = 0.05
@@ -171,12 +190,14 @@ def advance(previous, prices, stamp, approved_buys=None):
     return s
 
 def main():
+    verify_global_emergency_lock()
     prices = quotes()
     if STATE.exists():
         previous = json.loads(STATE.read_text(encoding="utf-8"))
     else:
         from migrate_xrp_state import migrate
         previous = migrate(json.loads(Path("state.json").read_text(encoding="utf-8")))
+    verify_global_emergency_lock()
     approved = load_approved()
     print("RESEARCH BUY GATE", sorted(approved) if approved else "ALL NEW BUYS BLOCKED")
     updated = advance(previous, prices, datetime.now(timezone.utc).isoformat(), approved_buys=approved)
