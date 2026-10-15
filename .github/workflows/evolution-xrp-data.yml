@@ -31,6 +31,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_intelligence_core.py' -v
           python -m unittest discover -s tests -p 'test_learning_history.py' -v
+          python -m unittest discover -s tests -p 'test_ten_paper_engine.py' -v
       - name: Commit public research data and report
         run: |
           git config user.name "github-actions[bot]"
