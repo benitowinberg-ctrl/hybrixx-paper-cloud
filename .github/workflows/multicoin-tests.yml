@@ -6,6 +6,7 @@ on:
     paths:
       - 'multi_paper.py'
       - 'research_backtest.py'
+      - 'migrate_xrp_state.py'
       - 'tests/**'
       - '.github/workflows/multicoin-tests.yml'
 permissions:
@@ -20,7 +21,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify syntax
-        run: python -m compileall -q multi_paper.py research_backtest.py tests
+        run: python -m compileall -q multi_paper.py research_backtest.py migrate_xrp_state.py tests
       - name: Validate permanent paper-only production policy
         run: python security/production_guard.py
       - name: Run deterministic regression tests
