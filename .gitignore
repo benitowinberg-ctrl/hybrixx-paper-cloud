@@ -1,0 +1,16 @@
+# Never version-control credentials, local configuration or private trading records.
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.sqlite
+*.sqlite3
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+secrets/
+private_state/
