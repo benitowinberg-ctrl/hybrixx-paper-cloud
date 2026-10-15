@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-10-15T19:04:22.361749+00:00",
+  "generated_utc": "2026-10-15T19:10:27.559426+00:00",
   "mode": "UNIFIED_RESEARCH_ONLY",
   "risk_audit": {
-    "timestamp": "2026-10-15T19:04:22.361749+00:00",
+    "timestamp": "2026-10-15T19:10:27.559426+00:00",
     "mode": "AUDIT_ONLY",
     "ok": true,
     "errors": [],
@@ -72,13 +72,11 @@
     },
     "gate": {
       "present": true,
-      "fresh": false
+      "fresh": true
     }
   },
-  "research_status": "INSUFFICIENT_EVIDENCE",
-  "veto_reasons": [
-    "UNVERIFIED_GATE"
-  ],
+  "research_status": "EVIDENCE_COMPLETE",
+  "veto_reasons": [],
   "approved_real_trades": [],
   "approved_paper_buys": [],
   "trade_authorization": false,
