@@ -28,9 +28,10 @@ jobs:
           python security/production_guard.py
       - name: Check multicoin syntax and migration
         run: |
-          python -m compileall -q multi_paper.py migrate_xrp_state.py research_backtest.py
+          python -m compileall -q multi_paper.py paper_trade_gate.py migrate_xrp_state.py research_backtest.py
           python -m unittest discover -s tests -p 'test_migrate_xrp.py' -v
           python -m unittest discover -s tests -p 'test_paper_health.py' -v
+          python -m unittest discover -s tests -p 'test_paper_trade_gate.py' -v
       - name: Run multi-coin simulation using single migrated account
         run: python multi_paper.py
       - name: Verify account accounting and paper-only policy
