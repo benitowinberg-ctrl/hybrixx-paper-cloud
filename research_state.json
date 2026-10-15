@@ -292,5 +292,52 @@
   "autonomous_learning": {
     "status": "AUTOMATED_PARAMETER_RESEARCH",
     "message": "Scheduled re-evaluation; not trained AI"
+  },
+  "intelligence_core": {
+    "version": "0.2",
+    "generated_at_utc": "2026-10-15T22:11:18.390Z",
+    "operating_mode": "PAPER_RESEARCH_ONLY",
+    "trade_permission": false,
+    "automatic_order_execution": false,
+    "champion": null,
+    "research_candidates": [
+      {
+        "strategy": "Breakout",
+        "research_score": -1.6575,
+        "status": "EXPLORATORY_ONLY"
+      },
+      {
+        "strategy": "Momentum",
+        "research_score": -3.1992,
+        "status": "EXPLORATORY_ONLY"
+      },
+      {
+        "strategy": "Donchian",
+        "research_score": -3.6161,
+        "status": "EXPLORATORY_ONLY"
+      },
+      {
+        "strategy": "MA",
+        "research_score": -6.8181,
+        "status": "EXPLORATORY_ONLY"
+      },
+      {
+        "strategy": "RSI",
+        "research_score": -8.4961,
+        "status": "EXPLORATORY_ONLY"
+      }
+    ],
+    "modules": {
+      "evolution": "AUTOMATED_WALK_FORWARD",
+      "copy_trading": "NO_VERIFIED_TRADER_SIGNALS",
+      "special_situations": "AWAITING_PRIMARY_FILINGS"
+    },
+    "restrictions": [
+      "No exchange credentials",
+      "No live or paper order generation",
+      "No override of emergency stop",
+      "No promotion from short-window backtests"
+    ],
+    "explanation": "Automated parameter evaluation is research, not trained AI or verified alpha."
   }
 }
