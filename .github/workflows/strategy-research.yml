@@ -30,6 +30,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_unified_intelligence.py' -v
           python -m unittest discover -s tests -p 'test_unified_learning_council.py' -v
           python -m unittest discover -s tests -p 'test_learning_governance.py' -v
+          python -m unittest discover -s tests -p 'test_learning_model_archive.py' -v
       - name: Evaluate closed Kraken OHLC candles
         run: python strategy_research.py --interval 60 --output strategy_report.json
       - name: Evaluate conservative research gate
@@ -48,6 +49,8 @@ jobs:
         run: python learning_engine.py
       - name: Run ten learning governance controls and record bounded evaluation history
         run: python learning_governance.py
+      - name: Archive versioned research-only model checkpoints
+        run: python learning_model_archive.py
       - name: Synthesize unified research evidence
         run: python unified_intelligence.py
       - name: Publish research report (no account changes)
@@ -55,7 +58,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           # Preserve generated outputs; another workflow may have pushed since checkout.
-          reports=(strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json learning_engine_report.json learning_governance_report.json learning_governance_history.json unified_intelligence_report.json)
+          reports=(strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json learning_engine_report.json learning_governance_report.json learning_governance_history.json learning_model_archive.json unified_intelligence_report.json)
           temp_dir="$(mktemp -d)"
           trap 'rm -rf "$temp_dir"' EXIT
           cp "${reports[@]}" "$temp_dir/"
