@@ -16,6 +16,7 @@ def inputs():
  result["adaptive"].update(trade_authorization=False)
  for key in ("market_dna","correlation_breaker","black_swan_radar","drift_detector","darwin_engine","counterfactual_lab","reality_twin","capital_guardian","evidence_ledger","investment_committee"):
   result["adaptive"][key]={}
+ result["learning"]={"generated_utc":stamp,"trade_authorization":False,"errors":{},"assets":{coin:{"holdout_model_frozen":True,"signal_authorized":False,"holdout_observations":143} for coin in COINS}}
  return result
 class CouncilTests(unittest.TestCase):
  def test_full_evidence_still_no_trade_authorization(self):
