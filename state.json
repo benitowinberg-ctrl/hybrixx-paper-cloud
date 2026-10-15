@@ -95,15 +95,20 @@
     "version": "2.0",
     "realized_pnl_eur": 0.0,
     "fees_eur": 0.3241571913013517,
-    "safe_stop": false,
+    "safe_stop": true,
     "entry_price_eur": 1.19772653,
     "cost_basis_eur": 124.99999999951355,
     "last_trade_seq": 12,
     "observation_seq": 15,
     "peak_equity_eur": 500.0,
-    "signal": "HOLD",
-    "last_action": "HOLD",
+    "signal": "LOCKED",
+    "last_action": "LOCKED",
     "drawdown_pct": 0.11
   },
-  "invested_eur": 124.45
+  "invested_eur": 124.45,
+  "emergency_lock": {
+    "active": true,
+    "reason_code": "SECURITY_AUDIT_FAILED",
+    "activated_at_utc": "2026-10-15T19:28:34.521098+00:00"
+  }
 }
