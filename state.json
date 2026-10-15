@@ -1,7 +1,20 @@
 {
-  "cash_eur": 500.0,
-  "xrp": 0.0,
-  "trades": [],
+  "cash_eur": 375.0,
+  "xrp": 104.09374735,
+  "trades": [
+    {
+      "time_utc": "2026-10-15T17:28:34.634915+00:00",
+      "side": "BUY",
+      "symbol": "XRP/EUR",
+      "reason": "MOVING_AVERAGE_BUY",
+      "market_price_eur": 1.19653,
+      "fill_price_eur": 1.19772653,
+      "qty": 104.09374735,
+      "gross_eur": 124.67584281,
+      "fee_eur": 0.32415719,
+      "cost_eur": 125.0
+    }
+  ],
   "observations": [
     {
       "time_utc": "2026-10-15T13:58:56.033721+00:00",
@@ -54,23 +67,28 @@
       "time_utc": "2026-10-15T17:27:35.462171+00:00",
       "symbol": "XRP/EUR",
       "xrp_eur": 1.19637
+    },
+    {
+      "time_utc": "2026-10-15T17:28:34.634915+00:00",
+      "symbol": "XRP/EUR",
+      "xrp_eur": 1.19653
     }
   ],
-  "last_update_utc": "2026-10-15T17:27:35.462171+00:00",
-  "equity_eur": 500.0,
+  "last_update_utc": "2026-10-15T17:28:34.634915+00:00",
+  "equity_eur": 499.55,
   "paper_engine": {
     "version": "2.0",
     "realized_pnl_eur": 0.0,
-    "fees_eur": 0.0,
+    "fees_eur": 0.3241571913013517,
     "safe_stop": false,
-    "entry_price_eur": null,
-    "cost_basis_eur": 0.0,
-    "last_trade_seq": -1000,
-    "observation_seq": 11,
+    "entry_price_eur": 1.19772653,
+    "cost_basis_eur": 124.99999999951355,
+    "last_trade_seq": 12,
+    "observation_seq": 12,
     "peak_equity_eur": 500.0,
-    "signal": "WARMUP",
-    "last_action": "HOLD",
-    "drawdown_pct": 0.0
+    "signal": "BUY",
+    "last_action": "BUY",
+    "drawdown_pct": 0.09
   },
-  "invested_eur": 0.0
+  "invested_eur": 124.55
 }
