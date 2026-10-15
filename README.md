@@ -25,3 +25,12 @@
 - Kursausfälle lassen den Workflow fehlschlagen statt stillschweigend Werte zu erfinden.
 - Keine Sicherheit, dass die Strategie gewinnbringend ist. Für reales Trading sind unabhängige historische Tests, robuste Verlustlimits, API-Rechteverwaltung und eine andere zuverlässige Ausführungsumgebung nötig.
 - GitHub Actions arbeitet in kurzen Läufen, **nicht als permanent laufender 24/7-Handelsprozess**.
+
+## 🚨 HYBRIXX Notfall-STOPP (nur Paper-Modus)
+[Geschützten Notfall-Workflow in GitHub öffnen](https://github.com/benitowinberg-ctrl/hybrixx-paper-cloud/actions/workflows/emergency-stop.yml). Melde dich mit **deinem GitHub-Konto** an, wähle `Run workflow` auf `main` und bestätige. Die GitHub-Action schreibt `emergency_lock.active=true` in `state.json` und markiert den Paper-Handel als gesperrt. **Das Öffnen des Links allein löst keinen Stopp aus.** GitHub Actions kann verzögert starten: dieser Weg ist keine Echtzeit-Notabschaltung für Echtgeld.
+
+Die Handelssperre ist **persistierend**. Solange sie gesetzt ist, löst die Paper-Engine **weder BUY noch SELL** aus; Preisbeobachtungen können weiterlaufen. Die Dashboard-Anzeige zeigt den Sperrstatus. Es gibt **keinen automatischen Neustart / Unlock**.
+
+Bei einem fehlgeschlagenen Security-Sentinel-Audit versucht der Alarmworkflow ebenfalls, die Sperre automatisch zu setzen und erstellt ein GitHub-Warn-Issue. Selbst wenn dieser Schreibversuch scheitert, verhindern die fehlgeschlagenen Sicherheitsprüfungen die betreffende Paper-Ausführung; unabhängige Schutzmechanismen für Echtgeldausführung fehlen noch.
+
+**Kein Geldtransfer:** Die aktuelle App verwaltet ausschließlich 500 € virtuelles Kapital. Es existiert weder ein angeschlossenes Bankkonto noch eine Börsen-Auszahlungsberechtigung. Niemals vorschnell eine automatische Auszahlung aufgrund einer verdächtigen Aktivität einrichten: dies kann durch manipulierte Alarme zum Abfluss des Guthabens führen. Für echtes Kapital benötigen wir einen **getrennten privaten Dienst**, serverseitiges Authentisieren, sofortigen Order-Stopp, Alarmierung, getrennte Börsenrechte und eine vom Eigentümer mit starker 2FA freizugebende Auszahlung an ein zuvor verifiziertes Ziel.
