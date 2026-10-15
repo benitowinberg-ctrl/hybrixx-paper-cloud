@@ -1,0 +1,30 @@
+name: HYBRIXX v1.2 Paper Test
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hybrixx-paper-dev
+  cancel-in-progress: false
+jobs:
+  test-and-paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline tests
+        run: python -m unittest -v test_paper_engine.py
+      - name: Run one paper observation
+        run: python paper_engine.py
+      - name: Save paper state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update HYBRIXX v1.2 paper state'
+            git push
+          fi
