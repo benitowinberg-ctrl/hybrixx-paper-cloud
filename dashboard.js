@@ -28,3 +28,27 @@ const engine=s.paper_engine||{};if(s.mode==='PAPER_ONLY_DEVELOPMENT'){$('mode').
 $('notice').textContent='Nur PAPER: keine echten Orders. Kurswerte sind stündliche Momentaufnahmen, keine Live-Ticks. Trade-Gebühren und Ausführung sind simuliert. Gewinn-Tresor ist noch nicht implementiert.';}
 async function load(){try{let res=await fetch('./multi_state.json?nocache='+Date.now(),{cache:'no-store'});if(!res.ok)res=await fetch('./state.json?nocache='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);render(await res.json());}catch(e){$('status').textContent='● Noch keine Cloud-Verbindung';$('notice').textContent='state.json konnte nicht automatisch geladen werden. Das ist beim lokalen Öffnen einer HTML-Datei normal. Über eine Webadresse oder mit einem passenden lokalen Server kann der Abruf funktionieren. Fehler: '+e.message;}}
 $('reload').onclick=load;$('coin').onchange=()=>state&&render(state);load();
+
+async function loadResearch(){
+ const status=$('research-status'),out=$('research-results');
+ if(!status||!out)return;
+ try{
+  const response=await fetch('./research_state.json?nocache='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('Forschungsbericht noch nicht veröffentlicht (HTTP '+response.status+')');
+  const r=await response.json();
+  if(r.mode!=='RESEARCH_ONLY'||!Array.isArray(r.evolution?.ranking))throw Error('Ungültiger Forschungsbericht');
+  const last=r.last_candle_utc?new Date(r.last_candle_utc).toLocaleString('de-DE'):'unbekannt';
+  status.textContent='Automatische Auswertung · '+r.data_points+' XRP/EUR-Kerzen · Stand '+last;
+  const title=document.createElement('p');title.textContent='Walk-Forward-Forschung: '+r.evolution.ranking.length+' Strategien. Kein bestätigter Gewinnvorteil.';
+  const list=document.createElement('ol');
+  for(const s of r.evolution.ranking){
+   const li=document.createElement('li');
+   li.textContent=s.strategy+' · Ø Test '+Number(s.mean_oos_return_pct).toFixed(2)+' % · '+s.positive_folds+'/'+s.folds+' positive Testfenster';
+   list.appendChild(li);
+  }
+  const extras=document.createElement('p');extras.className='muted';
+  extras.textContent='Copy Trading: '+r.copy_trading.status+' · Special Situations: '+r.special_situations.status;
+  out.replaceChildren(title,list,extras);
+ }catch(e){status.textContent='Automatische Forschung noch nicht verfügbar: '+e.message;out.replaceChildren()}
+}
+loadResearch();
