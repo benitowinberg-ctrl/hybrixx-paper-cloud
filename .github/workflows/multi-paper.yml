@@ -28,10 +28,11 @@ jobs:
           python security/production_guard.py
       - name: Check multicoin syntax and migration
         run: |
-          python -m compileall -q multi_paper.py paper_trade_gate.py migrate_xrp_state.py research_backtest.py
+          python -m compileall -q multi_paper.py paper_trade_gate.py readiness_audit.py migrate_xrp_state.py research_backtest.py
           python -m unittest discover -s tests -p 'test_migrate_xrp.py' -v
           python -m unittest discover -s tests -p 'test_paper_health.py' -v
           python -m unittest discover -s tests -p 'test_paper_trade_gate.py' -v
+          python -m unittest discover -s tests -p 'test_readiness_audit.py' -v
       - name: Run multi-coin simulation using single migrated account
         run: python multi_paper.py
       - name: Verify account accounting and paper-only policy
@@ -39,11 +40,13 @@ jobs:
           python security/production_guard.py
           python paper_health.py --max-age-minutes 15
           python -c "import json,math; s=json.load(open('multi_state.json')); assert s['mode']=='PAPER_ONLY_DEVELOPMENT'; assert s['cash_eur']>=0; assert len(s['positions'])<=3; assert math.isclose(s['equity_eur'],s['cash_eur']+sum(q*s['latest_prices_eur'][c] for c,q in s['positions'].items()),abs_tol=.02)"
+      - name: Run 23-point independent readiness audit
+        run: python readiness_audit.py
       - name: Publish multi-coin paper journal
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add multi_state.json
+          git add multi_state.json readiness_audit.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update HYBRIXX ten-market paper account'
             git pull --rebase origin main
