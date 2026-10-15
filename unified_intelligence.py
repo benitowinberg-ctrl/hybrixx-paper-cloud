@@ -12,7 +12,7 @@ from risk_audit_suite import evaluate
 MAX_AGE=timedelta(hours=36)
 def freshness(report,now):
     try:
-        stamp=report.get("generated_utc") or report.get("timestamp")
+        stamp=report.get("generated_utc") or report.get("timestamp") or report.get("source_generated_utc")
         t=datetime.fromisoformat(stamp.replace("Z","+00:00"))
         return t.tzinfo is not None and timedelta(0)<=now-t<=MAX_AGE
     except (AttributeError,TypeError,ValueError,OverflowError):
