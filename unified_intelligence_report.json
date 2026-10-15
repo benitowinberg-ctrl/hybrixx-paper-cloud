@@ -1,24 +1,24 @@
 {
-  "generated_utc": "2026-10-15T19:10:27.559426+00:00",
+  "generated_utc": "2026-10-15T19:25:53.418985+00:00",
   "mode": "UNIFIED_RESEARCH_ONLY",
   "risk_audit": {
-    "timestamp": "2026-10-15T19:10:27.559426+00:00",
+    "timestamp": "2026-10-15T19:25:53.418985+00:00",
     "mode": "AUDIT_ONLY",
     "ok": true,
     "errors": [],
     "treasury": {
       "cash_eur": 375.0,
-      "equity_eur": 499.33,
-      "exposure_eur": 124.33,
-      "cash_reserve_pct": 75.1
+      "equity_eur": 499.78,
+      "exposure_eur": 124.78,
+      "cash_reserve_pct": 75.03
     },
     "risk": {
-      "drawdown_pct": 0.134,
+      "drawdown_pct": 0.044,
       "drawdown_limit_pct": 15,
       "daily_loss_limit_enforced": false
     },
     "accounting": {
-      "reconciliation_difference_eur": 0.0015,
+      "reconciliation_difference_eur": -0.0045,
       "recorded_fees_eur": 0.3241571913013517
     },
     "trade_expectancy": {
