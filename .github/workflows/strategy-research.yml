@@ -26,6 +26,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_historical_data_quality.py' -v
           python -m unittest discover -s tests -p 'test_shadow_arena.py' -v
           python -m unittest discover -s tests -p 'test_adaptive_lab.py' -v
+          python -m unittest discover -s tests -p 'test_learning_engine.py' -v
       - name: Evaluate closed Kraken OHLC candles
         run: python strategy_research.py --interval 60 --output strategy_report.json
       - name: Evaluate conservative research gate
@@ -40,13 +41,15 @@ jobs:
         run: python shadow_arena.py
       - name: Run ten adaptive research diagnostics
         run: python adaptive_lab.py
+      - name: Train and evaluate research-only online learning engine
+        run: python learning_engine.py
       - name: Synthesize unified research evidence
         run: python unified_intelligence.py
       - name: Publish research report (no account changes)
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json unified_intelligence_report.json
+          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json shadow_arena_report.json adaptive_lab_report.json learning_engine_report.json unified_intelligence_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update read-only HYBRIXX strategy research report'
             git pull --rebase origin main
