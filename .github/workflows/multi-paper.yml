@@ -30,11 +30,13 @@ jobs:
         run: |
           python -m compileall -q multi_paper.py migrate_xrp_state.py research_backtest.py
           python -m unittest discover -s tests -p 'test_migrate_xrp.py' -v
+          python -m unittest discover -s tests -p 'test_paper_health.py' -v
       - name: Run multi-coin simulation using single migrated account
         run: python multi_paper.py
       - name: Verify account accounting and paper-only policy
         run: |
           python security/production_guard.py
+          python paper_health.py --max-age-minutes 15
           python -c "import json,math; s=json.load(open('multi_state.json')); assert s['mode']=='PAPER_ONLY_DEVELOPMENT'; assert s['cash_eur']>=0; assert len(s['positions'])<=3; assert math.isclose(s['equity_eur'],s['cash_eur']+sum(q*s['latest_prices_eur'][c] for c,q in s['positions'].items()),abs_tol=.02)"
       - name: Publish multi-coin paper journal
         run: |
