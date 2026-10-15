@@ -339,5 +339,10 @@
       "No promotion from short-window backtests"
     ],
     "explanation": "Automated parameter evaluation is research, not trained AI or verified alpha."
+  },
+  "learning_history": {
+    "status": "INSUFFICIENT_DISTINCT_CANDLES",
+    "observations": 1,
+    "message": "Three distinct updates required; overlapping backtests are not independent evidence."
   }
 }
