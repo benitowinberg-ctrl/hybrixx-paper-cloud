@@ -18,3 +18,7 @@ jobs:
         run: |
           python security/production_guard.py
           python paper_health.py --max-age-minutes 60
+      - name: Validate independent risk controls
+        run: |
+          python -m unittest discover -s tests -p 'test_risk_audit_suite.py' -v
+          python risk_audit_suite.py
