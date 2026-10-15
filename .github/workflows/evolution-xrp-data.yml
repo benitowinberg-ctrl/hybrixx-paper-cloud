@@ -1,5 +1,9 @@
 name: Evolution Lab XRP Historical Data
 on:
+  push:
+    paths:
+      - 'research_engine.py'
+      - '.github/workflows/evolution-xrp-data.yml'
   workflow_dispatch:
   schedule:
     - cron: "23 1 * * *"
