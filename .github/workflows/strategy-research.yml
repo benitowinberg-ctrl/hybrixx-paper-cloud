@@ -31,11 +31,13 @@ jobs:
         run: python human_strategy_comparison.py
       - name: Run quality-gated rolling walk-forward research
         run: python walkforward_research.py
+      - name: Evaluate read-only bootstrap robustness
+        run: python robustness_research.py
       - name: Publish research report (no account changes)
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json
+          git add strategy_report.json strategy_gate_report.json human_strategy_comparison.json walkforward_report.json robustness_report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update read-only HYBRIXX strategy research report'
             git pull --rebase origin main
