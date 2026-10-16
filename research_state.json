@@ -1,7 +1,7 @@
 {
   "version": "0.1",
-  "generated_at_utc": "2026-10-16T11:51:43.927714+00:00",
-  "last_candle_utc": "2026-10-16T10:00:00+00:00",
+  "generated_at_utc": "2026-10-16T13:06:06.860714+00:00",
+  "last_candle_utc": "2026-10-16T12:00:00+00:00",
   "mode": "RESEARCH_ONLY",
   "market": "XRPEUR",
   "data_points": 720,
@@ -15,21 +15,21 @@
     "ranking": [
       {
         "strategy": "Breakout",
-        "mean_oos_return_pct": -0.8285,
+        "mean_oos_return_pct": -0.8804,
         "worst_oos_drawdown_pct": 3.4119,
         "positive_folds": 0,
         "folds": 3
       },
       {
         "strategy": "Momentum",
-        "mean_oos_return_pct": -1.476,
+        "mean_oos_return_pct": -1.6345,
         "worst_oos_drawdown_pct": 5.0014,
         "positive_folds": 1,
         "folds": 3
       },
       {
         "strategy": "Donchian",
-        "mean_oos_return_pct": -1.7258,
+        "mean_oos_return_pct": -1.7777,
         "worst_oos_drawdown_pct": 6.0566,
         "positive_folds": 0,
         "folds": 3
@@ -43,38 +43,38 @@
       },
       {
         "strategy": "MA",
-        "mean_oos_return_pct": -2.2365,
-        "worst_oos_drawdown_pct": 6.5224,
+        "mean_oos_return_pct": -2.6237,
+        "worst_oos_drawdown_pct": 5.9752,
         "positive_folds": 1,
         "folds": 3
       }
     ],
     "folds": [
       {
-        "test_start": "2026-10-01T23:00:00+00:00",
-        "test_end": "2026-10-05T22:00:00+00:00",
+        "test_start": "2026-10-02T01:00:00+00:00",
+        "test_end": "2026-10-06T00:00:00+00:00",
         "results": [
           {
             "strategy": "MA",
-            "parameter": 16,
+            "parameter": 8,
             "training": {
-              "return_pct": -7.4547,
-              "drawdown_pct": 7.4193,
-              "orders": 7
+              "return_pct": -8.4556,
+              "drawdown_pct": 8.3906,
+              "orders": 9
             },
             "out_of_sample": {
-              "return_pct": -0.7902,
+              "return_pct": -1.9221,
               "drawdown_pct": 4.9246,
-              "orders": 3
+              "orders": 4
             }
           },
           {
             "strategy": "Momentum",
             "parameter": 30,
             "training": {
-              "return_pct": -6.5684,
-              "drawdown_pct": 6.5684,
-              "orders": 12
+              "return_pct": -6.3728,
+              "drawdown_pct": 6.3728,
+              "orders": 10
             },
             "out_of_sample": {
               "return_pct": -3.3071,
@@ -127,8 +127,8 @@
         ]
       },
       {
-        "test_start": "2026-10-06T11:00:00+00:00",
-        "test_end": "2026-10-10T10:00:00+00:00",
+        "test_start": "2026-10-06T13:00:00+00:00",
+        "test_end": "2026-10-10T12:00:00+00:00",
         "results": [
           {
             "strategy": "MA",
@@ -139,7 +139,7 @@
               "orders": 8
             },
             "out_of_sample": {
-              "return_pct": 0.4094,
+              "return_pct": 0.2518,
               "drawdown_pct": 0.8624,
               "orders": 1
             }
@@ -148,9 +148,9 @@
             "strategy": "Momentum",
             "parameter": 30,
             "training": {
-              "return_pct": -4.8389,
+              "return_pct": -5.3365,
               "drawdown_pct": 5.3365,
-              "orders": 12
+              "orders": 10
             },
             "out_of_sample": {
               "return_pct": 0.0895,
@@ -167,7 +167,7 @@
               "orders": 4
             },
             "out_of_sample": {
-              "return_pct": -0.7962,
+              "return_pct": -0.9519,
               "drawdown_pct": 0.5954,
               "orders": 1
             }
@@ -181,7 +181,7 @@
               "orders": 4
             },
             "out_of_sample": {
-              "return_pct": -0.7962,
+              "return_pct": -0.9519,
               "drawdown_pct": 0.5954,
               "orders": 1
             }
@@ -203,20 +203,20 @@
         ]
       },
       {
-        "test_start": "2026-10-12T11:00:00+00:00",
-        "test_end": "2026-10-16T10:00:00+00:00",
+        "test_start": "2026-10-12T13:00:00+00:00",
+        "test_end": "2026-10-16T12:00:00+00:00",
         "results": [
           {
             "strategy": "MA",
             "parameter": 12,
             "training": {
-              "return_pct": -0.8996,
-              "drawdown_pct": 2.4972,
+              "return_pct": -1.9129,
+              "drawdown_pct": 3.151,
               "orders": 3
             },
             "out_of_sample": {
-              "return_pct": -6.3288,
-              "drawdown_pct": 6.5224,
+              "return_pct": -6.2009,
+              "drawdown_pct": 5.9752,
               "orders": 5
             }
           },
@@ -229,9 +229,9 @@
               "orders": 4
             },
             "out_of_sample": {
-              "return_pct": -1.2103,
-              "drawdown_pct": 1.1841,
-              "orders": 3
+              "return_pct": -1.6858,
+              "drawdown_pct": 1.3304,
+              "orders": 5
             }
           },
           {
@@ -252,9 +252,9 @@
             "strategy": "Donchian",
             "parameter": 30,
             "training": {
-              "return_pct": -2.5678,
-              "drawdown_pct": 2.5621,
-              "orders": 3
+              "return_pct": -3.564,
+              "drawdown_pct": 3.564,
+              "orders": 4
             },
             "out_of_sample": {
               "return_pct": 0.0,
@@ -295,7 +295,7 @@
   },
   "intelligence_core": {
     "version": "0.2",
-    "generated_at_utc": "2026-10-16T11:51:43.927761+00:00",
+    "generated_at_utc": "2026-10-16T13:06:06.860751+00:00",
     "operating_mode": "PAPER_RESEARCH_ONLY",
     "trade_permission": false,
     "automatic_order_execution": false,
@@ -303,22 +303,22 @@
     "research_candidates": [
       {
         "strategy": "Breakout",
-        "research_score": -2.5345,
+        "research_score": -2.5863,
         "status": "EXPLORATORY_ONLY"
       },
       {
         "strategy": "Momentum",
-        "research_score": -3.9767,
+        "research_score": -4.1352,
         "status": "EXPLORATORY_ONLY"
       },
       {
         "strategy": "Donchian",
-        "research_score": -4.7541,
+        "research_score": -4.806,
         "status": "EXPLORATORY_ONLY"
       },
       {
         "strategy": "MA",
-        "research_score": -5.4977,
+        "research_score": -5.6113,
         "status": "EXPLORATORY_ONLY"
       },
       {
@@ -342,23 +342,23 @@
   },
   "learning_history": {
     "status": "DESCRIPTIVE_ONLY",
-    "observations": 13,
+    "observations": 14,
     "changes": [
       {
         "strategy": "Breakout",
-        "delta_mean_oos_pct": -0.0369
+        "delta_mean_oos_pct": -0.0917
       },
       {
         "strategy": "Donchian",
-        "delta_mean_oos_pct": -0.0369
+        "delta_mean_oos_pct": -0.0917
       },
       {
         "strategy": "MA",
-        "delta_mean_oos_pct": 0.3332
+        "delta_mean_oos_pct": 0.0728
       },
       {
         "strategy": "Momentum",
-        "delta_mean_oos_pct": -0.1274
+        "delta_mean_oos_pct": -0.0486
       },
       {
         "strategy": "RSI",
