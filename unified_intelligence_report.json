@@ -1,24 +1,26 @@
 {
-  "generated_utc": "2026-10-15T20:11:32.465178+00:00",
+  "generated_utc": "2026-10-16T03:55:56.022868+00:00",
   "mode": "UNIFIED_RESEARCH_ONLY",
   "risk_audit": {
-    "timestamp": "2026-10-15T20:11:32.465178+00:00",
+    "timestamp": "2026-10-16T03:55:56.022868+00:00",
     "mode": "AUDIT_ONLY",
-    "ok": true,
-    "errors": [],
+    "ok": false,
+    "errors": [
+      "STALE_DATA"
+    ],
     "treasury": {
       "cash_eur": 375.0,
-      "equity_eur": 499.56,
-      "exposure_eur": 124.56,
-      "cash_reserve_pct": 75.07
+      "equity_eur": 499.66,
+      "exposure_eur": 124.66,
+      "cash_reserve_pct": 75.05
     },
     "risk": {
-      "drawdown_pct": 0.088,
+      "drawdown_pct": 0.068,
       "drawdown_limit_pct": 15,
       "daily_loss_limit_enforced": false
     },
     "accounting": {
-      "reconciliation_difference_eur": -0.0027,
+      "reconciliation_difference_eur": 0.0015,
       "recorded_fees_eur": 0.3241571913013517
     },
     "trade_expectancy": {
@@ -83,8 +85,10 @@
       "holdout_frozen": true
     }
   },
-  "research_status": "EVIDENCE_COMPLETE",
-  "veto_reasons": [],
+  "research_status": "INSUFFICIENT_EVIDENCE",
+  "veto_reasons": [
+    "RISK_AUDIT_FAILED"
+  ],
   "approved_real_trades": [],
   "approved_paper_buys": [],
   "trade_authorization": false,

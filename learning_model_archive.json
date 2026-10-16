@@ -595,5 +595,204 @@
         }
       }
     }
+  },
+  {
+    "sha256": "b57c4622cfa5c8db6963eb0c127f81a7ce5c581af9d20a03e102e6fd2d4e5a72",
+    "payload": {
+      "source_generated_utc": "2026-10-16T03:55:55.718510+00:00",
+      "trade_authorization": false,
+      "models": {
+        "BTC": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            0.0002012,
+            -0.0098732,
+            -0.0290686,
+            0.0026117,
+            -0.0313996
+          ],
+          "bias": 0.14118,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "ETH": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.0026064,
+            -0.0080035,
+            -0.0743211,
+            0.0105301,
+            -0.1064637
+          ],
+          "bias": 0.0547621,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "XRP": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.0701747,
+            -0.0424296,
+            -0.0422457,
+            0.0141027,
+            -0.0892061
+          ],
+          "bias": 0.1211559,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "SOL": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.0710062,
+            -0.0585459,
+            -0.134476,
+            -0.0012472,
+            -0.1733323
+          ],
+          "bias": -0.1554056,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "ADA": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.1143766,
+            -0.0818651,
+            -0.0414031,
+            0.0511388,
+            -0.04118
+          ],
+          "bias": 0.0279897,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "DOGE": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.0689686,
+            -0.0327705,
+            -0.0956656,
+            0.0082777,
+            -0.1057779
+          ],
+          "bias": -0.0361737,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "DOT": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.1057324,
+            -0.1564408,
+            -0.1375526,
+            0.0837169,
+            -0.0276235
+          ],
+          "bias": 0.1516005,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "LINK": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.0676167,
+            -0.2075175,
+            -0.1210094,
+            -0.0196706,
+            -0.08283
+          ],
+          "bias": -0.0255864,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "LTC": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.1130241,
+            -0.2213804,
+            -0.1840453,
+            0.0021606,
+            -0.145742
+          ],
+          "bias": -0.0645193,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        },
+        "AVAX": {
+          "feature_names": [
+            "return_1",
+            "return_6",
+            "return_24",
+            "volatility_12",
+            "trend_12_48"
+          ],
+          "weights": [
+            -0.1610967,
+            -0.1589471,
+            -0.2156176,
+            0.0163229,
+            -0.1910037
+          ],
+          "bias": 0.0189722,
+          "holdout_model_frozen": true,
+          "signal_authorized": false
+        }
+      }
+    }
   }
 ]
