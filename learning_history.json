@@ -1476,6 +1476,18 @@
         "RSI": -1.7605
       },
       "mode": "RESEARCH_ONLY"
+    },
+    {
+      "last_candle_utc": "2026-10-21T18:00:00+00:00",
+      "data_points": 720,
+      "strategy_mean_oos_pct": {
+        "Donchian": 0.794,
+        "Breakout": 0.7567,
+        "Momentum": -0.6889,
+        "RSI": -1.2395,
+        "MA": -1.5652
+      },
+      "mode": "RESEARCH_ONLY"
     }
   ]
 }
