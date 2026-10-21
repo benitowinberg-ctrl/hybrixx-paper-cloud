@@ -2,44 +2,44 @@
   "version": "1",
   "mode": "TEN_ISOLATED_VIRTUAL_PAPER_ACCOUNTS",
   "market": "XRPEUR",
-  "last_candle_utc": "2026-10-21T21:00:00+00:00",
+  "last_candle_utc": "2026-10-21T22:00:00+00:00",
   "starting_eur_per_system": 500.0,
   "system_count": 10,
   "systems": {
     "Alpha": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 8,
       "cash_eur": 500.0,
       "units": 0.0,
       "equity_eur": 500.0,
       "pnl_eur": 0.0,
       "validation": {
-        "return_pct": -6.6042,
-        "drawdown_pct": 7.3087,
-        "orders": 6
+        "return_pct": -7.2742,
+        "drawdown_pct": 7.6414,
+        "orders": 7
       },
       "historical_test": {
-        "return_pct": -3.0267,
-        "drawdown_pct": 6.7317,
+        "return_pct": -3.2973,
+        "drawdown_pct": 6.4811,
         "orders": 5
       },
       "trades": [],
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Beta": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 30,
       "cash_eur": 500.0,
       "units": 0.0,
       "equity_eur": 500.0,
       "pnl_eur": 0.0,
       "validation": {
-        "return_pct": -1.9316,
+        "return_pct": -1.9426,
         "drawdown_pct": 2.6823,
         "orders": 6
       },
       "historical_test": {
-        "return_pct": -2.0302,
+        "return_pct": -2.7022,
         "drawdown_pct": 5.2085,
         "orders": 15
       },
@@ -47,7 +47,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Gamma": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 1.6,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -67,7 +67,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Delta": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 30,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -79,7 +79,7 @@
         "orders": 4
       },
       "historical_test": {
-        "return_pct": 2.6855,
+        "return_pct": 1.9812,
         "drawdown_pct": 1.7914,
         "orders": 3
       },
@@ -87,7 +87,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Epsilon": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 25,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -107,7 +107,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Zeta": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 0.015,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -127,7 +127,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Eta": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 30,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -139,7 +139,7 @@
         "orders": 4
       },
       "historical_test": {
-        "return_pct": 2.797,
+        "return_pct": 2.0919,
         "drawdown_pct": 1.6848,
         "orders": 3
       },
@@ -147,27 +147,27 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Theta": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 16,
       "cash_eur": 500.0,
       "units": 0.0,
       "equity_eur": 500.0,
       "pnl_eur": 0.0,
       "validation": {
-        "return_pct": -6.2513,
+        "return_pct": -6.2901,
         "drawdown_pct": 6.841,
         "orders": 9
       },
       "historical_test": {
-        "return_pct": -5.153,
-        "drawdown_pct": 8.0812,
+        "return_pct": -5.4177,
+        "drawdown_pct": 7.8342,
         "orders": 11
       },
       "trades": [],
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Iota": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 1.5,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -187,7 +187,7 @@
       "status": "EMERGENCY_LOCK_ACTIVE"
     },
     "Kappa": {
-      "last_candle_utc": "2026-10-21T21:00:00+00:00",
+      "last_candle_utc": "2026-10-21T22:00:00+00:00",
       "parameter": 3,
       "cash_eur": 500.0,
       "units": 0.0,
@@ -199,7 +199,7 @@
         "orders": 8
       },
       "historical_test": {
-        "return_pct": -0.6871,
+        "return_pct": -1.3683,
         "drawdown_pct": 4.4815,
         "orders": 7
       },
