@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-20T03:55:55.759436+00:00",
+  "generated_utc": "2026-10-21T03:56:54.679836+00:00",
   "mode": "SHADOW_RESEARCH_ONLY_NO_ORDERS",
   "initial_per_strategy_eur": 500.0,
   "aggregate_hypothetical_initial_eur": 10000.0,
@@ -14,50 +14,50 @@
         "slow": 12
       },
       "initial_eur": 500.0,
-      "final_eur": 390.8,
-      "net_return_pct": -21.839,
-      "worst_single_coin_drawdown_pct": 40.702,
-      "orders": 646,
+      "final_eur": 374.33,
+      "net_return_pct": -25.133,
+      "worst_single_coin_drawdown_pct": 35.118,
+      "orders": 656,
       "markets": {
         "BTC": {
-          "return_pct": -15.693,
-          "orders": 54
+          "return_pct": -19.42,
+          "orders": 52
         },
         "ETH": {
-          "return_pct": -19.612,
-          "orders": 48
+          "return_pct": -23.131,
+          "orders": 50
         },
         "XRP": {
-          "return_pct": -18.656,
-          "orders": 56
+          "return_pct": -23.636,
+          "orders": 58
         },
         "SOL": {
-          "return_pct": -25.394,
-          "orders": 72
+          "return_pct": -31.248,
+          "orders": 76
         },
         "ADA": {
-          "return_pct": -16.0,
-          "orders": 66
-        },
-        "DOGE": {
-          "return_pct": -21.995,
+          "return_pct": -22.54,
           "orders": 68
         },
+        "DOGE": {
+          "return_pct": -29.826,
+          "orders": 70
+        },
         "DOT": {
-          "return_pct": -28.88,
+          "return_pct": -32.312,
           "orders": 84
         },
         "LINK": {
-          "return_pct": -22.619,
-          "orders": 66
+          "return_pct": -23.998,
+          "orders": 68
         },
         "LTC": {
-          "return_pct": -9.519,
+          "return_pct": -10.427,
           "orders": 60
         },
         "AVAX": {
-          "return_pct": -40.028,
-          "orders": 72
+          "return_pct": -34.793,
+          "orders": 70
         }
       }
     },
@@ -69,50 +69,50 @@
         "slow": 16
       },
       "initial_eur": 500.0,
-      "final_eur": 406.29,
-      "net_return_pct": -18.742,
-      "worst_single_coin_drawdown_pct": 29.36,
-      "orders": 522,
+      "final_eur": 387.03,
+      "net_return_pct": -22.594,
+      "worst_single_coin_drawdown_pct": 29.804,
+      "orders": 532,
       "markets": {
         "BTC": {
-          "return_pct": -13.968,
+          "return_pct": -19.153,
           "orders": 46
         },
         "ETH": {
-          "return_pct": -21.583,
-          "orders": 48
+          "return_pct": -25.727,
+          "orders": 50
         },
         "XRP": {
-          "return_pct": -14.279,
-          "orders": 48
+          "return_pct": -19.547,
+          "orders": 50
         },
         "SOL": {
-          "return_pct": -20.666,
-          "orders": 56
+          "return_pct": -26.664,
+          "orders": 58
         },
         "ADA": {
-          "return_pct": -17.464,
-          "orders": 56
+          "return_pct": -22.777,
+          "orders": 58
         },
         "DOGE": {
-          "return_pct": -15.539,
-          "orders": 54
+          "return_pct": -24.645,
+          "orders": 56
         },
         "DOT": {
-          "return_pct": -24.209,
+          "return_pct": -27.903,
           "orders": 58
         },
         "LINK": {
-          "return_pct": -25.203,
-          "orders": 56
+          "return_pct": -27.461,
+          "orders": 58
         },
         "LTC": {
-          "return_pct": -8.134,
+          "return_pct": -8.243,
           "orders": 46
         },
         "AVAX": {
-          "return_pct": -26.373,
-          "orders": 54
+          "return_pct": -23.827,
+          "orders": 52
         }
       }
     },
@@ -124,49 +124,49 @@
         "slow": 24
       },
       "initial_eur": 500.0,
-      "final_eur": 442.84,
-      "net_return_pct": -11.431,
-      "worst_single_coin_drawdown_pct": 26.146,
-      "orders": 350,
+      "final_eur": 422.57,
+      "net_return_pct": -15.485,
+      "worst_single_coin_drawdown_pct": 26.467,
+      "orders": 368,
       "markets": {
         "BTC": {
-          "return_pct": -14.168,
-          "orders": 40
-        },
-        "ETH": {
-          "return_pct": -17.244,
-          "orders": 34
-        },
-        "XRP": {
-          "return_pct": -9.055,
-          "orders": 32
-        },
-        "SOL": {
-          "return_pct": -8.464,
-          "orders": 30
-        },
-        "ADA": {
-          "return_pct": -8.404,
-          "orders": 38
-        },
-        "DOGE": {
-          "return_pct": -13.265,
+          "return_pct": -19.043,
           "orders": 42
         },
-        "DOT": {
-          "return_pct": -11.124,
-          "orders": 38
-        },
-        "LINK": {
-          "return_pct": -10.896,
+        "ETH": {
+          "return_pct": -20.205,
           "orders": 36
         },
+        "XRP": {
+          "return_pct": -14.699,
+          "orders": 34
+        },
+        "SOL": {
+          "return_pct": -13.338,
+          "orders": 32
+        },
+        "ADA": {
+          "return_pct": -14.575,
+          "orders": 40
+        },
+        "DOGE": {
+          "return_pct": -24.765,
+          "orders": 44
+        },
+        "DOT": {
+          "return_pct": -14.926,
+          "orders": 40
+        },
+        "LINK": {
+          "return_pct": -12.483,
+          "orders": 38
+        },
         "LTC": {
-          "return_pct": -3.536,
-          "orders": 30
+          "return_pct": -5.404,
+          "orders": 32
         },
         "AVAX": {
-          "return_pct": -18.156,
+          "return_pct": -15.411,
           "orders": 30
         }
       }
@@ -179,49 +179,49 @@
         "slow": 32
       },
       "initial_eur": 500.0,
-      "final_eur": 413.09,
-      "net_return_pct": -17.382,
-      "worst_single_coin_drawdown_pct": 32.548,
-      "orders": 294,
+      "final_eur": 409.39,
+      "net_return_pct": -18.122,
+      "worst_single_coin_drawdown_pct": 31.531,
+      "orders": 304,
       "markets": {
         "BTC": {
-          "return_pct": -14.628,
-          "orders": 36
+          "return_pct": -16.215,
+          "orders": 38
         },
         "ETH": {
-          "return_pct": -18.687,
+          "return_pct": -18.921,
           "orders": 32
         },
         "XRP": {
-          "return_pct": -12.261,
-          "orders": 28
+          "return_pct": -15.649,
+          "orders": 30
         },
         "SOL": {
-          "return_pct": -15.037,
-          "orders": 24
-        },
-        "ADA": {
-          "return_pct": -22.31,
-          "orders": 34
-        },
-        "DOGE": {
-          "return_pct": -10.912,
+          "return_pct": -16.5,
           "orders": 26
         },
+        "ADA": {
+          "return_pct": -23.702,
+          "orders": 36
+        },
+        "DOGE": {
+          "return_pct": -14.951,
+          "orders": 28
+        },
         "DOT": {
-          "return_pct": -21.366,
+          "return_pct": -20.974,
           "orders": 28
         },
         "LINK": {
-          "return_pct": -15.851,
+          "return_pct": -14.117,
           "orders": 30
         },
         "LTC": {
-          "return_pct": -11.019,
+          "return_pct": -10.09,
           "orders": 26
         },
         "AVAX": {
-          "return_pct": -31.754,
+          "return_pct": -30.102,
           "orders": 30
         }
       }
@@ -234,49 +234,49 @@
         "slow": 48
       },
       "initial_eur": 500.0,
-      "final_eur": 426.24,
-      "net_return_pct": -14.753,
-      "worst_single_coin_drawdown_pct": 28.783,
-      "orders": 212,
+      "final_eur": 415.81,
+      "net_return_pct": -16.837,
+      "worst_single_coin_drawdown_pct": 28.312,
+      "orders": 226,
       "markets": {
         "BTC": {
-          "return_pct": -9.399,
-          "orders": 22
+          "return_pct": -11.666,
+          "orders": 24
         },
         "ETH": {
-          "return_pct": -13.889,
-          "orders": 20
+          "return_pct": -16.095,
+          "orders": 22
         },
         "XRP": {
-          "return_pct": -16.874,
-          "orders": 24
+          "return_pct": -22.913,
+          "orders": 26
         },
         "SOL": {
-          "return_pct": -15.409,
-          "orders": 24
+          "return_pct": -15.672,
+          "orders": 26
         },
         "ADA": {
-          "return_pct": -5.669,
-          "orders": 20
+          "return_pct": -10.649,
+          "orders": 22
         },
         "DOGE": {
-          "return_pct": -21.497,
-          "orders": 22
+          "return_pct": -22.758,
+          "orders": 24
         },
         "DOT": {
-          "return_pct": -15.35,
-          "orders": 22
-        },
-        "LINK": {
-          "return_pct": -14.672,
-          "orders": 18
-        },
-        "LTC": {
-          "return_pct": -6.059,
+          "return_pct": -13.576,
           "orders": 20
         },
+        "LINK": {
+          "return_pct": -15.331,
+          "orders": 20
+        },
+        "LTC": {
+          "return_pct": -11.144,
+          "orders": 22
+        },
         "AVAX": {
-          "return_pct": -28.702,
+          "return_pct": -28.57,
           "orders": 20
         }
       }
@@ -289,50 +289,50 @@
         "slow": 64
       },
       "initial_eur": 500.0,
-      "final_eur": 423.37,
-      "net_return_pct": -15.325,
-      "worst_single_coin_drawdown_pct": 33.475,
-      "orders": 158,
+      "final_eur": 445.84,
+      "net_return_pct": -10.831,
+      "worst_single_coin_drawdown_pct": 29.912,
+      "orders": 162,
       "markets": {
         "BTC": {
-          "return_pct": -9.889,
-          "orders": 14
+          "return_pct": -9.128,
+          "orders": 16
         },
         "ETH": {
-          "return_pct": -13.403,
+          "return_pct": -11.318,
           "orders": 14
         },
         "XRP": {
-          "return_pct": -20.349,
-          "orders": 18
+          "return_pct": -16.063,
+          "orders": 20
         },
         "SOL": {
-          "return_pct": -12.592,
-          "orders": 16
-        },
-        "ADA": {
-          "return_pct": -7.334,
-          "orders": 12
-        },
-        "DOGE": {
-          "return_pct": -18.914,
+          "return_pct": -8.601,
           "orders": 14
         },
+        "ADA": {
+          "return_pct": -2.877,
+          "orders": 14
+        },
+        "DOGE": {
+          "return_pct": -10.874,
+          "orders": 16
+        },
         "DOT": {
-          "return_pct": -12.674,
-          "orders": 18
+          "return_pct": -5.766,
+          "orders": 16
         },
         "LINK": {
-          "return_pct": -20.757,
+          "return_pct": -14.872,
           "orders": 16
         },
         "LTC": {
-          "return_pct": -4.869,
-          "orders": 14
+          "return_pct": -1.805,
+          "orders": 16
         },
         "AVAX": {
-          "return_pct": -32.472,
-          "orders": 22
+          "return_pct": -27.01,
+          "orders": 20
         }
       }
     },
@@ -344,45 +344,45 @@
         "slow": 96
       },
       "initial_eur": 500.0,
-      "final_eur": 438.22,
-      "net_return_pct": -12.357,
-      "worst_single_coin_drawdown_pct": 31.004,
+      "final_eur": 439.86,
+      "net_return_pct": -12.028,
+      "worst_single_coin_drawdown_pct": 32.252,
       "orders": 104,
       "markets": {
         "BTC": {
-          "return_pct": -5.249,
+          "return_pct": -5.295,
           "orders": 10
         },
         "ETH": {
-          "return_pct": -7.784,
+          "return_pct": -8.404,
           "orders": 12
         },
         "XRP": {
-          "return_pct": -13.523,
+          "return_pct": -12.223,
           "orders": 10
         },
         "SOL": {
-          "return_pct": -12.804,
-          "orders": 12
-        },
-        "ADA": {
-          "return_pct": -21.596,
+          "return_pct": -10.182,
           "orders": 10
         },
+        "ADA": {
+          "return_pct": -20.192,
+          "orders": 8
+        },
         "DOGE": {
-          "return_pct": -16.598,
+          "return_pct": -15.047,
           "orders": 10
         },
         "DOT": {
-          "return_pct": -23.888,
-          "orders": 12
+          "return_pct": -24.06,
+          "orders": 14
         },
         "LINK": {
-          "return_pct": 5.15,
-          "orders": 6
+          "return_pct": 4.655,
+          "orders": 8
         },
         "LTC": {
-          "return_pct": -5.528,
+          "return_pct": -7.786,
           "orders": 8
         },
         "AVAX": {
@@ -399,13 +399,13 @@
         "slow": 128
       },
       "initial_eur": 500.0,
-      "final_eur": 440.92,
-      "net_return_pct": -11.816,
+      "final_eur": 438.02,
+      "net_return_pct": -12.396,
       "worst_single_coin_drawdown_pct": 30.543,
-      "orders": 80,
+      "orders": 90,
       "markets": {
         "BTC": {
-          "return_pct": -8.748,
+          "return_pct": -7.026,
           "orders": 14
         },
         "ETH": {
@@ -413,32 +413,32 @@
           "orders": 12
         },
         "XRP": {
-          "return_pct": -11.499,
-          "orders": 6
+          "return_pct": -9.436,
+          "orders": 8
         },
         "SOL": {
-          "return_pct": -4.915,
-          "orders": 4
+          "return_pct": -5.107,
+          "orders": 6
         },
         "ADA": {
-          "return_pct": -18.179,
+          "return_pct": -18.858,
           "orders": 8
         },
         "DOGE": {
-          "return_pct": -13.235,
+          "return_pct": -13.135,
           "orders": 8
         },
         "DOT": {
-          "return_pct": -21.776,
-          "orders": 8
+          "return_pct": -24.089,
+          "orders": 10
         },
         "LINK": {
-          "return_pct": -1.548,
+          "return_pct": -2.905,
           "orders": 4
         },
         "LTC": {
-          "return_pct": -9.585,
-          "orders": 6
+          "return_pct": -14.723,
+          "orders": 10
         },
         "AVAX": {
           "return_pct": -22.048,
@@ -454,50 +454,50 @@
         "threshold": 0.005
       },
       "initial_eur": 500.0,
-      "final_eur": 307.16,
-      "net_return_pct": -38.569,
-      "worst_single_coin_drawdown_pct": 54.966,
-      "orders": 1238,
+      "final_eur": 294.08,
+      "net_return_pct": -41.183,
+      "worst_single_coin_drawdown_pct": 50.89,
+      "orders": 1236,
       "markets": {
         "BTC": {
-          "return_pct": -27.516,
-          "orders": 90
+          "return_pct": -28.288,
+          "orders": 86
         },
         "ETH": {
-          "return_pct": -38.154,
-          "orders": 108
+          "return_pct": -38.69,
+          "orders": 110
         },
         "XRP": {
-          "return_pct": -34.775,
-          "orders": 106
+          "return_pct": -38.362,
+          "orders": 108
         },
         "SOL": {
-          "return_pct": -41.009,
-          "orders": 138
-        },
-        "ADA": {
-          "return_pct": -39.533,
+          "return_pct": -43.444,
           "orders": 140
         },
+        "ADA": {
+          "return_pct": -45.217,
+          "orders": 142
+        },
         "DOGE": {
-          "return_pct": -35.13,
+          "return_pct": -38.594,
           "orders": 124
         },
         "DOT": {
-          "return_pct": -43.666,
-          "orders": 136
+          "return_pct": -46.869,
+          "orders": 134
         },
         "LINK": {
-          "return_pct": -48.305,
-          "orders": 142
+          "return_pct": -50.233,
+          "orders": 140
         },
         "LTC": {
-          "return_pct": -30.021,
+          "return_pct": -31.126,
           "orders": 120
         },
         "AVAX": {
-          "return_pct": -47.584,
-          "orders": 134
+          "return_pct": -51.009,
+          "orders": 132
         }
       }
     },
@@ -509,50 +509,50 @@
         "threshold": 0.01
       },
       "initial_eur": 500.0,
-      "final_eur": 373.86,
-      "net_return_pct": -25.229,
-      "worst_single_coin_drawdown_pct": 36.827,
-      "orders": 822,
+      "final_eur": 361.7,
+      "net_return_pct": -27.659,
+      "worst_single_coin_drawdown_pct": 38.145,
+      "orders": 832,
       "markets": {
         "BTC": {
-          "return_pct": -18.007,
-          "orders": 58
+          "return_pct": -19.351,
+          "orders": 56
         },
         "ETH": {
-          "return_pct": -19.193,
+          "return_pct": -22.486,
           "orders": 54
         },
         "XRP": {
-          "return_pct": -26.249,
+          "return_pct": -29.845,
           "orders": 74
         },
         "SOL": {
-          "return_pct": -20.514,
-          "orders": 76
+          "return_pct": -26.442,
+          "orders": 78
         },
         "ADA": {
-          "return_pct": -22.434,
+          "return_pct": -24.914,
           "orders": 84
         },
         "DOGE": {
-          "return_pct": -23.75,
-          "orders": 90
+          "return_pct": -30.914,
+          "orders": 92
         },
         "DOT": {
-          "return_pct": -36.867,
-          "orders": 118
+          "return_pct": -37.918,
+          "orders": 122
         },
         "LINK": {
-          "return_pct": -30.504,
-          "orders": 82
+          "return_pct": -30.823,
+          "orders": 86
         },
         "LTC": {
-          "return_pct": -22.907,
-          "orders": 88
+          "return_pct": -23.176,
+          "orders": 90
         },
         "AVAX": {
-          "return_pct": -31.866,
-          "orders": 98
+          "return_pct": -30.724,
+          "orders": 96
         }
       }
     },
@@ -564,50 +564,50 @@
         "threshold": 0.015
       },
       "initial_eur": 500.0,
-      "final_eur": 400.53,
-      "net_return_pct": -19.894,
-      "worst_single_coin_drawdown_pct": 36.342,
-      "orders": 530,
+      "final_eur": 381.18,
+      "net_return_pct": -23.764,
+      "worst_single_coin_drawdown_pct": 37.057,
+      "orders": 562,
       "markets": {
         "BTC": {
-          "return_pct": -7.196,
+          "return_pct": -11.243,
           "orders": 30
         },
         "ETH": {
-          "return_pct": -15.796,
-          "orders": 44
+          "return_pct": -19.075,
+          "orders": 48
         },
         "XRP": {
-          "return_pct": -16.872,
-          "orders": 52
+          "return_pct": -22.66,
+          "orders": 56
         },
         "SOL": {
-          "return_pct": -21.398,
-          "orders": 54
+          "return_pct": -26.302,
+          "orders": 60
         },
         "ADA": {
-          "return_pct": -17.875,
-          "orders": 52
-        },
-        "DOGE": {
-          "return_pct": -17.847,
+          "return_pct": -22.375,
           "orders": 54
         },
+        "DOGE": {
+          "return_pct": -26.638,
+          "orders": 56
+        },
         "DOT": {
-          "return_pct": -31.663,
-          "orders": 84
+          "return_pct": -36.587,
+          "orders": 90
         },
         "LINK": {
-          "return_pct": -22.845,
-          "orders": 58
+          "return_pct": -23.857,
+          "orders": 60
         },
         "LTC": {
-          "return_pct": -11.41,
-          "orders": 42
+          "return_pct": -14.301,
+          "orders": 44
         },
         "AVAX": {
-          "return_pct": -36.041,
-          "orders": 60
+          "return_pct": -34.605,
+          "orders": 64
         }
       }
     },
@@ -619,50 +619,50 @@
         "threshold": 0.02
       },
       "initial_eur": 500.0,
-      "final_eur": 429.65,
-      "net_return_pct": -14.071,
-      "worst_single_coin_drawdown_pct": 31.005,
-      "orders": 326,
+      "final_eur": 412.25,
+      "net_return_pct": -17.55,
+      "worst_single_coin_drawdown_pct": 31.554,
+      "orders": 346,
       "markets": {
         "BTC": {
-          "return_pct": -6.67,
-          "orders": 18
-        },
-        "ETH": {
-          "return_pct": -8.329,
-          "orders": 26
-        },
-        "XRP": {
-          "return_pct": -12.712,
-          "orders": 26
-        },
-        "SOL": {
-          "return_pct": -13.218,
-          "orders": 38
-        },
-        "ADA": {
-          "return_pct": -13.167,
+          "return_pct": -10.871,
           "orders": 24
         },
-        "DOGE": {
-          "return_pct": -19.858,
+        "ETH": {
+          "return_pct": -10.587,
           "orders": 28
         },
+        "XRP": {
+          "return_pct": -20.788,
+          "orders": 28
+        },
+        "SOL": {
+          "return_pct": -17.538,
+          "orders": 40
+        },
+        "ADA": {
+          "return_pct": -17.676,
+          "orders": 26
+        },
+        "DOGE": {
+          "return_pct": -23.494,
+          "orders": 30
+        },
         "DOT": {
-          "return_pct": -18.784,
-          "orders": 38
+          "return_pct": -19.614,
+          "orders": 36
         },
         "LINK": {
-          "return_pct": -16.074,
-          "orders": 38
+          "return_pct": -17.383,
+          "orders": 40
         },
         "LTC": {
-          "return_pct": -5.436,
-          "orders": 44
+          "return_pct": -8.707,
+          "orders": 46
         },
         "AVAX": {
-          "return_pct": -26.459,
-          "orders": 46
+          "return_pct": -28.84,
+          "orders": 48
         }
       }
     },
@@ -674,50 +674,50 @@
         "threshold": 0.03
       },
       "initial_eur": 500.0,
-      "final_eur": 409.89,
-      "net_return_pct": -18.023,
-      "worst_single_coin_drawdown_pct": 33.279,
-      "orders": 226,
+      "final_eur": 426.17,
+      "net_return_pct": -14.766,
+      "worst_single_coin_drawdown_pct": 29.055,
+      "orders": 248,
       "markets": {
         "BTC": {
-          "return_pct": -7.671,
+          "return_pct": -4.61,
           "orders": 8
         },
         "ETH": {
-          "return_pct": -8.855,
+          "return_pct": -5.384,
           "orders": 10
         },
         "XRP": {
-          "return_pct": -19.401,
-          "orders": 18
+          "return_pct": -13.283,
+          "orders": 22
         },
         "SOL": {
-          "return_pct": -13.189,
-          "orders": 30
+          "return_pct": -12.972,
+          "orders": 36
         },
         "ADA": {
-          "return_pct": -31.954,
-          "orders": 26
+          "return_pct": -27.517,
+          "orders": 28
         },
         "DOGE": {
-          "return_pct": -25.368,
-          "orders": 34
+          "return_pct": -18.868,
+          "orders": 36
         },
         "DOT": {
-          "return_pct": -23.553,
-          "orders": 22
+          "return_pct": -16.479,
+          "orders": 24
         },
         "LINK": {
-          "return_pct": -22.753,
-          "orders": 22
+          "return_pct": -18.45,
+          "orders": 28
         },
         "LTC": {
-          "return_pct": 5.34,
-          "orders": 18
+          "return_pct": -2.066,
+          "orders": 20
         },
         "AVAX": {
-          "return_pct": -32.823,
-          "orders": 38
+          "return_pct": -28.032,
+          "orders": 36
         }
       }
     },
@@ -729,50 +729,50 @@
         "threshold": 0.04
       },
       "initial_eur": 500.0,
-      "final_eur": 450.13,
-      "net_return_pct": -9.975,
+      "final_eur": 446.8,
+      "net_return_pct": -10.64,
       "worst_single_coin_drawdown_pct": 32.876,
-      "orders": 190,
+      "orders": 174,
       "markets": {
         "BTC": {
-          "return_pct": -4.689,
+          "return_pct": -4.979,
           "orders": 8
         },
         "ETH": {
-          "return_pct": -3.661,
-          "orders": 12
+          "return_pct": -1.344,
+          "orders": 6
         },
         "XRP": {
-          "return_pct": 0.799,
+          "return_pct": -1.41,
           "orders": 6
         },
         "SOL": {
-          "return_pct": -13.414,
+          "return_pct": -14.277,
           "orders": 28
         },
         "ADA": {
-          "return_pct": -19.035,
+          "return_pct": -21.348,
           "orders": 32
         },
         "DOGE": {
-          "return_pct": -1.525,
+          "return_pct": -2.801,
           "orders": 12
         },
         "DOT": {
-          "return_pct": -28.93,
-          "orders": 34
+          "return_pct": -27.439,
+          "orders": 30
         },
         "LINK": {
-          "return_pct": 4.157,
-          "orders": 14
+          "return_pct": 1.492,
+          "orders": 10
         },
         "LTC": {
-          "return_pct": -5.23,
-          "orders": 12
+          "return_pct": -9.255,
+          "orders": 14
         },
         "AVAX": {
-          "return_pct": -28.219,
-          "orders": 32
+          "return_pct": -25.03,
+          "orders": 28
         }
       }
     },
@@ -783,50 +783,50 @@
         "look": 12
       },
       "initial_eur": 500.0,
-      "final_eur": 326.69,
-      "net_return_pct": -34.663,
-      "worst_single_coin_drawdown_pct": 39.684,
-      "orders": 1078,
+      "final_eur": 325.99,
+      "net_return_pct": -34.802,
+      "worst_single_coin_drawdown_pct": 38.905,
+      "orders": 1038,
       "markets": {
         "BTC": {
-          "return_pct": -30.239,
-          "orders": 106
+          "return_pct": -32.329,
+          "orders": 102
         },
         "ETH": {
-          "return_pct": -39.684,
-          "orders": 122
+          "return_pct": -37.978,
+          "orders": 118
         },
         "XRP": {
-          "return_pct": -32.699,
-          "orders": 102
+          "return_pct": -33.182,
+          "orders": 94
         },
         "SOL": {
-          "return_pct": -33.346,
-          "orders": 108
+          "return_pct": -31.903,
+          "orders": 100
         },
         "ADA": {
-          "return_pct": -30.565,
-          "orders": 102
+          "return_pct": -32.036,
+          "orders": 98
         },
         "DOGE": {
-          "return_pct": -29.864,
+          "return_pct": -34.23,
           "orders": 98
         },
         "DOT": {
-          "return_pct": -39.649,
-          "orders": 118
+          "return_pct": -38.813,
+          "orders": 114
         },
         "LINK": {
-          "return_pct": -36.674,
-          "orders": 112
+          "return_pct": -36.685,
+          "orders": 110
         },
         "LTC": {
-          "return_pct": -34.276,
-          "orders": 104
+          "return_pct": -33.898,
+          "orders": 100
         },
         "AVAX": {
-          "return_pct": -39.63,
-          "orders": 106
+          "return_pct": -36.972,
+          "orders": 104
         }
       }
     },
@@ -837,50 +837,50 @@
         "look": 24
       },
       "initial_eur": 500.0,
-      "final_eur": 389.97,
-      "net_return_pct": -22.007,
-      "worst_single_coin_drawdown_pct": 27.787,
-      "orders": 678,
+      "final_eur": 385.31,
+      "net_return_pct": -22.938,
+      "worst_single_coin_drawdown_pct": 26.374,
+      "orders": 642,
       "markets": {
         "BTC": {
-          "return_pct": -17.953,
-          "orders": 64
-        },
-        "ETH": {
-          "return_pct": -23.759,
-          "orders": 76
-        },
-        "XRP": {
-          "return_pct": -16.516,
-          "orders": 62
-        },
-        "SOL": {
-          "return_pct": -22.836,
-          "orders": 66
-        },
-        "ADA": {
-          "return_pct": -20.435,
-          "orders": 72
-        },
-        "DOGE": {
-          "return_pct": -17.744,
+          "return_pct": -20.443,
           "orders": 60
         },
-        "DOT": {
-          "return_pct": -26.461,
-          "orders": 74
-        },
-        "LINK": {
-          "return_pct": -25.449,
+        "ETH": {
+          "return_pct": -22.008,
           "orders": 70
         },
+        "XRP": {
+          "return_pct": -18.374,
+          "orders": 54
+        },
+        "SOL": {
+          "return_pct": -21.778,
+          "orders": 60
+        },
+        "ADA": {
+          "return_pct": -24.469,
+          "orders": 68
+        },
+        "DOGE": {
+          "return_pct": -22.603,
+          "orders": 58
+        },
+        "DOT": {
+          "return_pct": -26.262,
+          "orders": 70
+        },
+        "LINK": {
+          "return_pct": -24.527,
+          "orders": 66
+        },
         "LTC": {
-          "return_pct": -23.242,
+          "return_pct": -23.296,
           "orders": 68
         },
         "AVAX": {
-          "return_pct": -25.672,
-          "orders": 66
+          "return_pct": -25.619,
+          "orders": 68
         }
       }
     },
@@ -891,50 +891,50 @@
         "look": 48
       },
       "initial_eur": 500.0,
-      "final_eur": 426.89,
-      "net_return_pct": -14.623,
-      "worst_single_coin_drawdown_pct": 20.822,
-      "orders": 356,
+      "final_eur": 427.87,
+      "net_return_pct": -14.425,
+      "worst_single_coin_drawdown_pct": 20.41,
+      "orders": 370,
       "markets": {
         "BTC": {
-          "return_pct": -10.679,
-          "orders": 28
+          "return_pct": -11.157,
+          "orders": 30
         },
         "ETH": {
-          "return_pct": -12.454,
-          "orders": 38
+          "return_pct": -12.66,
+          "orders": 40
         },
         "XRP": {
-          "return_pct": -9.191,
+          "return_pct": -10.59,
           "orders": 24
         },
         "SOL": {
-          "return_pct": -13.585,
-          "orders": 28
+          "return_pct": -13.731,
+          "orders": 30
         },
         "ADA": {
-          "return_pct": -13.48,
-          "orders": 40
+          "return_pct": -10.734,
+          "orders": 34
         },
         "DOGE": {
-          "return_pct": -16.487,
-          "orders": 28
+          "return_pct": -17.273,
+          "orders": 34
         },
         "DOT": {
-          "return_pct": -20.822,
+          "return_pct": -18.998,
           "orders": 46
         },
         "LINK": {
-          "return_pct": -16.785,
-          "orders": 38
+          "return_pct": -17.435,
+          "orders": 42
         },
         "LTC": {
-          "return_pct": -17.508,
-          "orders": 46
+          "return_pct": -16.498,
+          "orders": 48
         },
         "AVAX": {
-          "return_pct": -15.236,
-          "orders": 40
+          "return_pct": -15.176,
+          "orders": 42
         }
       }
     },
@@ -945,10 +945,10 @@
         "look": 12
       },
       "initial_eur": 500.0,
-      "final_eur": 482.83,
-      "net_return_pct": -3.434,
+      "final_eur": 482.61,
+      "net_return_pct": -3.479,
       "worst_single_coin_drawdown_pct": 11.91,
-      "orders": 300,
+      "orders": 298,
       "markets": {
         "BTC": {
           "return_pct": -0.463,
@@ -987,8 +987,8 @@
           "orders": 24
         },
         "AVAX": {
-          "return_pct": -6.428,
-          "orders": 56
+          "return_pct": -6.877,
+          "orders": 54
         }
       }
     },
@@ -999,10 +999,10 @@
         "look": 24
       },
       "initial_eur": 500.0,
-      "final_eur": 477.77,
-      "net_return_pct": -4.447,
+      "final_eur": 477.18,
+      "net_return_pct": -4.564,
       "worst_single_coin_drawdown_pct": 19.556,
-      "orders": 372,
+      "orders": 370,
       "markets": {
         "BTC": {
           "return_pct": -2.279,
@@ -1041,8 +1041,8 @@
           "orders": 48
         },
         "AVAX": {
-          "return_pct": -9.116,
-          "orders": 56
+          "return_pct": -10.288,
+          "orders": 54
         }
       }
     },
@@ -1053,10 +1053,10 @@
         "look": 48
       },
       "initial_eur": 500.0,
-      "final_eur": 480.61,
-      "net_return_pct": -3.878,
+      "final_eur": 479.6,
+      "net_return_pct": -4.079,
       "worst_single_coin_drawdown_pct": 19.594,
-      "orders": 368,
+      "orders": 364,
       "markets": {
         "BTC": {
           "return_pct": -2.738,
@@ -1095,8 +1095,8 @@
           "orders": 40
         },
         "AVAX": {
-          "return_pct": 1.722,
-          "orders": 46
+          "return_pct": -0.292,
+          "orders": 42
         }
       }
     }
@@ -1106,19 +1106,19 @@
     "reversion_48",
     "reversion_24",
     "momentum_96_0.04",
-    "trend_6_24",
-    "trend_32_128",
-    "trend_24_96",
-    "momentum_48_0.02",
-    "breakout_48",
-    "trend_12_48",
     "trend_16_64",
-    "trend_8_32",
+    "trend_24_96",
+    "trend_32_128",
+    "breakout_48",
     "momentum_72_0.03",
+    "trend_6_24",
+    "trend_12_48",
+    "momentum_48_0.02",
+    "trend_8_32",
     "trend_4_16",
+    "breakout_24",
     "momentum_24_0.015",
     "trend_3_12",
-    "breakout_24",
     "momentum_12_0.01",
     "breakout_12",
     "momentum_6_0.005"
