@@ -1,6 +1,6 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-10-21T03:56:40.556443+00:00",
+  "source_generated_utc": "2026-10-22T03:57:34.650284+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
@@ -41,7 +41,8 @@
     "ADA": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN"
+        "NONPOSITIVE_NET_RETURN",
+        "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -59,7 +60,6 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
@@ -68,7 +68,8 @@
     "LINK": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN"
+        "NONPOSITIVE_NET_RETURN",
+        "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -79,7 +80,7 @@
         "NONPOSITIVE_NET_RETURN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
-      "selected_strategy": "ma_4_12",
+      "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "AVAX": {
