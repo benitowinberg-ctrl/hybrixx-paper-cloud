@@ -688,5 +688,51 @@
         "baseline_accuracy": 0.5455
       }
     }
+  },
+  {
+    "source_generated_utc": "2026-10-24T03:56:06.729179+00:00",
+    "fingerprint": "8100512dc5131936e434b906d6239c37e1cc90f3fb505772a7b85df9df2215bc",
+    "markets": {
+      "BTC": {
+        "accuracy": 0.4825,
+        "baseline_accuracy": 0.4825
+      },
+      "ETH": {
+        "accuracy": 0.5035,
+        "baseline_accuracy": 0.4965
+      },
+      "XRP": {
+        "accuracy": 0.5175,
+        "baseline_accuracy": 0.5175
+      },
+      "SOL": {
+        "accuracy": 0.4965,
+        "baseline_accuracy": 0.4965
+      },
+      "ADA": {
+        "accuracy": 0.5455,
+        "baseline_accuracy": 0.5455
+      },
+      "DOGE": {
+        "accuracy": 0.5455,
+        "baseline_accuracy": 0.4825
+      },
+      "DOT": {
+        "accuracy": 0.5175,
+        "baseline_accuracy": 0.5105
+      },
+      "LINK": {
+        "accuracy": 0.4825,
+        "baseline_accuracy": 0.4825
+      },
+      "LTC": {
+        "accuracy": 0.5035,
+        "baseline_accuracy": 0.4895
+      },
+      "AVAX": {
+        "accuracy": 0.5175,
+        "baseline_accuracy": 0.5524
+      }
+    }
   }
 ]
