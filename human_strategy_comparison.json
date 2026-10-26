@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-25T03:56:03.880279+00:00",
+  "generated_utc": "2026-10-26T03:59:05.336212+00:00",
   "mode": "RESEARCH_ONLY_NO_ORDERS",
   "methodology": "Human-inspired discipline, not human transaction replication",
   "assets": {
@@ -19,24 +19,24 @@
           "training_score": 0.0
         },
         {
-          "method": "momentum_drawdown_guard",
-          "training": {
-            "ending_eur": 468.18,
-            "return_pct": -6.363,
-            "max_drawdown_pct": 6.701,
-            "trades": 16
-          },
-          "training_score": -9.713
-        },
-        {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 468.11,
-            "return_pct": -6.379,
+            "ending_eur": 472.71,
+            "return_pct": -5.457,
             "max_drawdown_pct": 6.91,
-            "trades": 14
+            "trades": 12
           },
-          "training_score": -9.834
+          "training_score": -8.912
+        },
+        {
+          "method": "momentum_drawdown_guard",
+          "training": {
+            "ending_eur": 455.01,
+            "return_pct": -8.997,
+            "max_drawdown_pct": 9.164,
+            "trades": 22
+          },
+          "training_score": -13.579
         }
       ],
       "selected": "stay_in_cash",
@@ -72,22 +72,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 450.62,
-            "return_pct": -9.876,
-            "max_drawdown_pct": 9.876,
-            "trades": 18
+            "ending_eur": 439.28,
+            "return_pct": -12.145,
+            "max_drawdown_pct": 12.145,
+            "trades": 20
           },
-          "training_score": -14.814
+          "training_score": -18.218
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 434.64,
-            "return_pct": -13.071,
-            "max_drawdown_pct": 13.75,
-            "trades": 28
+            "ending_eur": 430.78,
+            "return_pct": -13.844,
+            "max_drawdown_pct": 14.38,
+            "trades": 30
           },
-          "training_score": -19.946
+          "training_score": -21.034
         }
       ],
       "selected": "stay_in_cash",
@@ -98,10 +98,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -6.135,
-        "max_drawdown_pct": 7.093,
-        "trades": 6,
-        "ending_eur": 469.33
+        "return_pct": -4.804,
+        "max_drawdown_pct": 4.804,
+        "trades": 4,
+        "ending_eur": 475.98
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -133,12 +133,12 @@
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 405.34,
-            "return_pct": -18.932,
-            "max_drawdown_pct": 20.866,
-            "trades": 46
+            "ending_eur": 388.43,
+            "return_pct": -22.314,
+            "max_drawdown_pct": 24.167,
+            "trades": 52
           },
-          "training_score": -29.365
+          "training_score": -34.398
         }
       ],
       "selected": "stay_in_cash",
@@ -149,10 +149,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -5.88,
-        "max_drawdown_pct": 6.05,
-        "trades": 6,
-        "ending_eur": 470.6
+        "return_pct": -4.72,
+        "max_drawdown_pct": 6.138,
+        "trades": 8,
+        "ending_eur": 476.4
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -174,22 +174,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 453.31,
-            "return_pct": -9.337,
-            "max_drawdown_pct": 10.129,
-            "trades": 10
+            "ending_eur": 455.96,
+            "return_pct": -8.808,
+            "max_drawdown_pct": 8.808,
+            "trades": 8
           },
-          "training_score": -14.401
+          "training_score": -13.212
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 398.99,
-            "return_pct": -20.202,
-            "max_drawdown_pct": 20.202,
+            "ending_eur": 396.57,
+            "return_pct": -20.686,
+            "max_drawdown_pct": 20.686,
             "trades": 48
           },
-          "training_score": -30.303
+          "training_score": -31.029
         }
       ],
       "selected": "stay_in_cash",
@@ -200,10 +200,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -3.371,
-        "max_drawdown_pct": 4.931,
-        "trades": 6,
-        "ending_eur": 483.14
+        "return_pct": -1.348,
+        "max_drawdown_pct": 4.187,
+        "trades": 4,
+        "ending_eur": 493.26
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -225,22 +225,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 471.18,
-            "return_pct": -5.765,
-            "max_drawdown_pct": 8.255,
-            "trades": 16
+            "ending_eur": 453.98,
+            "return_pct": -9.205,
+            "max_drawdown_pct": 11.017,
+            "trades": 20
           },
-          "training_score": -9.893
+          "training_score": -14.713
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 380.21,
-            "return_pct": -23.959,
-            "max_drawdown_pct": 23.959,
-            "trades": 46
+            "ending_eur": 380.28,
+            "return_pct": -23.945,
+            "max_drawdown_pct": 24.315,
+            "trades": 44
           },
-          "training_score": -35.938
+          "training_score": -36.102
         }
       ],
       "selected": "stay_in_cash",
@@ -251,10 +251,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -8.429,
-        "max_drawdown_pct": 8.857,
-        "trades": 6,
-        "ending_eur": 457.85
+        "return_pct": -5.542,
+        "max_drawdown_pct": 5.629,
+        "trades": 4,
+        "ending_eur": 472.29
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -276,22 +276,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 433.49,
-            "return_pct": -13.303,
-            "max_drawdown_pct": 13.303,
-            "trades": 18
+            "ending_eur": 429.95,
+            "return_pct": -14.009,
+            "max_drawdown_pct": 14.009,
+            "trades": 20
           },
-          "training_score": -19.955
+          "training_score": -21.014
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 392.65,
-            "return_pct": -21.47,
-            "max_drawdown_pct": 22.034,
-            "trades": 40
+            "ending_eur": 382.42,
+            "return_pct": -23.516,
+            "max_drawdown_pct": 24.034,
+            "trades": 44
           },
-          "training_score": -32.487
+          "training_score": -35.533
         }
       ],
       "selected": "stay_in_cash",
@@ -302,10 +302,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -8.183,
-        "max_drawdown_pct": 8.934,
-        "trades": 8,
-        "ending_eur": 459.08
+        "return_pct": -5.117,
+        "max_drawdown_pct": 7.596,
+        "trades": 6,
+        "ending_eur": 474.41
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -327,22 +327,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 441.27,
-            "return_pct": -11.745,
+            "ending_eur": 455.99,
+            "return_pct": -8.802,
             "max_drawdown_pct": 14.112,
-            "trades": 26
+            "trades": 22
           },
-          "training_score": -18.801
+          "training_score": -15.858
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 404.81,
-            "return_pct": -19.038,
-            "max_drawdown_pct": 23.096,
+            "ending_eur": 401.4,
+            "return_pct": -19.719,
+            "max_drawdown_pct": 21.688,
             "trades": 50
           },
-          "training_score": -30.586
+          "training_score": -30.563
         }
       ],
       "selected": "stay_in_cash",
@@ -353,10 +353,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -15.023,
-        "max_drawdown_pct": 17.997,
+        "return_pct": -16.103,
+        "max_drawdown_pct": 17.943,
         "trades": 6,
-        "ending_eur": 424.89
+        "ending_eur": 419.48
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -376,24 +376,24 @@
           "training_score": 0.0
         },
         {
-          "method": "trend_volatility_gate",
-          "training": {
-            "ending_eur": 417.58,
-            "return_pct": -16.484,
-            "max_drawdown_pct": 16.55,
-            "trades": 18
-          },
-          "training_score": -24.759
-        },
-        {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 419.07,
-            "return_pct": -16.186,
-            "max_drawdown_pct": 20.341,
-            "trades": 36
+            "ending_eur": 420.95,
+            "return_pct": -15.81,
+            "max_drawdown_pct": 21.326,
+            "trades": 38
           },
-          "training_score": -26.357
+          "training_score": -26.473
+        },
+        {
+          "method": "trend_volatility_gate",
+          "training": {
+            "ending_eur": 412.54,
+            "return_pct": -17.491,
+            "max_drawdown_pct": 18.555,
+            "trades": 16
+          },
+          "training_score": -26.768
         }
       ],
       "selected": "stay_in_cash",
@@ -404,10 +404,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -6.7,
-        "max_drawdown_pct": 7.043,
-        "trades": 6,
-        "ending_eur": 466.5
+        "return_pct": -4.185,
+        "max_drawdown_pct": 5.451,
+        "trades": 4,
+        "ending_eur": 479.08
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -429,22 +429,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 484.86,
-            "return_pct": -3.029,
-            "max_drawdown_pct": 6.763,
+            "ending_eur": 476.09,
+            "return_pct": -4.783,
+            "max_drawdown_pct": 8.779,
             "trades": 10
           },
-          "training_score": -6.41
+          "training_score": -9.172
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 462.03,
-            "return_pct": -7.595,
-            "max_drawdown_pct": 10.106,
+            "ending_eur": 453.67,
+            "return_pct": -9.267,
+            "max_drawdown_pct": 12.001,
             "trades": 22
           },
-          "training_score": -12.648
+          "training_score": -15.267
         }
       ],
       "selected": "stay_in_cash",
@@ -455,10 +455,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -9.182,
-        "max_drawdown_pct": 9.182,
+        "return_pct": -7.146,
+        "max_drawdown_pct": 6.811,
         "trades": 6,
-        "ending_eur": 454.09
+        "ending_eur": 464.27
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     },
@@ -480,22 +480,22 @@
         {
           "method": "trend_volatility_gate",
           "training": {
-            "ending_eur": 370.52,
-            "return_pct": -25.897,
-            "max_drawdown_pct": 25.897,
-            "trades": 18
+            "ending_eur": 373.23,
+            "return_pct": -25.354,
+            "max_drawdown_pct": 26.738,
+            "trades": 20
           },
-          "training_score": -38.846
+          "training_score": -38.723
         },
         {
           "method": "momentum_drawdown_guard",
           "training": {
-            "ending_eur": 366.01,
-            "return_pct": -26.797,
-            "max_drawdown_pct": 27.454,
+            "ending_eur": 371.43,
+            "return_pct": -25.714,
+            "max_drawdown_pct": 27.813,
             "trades": 38
           },
-          "training_score": -40.524
+          "training_score": -39.62
         }
       ],
       "selected": "stay_in_cash",
@@ -506,10 +506,10 @@
         "trades": 0
       },
       "existing_ma_12_48_baseline": {
-        "return_pct": -5.847,
-        "max_drawdown_pct": 8.715,
+        "return_pct": -5.23,
+        "max_drawdown_pct": 5.965,
         "trades": 4,
-        "ending_eur": 470.76
+        "ending_eur": 473.85
       },
       "caution": "No-trade cash is an eligible strategy; holdout is not a profit guarantee."
     }
