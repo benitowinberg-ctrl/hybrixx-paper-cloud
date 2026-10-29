@@ -1,6 +1,6 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-10-28T09:51:15.756750+00:00",
+  "source_generated_utc": "2026-10-29T10:12:25.474526+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
@@ -87,6 +87,7 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
+        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
