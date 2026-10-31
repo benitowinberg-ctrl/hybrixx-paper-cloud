@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-30T10:14:23.447564+00:00",
+  "generated_utc": "2026-10-31T09:49:45.101428+00:00",
   "mode": "RESEARCH_ONLY_NO_ORDERS",
   "interval_minutes": 60,
   "assets": {
@@ -10,54 +10,54 @@
       "selection_basis": "training-only chronological 70/30 split",
       "strategies": [
         {
-          "strategy": "ma_12_48",
-          "training": {
-            "return_pct": -7.704,
-            "max_drawdown_pct": 8.027,
-            "trades": 16,
-            "ending_eur": 461.48
-          },
-          "training_score": -11.717
-        },
-        {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -8.249,
-            "max_drawdown_pct": 8.319,
+            "return_pct": -6.253,
+            "max_drawdown_pct": 7.017,
             "trades": 20,
-            "ending_eur": 458.75
+            "ending_eur": 468.74
           },
-          "training_score": -12.409
+          "training_score": -9.761
+        },
+        {
+          "strategy": "ma_12_48",
+          "training": {
+            "return_pct": -6.347,
+            "max_drawdown_pct": 7.654,
+            "trades": 14,
+            "ending_eur": 468.26
+          },
+          "training_score": -10.174
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -13.825,
-            "max_drawdown_pct": 14.002,
-            "trades": 32,
-            "ending_eur": 430.88
+            "return_pct": -12.009,
+            "max_drawdown_pct": 12.985,
+            "trades": 30,
+            "ending_eur": 439.96
           },
-          "training_score": -20.826
+          "training_score": -18.502
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -31.752,
-            "max_drawdown_pct": 31.874,
-            "trades": 96,
-            "ending_eur": 341.24
+            "return_pct": -31.439,
+            "max_drawdown_pct": 31.439,
+            "trades": 98,
+            "ending_eur": 342.81
           },
-          "training_score": -47.689
+          "training_score": -47.159
         }
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "ma_4_12",
       "out_of_sample": {
-        "return_pct": -4.369,
-        "max_drawdown_pct": 5.564,
-        "trades": 4,
-        "ending_eur": 478.15
+        "return_pct": -11.388,
+        "max_drawdown_pct": 11.388,
+        "trades": 18,
+        "ending_eur": 443.06
       },
-      "out_of_sample_buy_hold_pct": -7.386,
+      "out_of_sample_buy_hold_pct": -5.535,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "ETH": {
@@ -69,52 +69,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -10.921,
-            "max_drawdown_pct": 11.08,
-            "trades": 14,
-            "ending_eur": 445.4
+            "return_pct": -8.656,
+            "max_drawdown_pct": 9.786,
+            "trades": 12,
+            "ending_eur": 456.72
           },
-          "training_score": -16.461
+          "training_score": -13.549
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -12.768,
-            "max_drawdown_pct": 13.252,
+            "return_pct": -10.667,
+            "max_drawdown_pct": 11.225,
             "trades": 26,
-            "ending_eur": 436.16
+            "ending_eur": 446.67
           },
-          "training_score": -19.394
+          "training_score": -16.279
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -14.037,
-            "max_drawdown_pct": 14.391,
-            "trades": 36,
-            "ending_eur": 429.82
+            "return_pct": -11.054,
+            "max_drawdown_pct": 12.117,
+            "trades": 34,
+            "ending_eur": 444.73
           },
-          "training_score": -21.233
+          "training_score": -17.113
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -36.155,
-            "max_drawdown_pct": 35.925,
-            "trades": 106,
-            "ending_eur": 319.22
+            "return_pct": -34.196,
+            "max_drawdown_pct": 34.196,
+            "trades": 102,
+            "ending_eur": 329.02
           },
-          "training_score": -54.117
+          "training_score": -51.294
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -4.931,
-        "max_drawdown_pct": 6.751,
-        "trades": 4,
-        "ending_eur": 475.34
+        "return_pct": -2.23,
+        "max_drawdown_pct": 3.158,
+        "trades": 2,
+        "ending_eur": 488.85
       },
-      "out_of_sample_buy_hold_pct": -9.716,
+      "out_of_sample_buy_hold_pct": -6.944,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "XRP": {
@@ -126,52 +126,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -12.3,
-            "max_drawdown_pct": 13.604,
-            "trades": 16,
-            "ending_eur": 438.5
+            "return_pct": -8.967,
+            "max_drawdown_pct": 11.104,
+            "trades": 14,
+            "ending_eur": 455.17
           },
-          "training_score": -19.102
+          "training_score": -14.519
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -14.258,
-            "max_drawdown_pct": 14.707,
-            "trades": 30,
-            "ending_eur": 428.71
+            "return_pct": -11.163,
+            "max_drawdown_pct": 11.326,
+            "trades": 28,
+            "ending_eur": 444.18
           },
-          "training_score": -21.611
+          "training_score": -16.826
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -23.957,
-            "max_drawdown_pct": 25.173,
-            "trades": 50,
-            "ending_eur": 380.21
+            "return_pct": -19.679,
+            "max_drawdown_pct": 20.728,
+            "trades": 48,
+            "ending_eur": 401.6
           },
-          "training_score": -36.544
+          "training_score": -30.043
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -34.636,
-            "max_drawdown_pct": 35.092,
+            "return_pct": -33.563,
+            "max_drawdown_pct": 34.137,
             "trades": 86,
-            "ending_eur": 326.82
+            "ending_eur": 332.18
           },
-          "training_score": -52.182
+          "training_score": -50.632
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -3.874,
-        "max_drawdown_pct": 7.472,
+        "return_pct": -1.675,
+        "max_drawdown_pct": 3.761,
         "trades": 8,
-        "ending_eur": 480.63
+        "ending_eur": 491.62
       },
-      "out_of_sample_buy_hold_pct": -8.052,
+      "out_of_sample_buy_hold_pct": -6.203,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "SOL": {
@@ -183,52 +183,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -10.2,
-            "max_drawdown_pct": 12.83,
-            "trades": 14,
-            "ending_eur": 449.0
+            "return_pct": -9.295,
+            "max_drawdown_pct": 10.592,
+            "trades": 12,
+            "ending_eur": 453.52
           },
-          "training_score": -16.615
+          "training_score": -14.591
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -16.953,
-            "max_drawdown_pct": 17.39,
+            "return_pct": -15.54,
+            "max_drawdown_pct": 15.54,
             "trades": 46,
-            "ending_eur": 415.24
+            "ending_eur": 422.3
           },
-          "training_score": -25.648
+          "training_score": -23.31
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -18.976,
-            "max_drawdown_pct": 19.146,
+            "return_pct": -15.938,
+            "max_drawdown_pct": 15.938,
             "trades": 44,
-            "ending_eur": 405.12
+            "ending_eur": 420.31
           },
-          "training_score": -28.549
+          "training_score": -23.907
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -42.428,
-            "max_drawdown_pct": 42.549,
+            "return_pct": -41.85,
+            "max_drawdown_pct": 41.85,
             "trades": 96,
-            "ending_eur": 287.86
+            "ending_eur": 290.75
           },
-          "training_score": -63.703
+          "training_score": -62.775
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -4.627,
-        "max_drawdown_pct": 6.263,
-        "trades": 4,
-        "ending_eur": 476.87
+        "return_pct": -1.765,
+        "max_drawdown_pct": 3.407,
+        "trades": 2,
+        "ending_eur": 491.17
       },
-      "out_of_sample_buy_hold_pct": -9.718,
+      "out_of_sample_buy_hold_pct": -8.172,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "ADA": {
@@ -240,52 +240,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -6.114,
-            "max_drawdown_pct": 11.355,
-            "trades": 14,
-            "ending_eur": 469.43
+            "return_pct": -3.334,
+            "max_drawdown_pct": 13.756,
+            "trades": 12,
+            "ending_eur": 483.33
           },
-          "training_score": -11.791
+          "training_score": -10.212
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -9.581,
-            "max_drawdown_pct": 13.705,
-            "trades": 30,
-            "ending_eur": 452.09
+            "return_pct": -5.867,
+            "max_drawdown_pct": 14.401,
+            "trades": 28,
+            "ending_eur": 470.66
           },
-          "training_score": -16.433
+          "training_score": -13.067
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -13.842,
-            "max_drawdown_pct": 14.955,
+            "return_pct": -6.875,
+            "max_drawdown_pct": 14.774,
             "trades": 38,
-            "ending_eur": 430.79
+            "ending_eur": 465.63
           },
-          "training_score": -21.32
+          "training_score": -14.262
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -38.284,
-            "max_drawdown_pct": 38.455,
+            "return_pct": -35.762,
+            "max_drawdown_pct": 35.948,
             "trades": 92,
-            "ending_eur": 308.58
+            "ending_eur": 321.19
           },
-          "training_score": -57.511
+          "training_score": -53.736
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -7.503,
-        "max_drawdown_pct": 8.951,
-        "trades": 6,
-        "ending_eur": 462.49
+        "return_pct": -3.52,
+        "max_drawdown_pct": 3.52,
+        "trades": 4,
+        "ending_eur": 482.4
       },
-      "out_of_sample_buy_hold_pct": -14.681,
+      "out_of_sample_buy_hold_pct": -10.3,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "DOGE": {
@@ -297,52 +297,52 @@
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -11.943,
-            "max_drawdown_pct": 13.324,
-            "trades": 32,
-            "ending_eur": 440.29
+            "return_pct": -9.658,
+            "max_drawdown_pct": 12.109,
+            "trades": 30,
+            "ending_eur": 451.71
           },
-          "training_score": -18.605
+          "training_score": -15.712
         },
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -13.596,
-            "max_drawdown_pct": 14.7,
-            "trades": 14,
-            "ending_eur": 432.02
+            "return_pct": -11.149,
+            "max_drawdown_pct": 13.072,
+            "trades": 12,
+            "ending_eur": 444.26
           },
-          "training_score": -20.946
+          "training_score": -17.685
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -19.006,
-            "max_drawdown_pct": 19.52,
-            "trades": 38,
-            "ending_eur": 404.97
+            "return_pct": -17.909,
+            "max_drawdown_pct": 20.503,
+            "trades": 36,
+            "ending_eur": 410.46
           },
-          "training_score": -28.766
+          "training_score": -28.16
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -39.951,
-            "max_drawdown_pct": 40.125,
-            "trades": 86,
-            "ending_eur": 300.24
+            "return_pct": -37.805,
+            "max_drawdown_pct": 38.048,
+            "trades": 84,
+            "ending_eur": 310.97
           },
-          "training_score": -60.014
+          "training_score": -56.829
         }
       ],
       "selected_strategy": "momentum_24",
       "out_of_sample": {
-        "return_pct": -12.286,
-        "max_drawdown_pct": 13.592,
+        "return_pct": -13.399,
+        "max_drawdown_pct": 13.399,
         "trades": 28,
-        "ending_eur": 438.57
+        "ending_eur": 433.0
       },
-      "out_of_sample_buy_hold_pct": -8.339,
+      "out_of_sample_buy_hold_pct": -5.019,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "DOT": {
@@ -354,52 +354,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -8.83,
+            "return_pct": -5.09,
             "max_drawdown_pct": 14.604,
-            "trades": 14,
-            "ending_eur": 455.85
+            "trades": 12,
+            "ending_eur": 474.55
           },
-          "training_score": -16.132
-        },
-        {
-          "strategy": "ma_4_12",
-          "training": {
-            "return_pct": -20.149,
-            "max_drawdown_pct": 23.529,
-            "trades": 42,
-            "ending_eur": 399.26
-          },
-          "training_score": -31.913
+          "training_score": -12.392
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -22.763,
-            "max_drawdown_pct": 22.8,
-            "trades": 54,
-            "ending_eur": 386.19
+            "return_pct": -16.761,
+            "max_drawdown_pct": 20.827,
+            "trades": 56,
+            "ending_eur": 416.2
           },
-          "training_score": -34.163
+          "training_score": -27.175
+        },
+        {
+          "strategy": "ma_4_12",
+          "training": {
+            "return_pct": -21.121,
+            "max_drawdown_pct": 26.079,
+            "trades": 42,
+            "ending_eur": 394.4
+          },
+          "training_score": -34.16
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -29.434,
-            "max_drawdown_pct": 31.804,
-            "trades": 80,
-            "ending_eur": 352.83
+            "return_pct": -28.564,
+            "max_drawdown_pct": 30.541,
+            "trades": 82,
+            "ending_eur": 357.18
           },
-          "training_score": -45.336
+          "training_score": -43.834
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -16.991,
-        "max_drawdown_pct": 20.063,
+        "return_pct": -15.748,
+        "max_drawdown_pct": 15.768,
         "trades": 6,
-        "ending_eur": 415.04
+        "ending_eur": 421.26
       },
-      "out_of_sample_buy_hold_pct": -19.427,
+      "out_of_sample_buy_hold_pct": -13.872,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "LINK": {
@@ -411,52 +411,52 @@
         {
           "strategy": "ma_12_48",
           "training": {
-            "return_pct": -12.007,
-            "max_drawdown_pct": 13.102,
-            "trades": 14,
-            "ending_eur": 439.96
+            "return_pct": -10.919,
+            "max_drawdown_pct": 11.775,
+            "trades": 12,
+            "ending_eur": 445.41
           },
-          "training_score": -18.558
+          "training_score": -16.806
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -12.839,
-            "max_drawdown_pct": 14.177,
-            "trades": 34,
-            "ending_eur": 435.81
+            "return_pct": -14.445,
+            "max_drawdown_pct": 14.704,
+            "trades": 36,
+            "ending_eur": 427.77
           },
-          "training_score": -19.928
+          "training_score": -21.797
         },
         {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -14.981,
+            "return_pct": -14.805,
             "max_drawdown_pct": 16.634,
-            "trades": 38,
-            "ending_eur": 425.09
+            "trades": 36,
+            "ending_eur": 425.97
           },
-          "training_score": -23.298
+          "training_score": -23.122
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -32.88,
-            "max_drawdown_pct": 33.732,
-            "trades": 78,
-            "ending_eur": 335.6
+            "return_pct": -31.016,
+            "max_drawdown_pct": 31.418,
+            "trades": 76,
+            "ending_eur": 344.92
           },
-          "training_score": -49.746
+          "training_score": -46.725
         }
       ],
       "selected_strategy": "ma_12_48",
       "out_of_sample": {
-        "return_pct": -4.394,
-        "max_drawdown_pct": 7.397,
-        "trades": 4,
-        "ending_eur": 478.03
+        "return_pct": -3.294,
+        "max_drawdown_pct": 5.138,
+        "trades": 6,
+        "ending_eur": 483.53
       },
-      "out_of_sample_buy_hold_pct": -11.116,
+      "out_of_sample_buy_hold_pct": -5.533,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "LTC": {
@@ -466,54 +466,54 @@
       "selection_basis": "training-only chronological 70/30 split",
       "strategies": [
         {
-          "strategy": "ma_12_48",
+          "strategy": "momentum_24",
           "training": {
-            "return_pct": -15.037,
-            "max_drawdown_pct": 16.374,
-            "trades": 18,
-            "ending_eur": 424.81
+            "return_pct": -12.507,
+            "max_drawdown_pct": 14.781,
+            "trades": 36,
+            "ending_eur": 437.46
           },
-          "training_score": -23.224
+          "training_score": -19.898
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -15.431,
-            "max_drawdown_pct": 18.238,
+            "return_pct": -15.415,
+            "max_drawdown_pct": 15.926,
             "trades": 36,
-            "ending_eur": 422.85
+            "ending_eur": 422.92
           },
-          "training_score": -24.55
+          "training_score": -23.378
         },
         {
-          "strategy": "momentum_24",
+          "strategy": "ma_12_48",
           "training": {
-            "return_pct": -15.97,
-            "max_drawdown_pct": 17.575,
-            "trades": 40,
-            "ending_eur": 420.15
+            "return_pct": -15.82,
+            "max_drawdown_pct": 18.022,
+            "trades": 18,
+            "ending_eur": 420.9
           },
-          "training_score": -24.758
+          "training_score": -24.831
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -36.105,
-            "max_drawdown_pct": 38.486,
-            "trades": 86,
-            "ending_eur": 319.47
+            "return_pct": -29.896,
+            "max_drawdown_pct": 34.078,
+            "trades": 76,
+            "ending_eur": 350.52
           },
-          "training_score": -55.348
+          "training_score": -46.935
         }
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "momentum_24",
       "out_of_sample": {
-        "return_pct": -3.235,
-        "max_drawdown_pct": 5.453,
-        "trades": 6,
-        "ending_eur": 483.83
+        "return_pct": -4.468,
+        "max_drawdown_pct": 5.796,
+        "trades": 12,
+        "ending_eur": 477.66
       },
-      "out_of_sample_buy_hold_pct": -10.308,
+      "out_of_sample_buy_hold_pct": -7.79,
       "warning": "Research only; short historical samples do not predict profits."
     },
     "AVAX": {
@@ -523,54 +523,54 @@
       "selection_basis": "training-only chronological 70/30 split",
       "strategies": [
         {
-          "strategy": "ma_12_48",
-          "training": {
-            "return_pct": -18.627,
-            "max_drawdown_pct": 18.787,
-            "trades": 14,
-            "ending_eur": 406.86
-          },
-          "training_score": -28.02
-        },
-        {
           "strategy": "momentum_24",
           "training": {
-            "return_pct": -19.496,
-            "max_drawdown_pct": 19.402,
+            "return_pct": -13.537,
+            "max_drawdown_pct": 14.71,
             "trades": 36,
-            "ending_eur": 402.52
+            "ending_eur": 432.32
           },
-          "training_score": -29.197
+          "training_score": -20.892
+        },
+        {
+          "strategy": "ma_12_48",
+          "training": {
+            "return_pct": -17.228,
+            "max_drawdown_pct": 18.556,
+            "trades": 12,
+            "ending_eur": 413.86
+          },
+          "training_score": -26.506
         },
         {
           "strategy": "ma_4_12",
           "training": {
-            "return_pct": -23.697,
-            "max_drawdown_pct": 24.095,
+            "return_pct": -25.591,
+            "max_drawdown_pct": 26.095,
             "trades": 38,
-            "ending_eur": 381.51
+            "ending_eur": 372.05
           },
-          "training_score": -35.745
+          "training_score": -38.639
         },
         {
           "strategy": "rsi_14",
           "training": {
-            "return_pct": -39.962,
-            "max_drawdown_pct": 40.08,
+            "return_pct": -40.21,
+            "max_drawdown_pct": 40.316,
             "trades": 80,
-            "ending_eur": 300.19
+            "ending_eur": 298.95
           },
-          "training_score": -60.002
+          "training_score": -60.368
         }
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "momentum_24",
       "out_of_sample": {
-        "return_pct": -8.567,
-        "max_drawdown_pct": 10.32,
-        "trades": 8,
-        "ending_eur": 457.16
+        "return_pct": -10.882,
+        "max_drawdown_pct": 10.882,
+        "trades": 22,
+        "ending_eur": 445.59
       },
-      "out_of_sample_buy_hold_pct": -12.962,
+      "out_of_sample_buy_hold_pct": -8.483,
       "warning": "Research only; short historical samples do not predict profits."
     }
   },
