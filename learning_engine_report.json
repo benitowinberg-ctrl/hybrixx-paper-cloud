@@ -1,14 +1,14 @@
 {
-  "generated_utc": "2026-10-31T09:50:41.367556+00:00",
+  "generated_utc": "2026-11-01T10:39:55.109711+00:00",
   "mode": "RESEARCH_ONLY_NO_ORDERS",
   "method": "Chronological prequential train; frozen final 20 percent holdout",
   "assets": {
     "BTC": {
       "train_observations": 527,
       "holdout_observations": 143,
-      "holdout_accuracy": 0.5035,
-      "always_down_baseline_accuracy": 0.5035,
-      "holdout_logloss": 0.69304,
+      "holdout_accuracy": 0.4615,
+      "always_down_baseline_accuracy": 0.4615,
+      "holdout_logloss": 0.70175,
       "model": "online_logistic_sgd",
       "feature_names": [
         "return_1",
@@ -18,37 +18,37 @@
         "trend_12_48"
       ],
       "model_weights": [
-        -0.0386488,
-        -0.0349653,
-        -0.0265449,
-        -0.0143208,
-        -0.0247256
+        -0.0361122,
+        -0.0362935,
+        -0.0276839,
+        -0.0098521,
+        -0.0216261
       ],
-      "model_bias": -0.0453267,
+      "model_bias": -0.1531656,
       "test_predictions_sample": [
         {
-          "timestamp": 1792918800,
-          "probability_up": 0.48963,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.48961,
+          "timestamp": 1793008800,
+          "probability_up": 0.46163,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.48787,
+          "timestamp": 1793012400,
+          "probability_up": 0.46142,
           "realized_up": false
         },
         {
-          "timestamp": 1792929600,
-          "probability_up": 0.48917,
+          "timestamp": 1793016000,
+          "probability_up": 0.46146,
           "realized_up": false
         },
         {
-          "timestamp": 1792933200,
-          "probability_up": 0.48932,
+          "timestamp": 1793019600,
+          "probability_up": 0.46339,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.45995,
           "realized_up": true
         }
       ],
@@ -58,9 +58,9 @@
     "ETH": {
       "train_observations": 527,
       "holdout_observations": 143,
-      "holdout_accuracy": 0.5105,
-      "always_down_baseline_accuracy": 0.4965,
-      "holdout_logloss": 0.69253,
+      "holdout_accuracy": 0.5035,
+      "always_down_baseline_accuracy": 0.4685,
+      "holdout_logloss": 0.69359,
       "model": "online_logistic_sgd",
       "feature_names": [
         "return_1",
@@ -70,37 +70,37 @@
         "trend_12_48"
       ],
       "model_weights": [
-        -0.0286713,
-        -0.0755255,
-        -0.0656586,
-        0.0163458,
-        -0.0698009
+        -0.0147239,
+        -0.065577,
+        -0.0668401,
+        0.0214794,
+        -0.0720632
       ],
-      "model_bias": 0.0196292,
+      "model_bias": -0.0364606,
       "test_predictions_sample": [
         {
-          "timestamp": 1792918800,
-          "probability_up": 0.51156,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.5119,
+          "timestamp": 1793008800,
+          "probability_up": 0.49235,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.50782,
+          "timestamp": 1793012400,
+          "probability_up": 0.49228,
           "realized_up": false
         },
         {
-          "timestamp": 1792929600,
-          "probability_up": 0.50879,
+          "timestamp": 1793016000,
+          "probability_up": 0.4929,
           "realized_up": false
         },
         {
-          "timestamp": 1792933200,
-          "probability_up": 0.50934,
+          "timestamp": 1793019600,
+          "probability_up": 0.49512,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.49222,
           "realized_up": true
         }
       ],
@@ -110,9 +110,9 @@
     "XRP": {
       "train_observations": 527,
       "holdout_observations": 143,
-      "holdout_accuracy": 0.5105,
-      "always_down_baseline_accuracy": 0.5175,
-      "holdout_logloss": 0.69276,
+      "holdout_accuracy": 0.4965,
+      "always_down_baseline_accuracy": 0.4965,
+      "holdout_logloss": 0.69382,
       "model": "online_logistic_sgd",
       "feature_names": [
         "return_1",
@@ -122,38 +122,38 @@
         "trend_12_48"
       ],
       "model_weights": [
-        0.0041751,
-        -0.0151325,
-        -0.0234607,
-        0.0230536,
-        -0.1111572
+        0.0019518,
+        -0.0157647,
+        -0.020288,
+        0.029256,
+        -0.1143878
       ],
-      "model_bias": -0.0247785,
+      "model_bias": -0.0736247,
       "test_predictions_sample": [
         {
-          "timestamp": 1792918800,
-          "probability_up": 0.49356,
+          "timestamp": 1793008800,
+          "probability_up": 0.48425,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.48436,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.48393,
           "realized_up": false
         },
         {
-          "timestamp": 1792922400,
-          "probability_up": 0.49373,
+          "timestamp": 1793019600,
+          "probability_up": 0.48448,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.49298,
+          "timestamp": 1793023200,
+          "probability_up": 0.48401,
           "realized_up": false
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.49294,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.49316,
-          "realized_up": true
         }
       ],
       "holdout_model_frozen": true,
@@ -164,6 +164,266 @@
       "holdout_observations": 143,
       "holdout_accuracy": 0.4895,
       "always_down_baseline_accuracy": 0.4825,
+      "holdout_logloss": 0.6964,
+      "model": "online_logistic_sgd",
+      "feature_names": [
+        "return_1",
+        "return_6",
+        "return_24",
+        "volatility_12",
+        "trend_12_48"
+      ],
+      "model_weights": [
+        -0.05182,
+        -0.1062907,
+        -0.0756834,
+        0.0666198,
+        -0.0853764
+      ],
+      "model_bias": -0.1416345,
+      "test_predictions_sample": [
+        {
+          "timestamp": 1793008800,
+          "probability_up": 0.46697,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.46505,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.46461,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793019600,
+          "probability_up": 0.46801,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.46079,
+          "realized_up": false
+        }
+      ],
+      "holdout_model_frozen": true,
+      "signal_authorized": false
+    },
+    "ADA": {
+      "train_observations": 527,
+      "holdout_observations": 143,
+      "holdout_accuracy": 0.5175,
+      "always_down_baseline_accuracy": 0.5175,
+      "holdout_logloss": 0.69107,
+      "model": "online_logistic_sgd",
+      "feature_names": [
+        "return_1",
+        "return_6",
+        "return_24",
+        "volatility_12",
+        "trend_12_48"
+      ],
+      "model_weights": [
+        -0.0832244,
+        -0.0926721,
+        -0.0803515,
+        0.0647244,
+        -0.1038876
+      ],
+      "model_bias": -0.1677416,
+      "test_predictions_sample": [
+        {
+          "timestamp": 1793008800,
+          "probability_up": 0.46439,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.45872,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.45819,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793019600,
+          "probability_up": 0.46631,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.45173,
+          "realized_up": false
+        }
+      ],
+      "holdout_model_frozen": true,
+      "signal_authorized": false
+    },
+    "DOGE": {
+      "train_observations": 527,
+      "holdout_observations": 143,
+      "holdout_accuracy": 0.4406,
+      "always_down_baseline_accuracy": 0.4266,
+      "holdout_logloss": 0.69576,
+      "model": "online_logistic_sgd",
+      "feature_names": [
+        "return_1",
+        "return_6",
+        "return_24",
+        "volatility_12",
+        "trend_12_48"
+      ],
+      "model_weights": [
+        -0.0073989,
+        -0.061448,
+        -0.0884008,
+        0.0726763,
+        -0.1616715
+      ],
+      "model_bias": -0.0382792,
+      "test_predictions_sample": [
+        {
+          "timestamp": 1793008800,
+          "probability_up": 0.49213,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.49252,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.49101,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793019600,
+          "probability_up": 0.49374,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.49019,
+          "realized_up": false
+        }
+      ],
+      "holdout_model_frozen": true,
+      "signal_authorized": false
+    },
+    "DOT": {
+      "train_observations": 527,
+      "holdout_observations": 143,
+      "holdout_accuracy": 0.4965,
+      "always_down_baseline_accuracy": 0.4965,
+      "holdout_logloss": 0.69108,
+      "model": "online_logistic_sgd",
+      "feature_names": [
+        "return_1",
+        "return_6",
+        "return_24",
+        "volatility_12",
+        "trend_12_48"
+      ],
+      "model_weights": [
+        0.0271972,
+        -0.1697035,
+        -0.1074997,
+        0.0264535,
+        -0.1772831
+      ],
+      "model_bias": -0.1355292,
+      "test_predictions_sample": [
+        {
+          "timestamp": 1793008800,
+          "probability_up": 0.47206,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.46952,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.46697,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793019600,
+          "probability_up": 0.47188,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.47051,
+          "realized_up": false
+        }
+      ],
+      "holdout_model_frozen": true,
+      "signal_authorized": false
+    },
+    "LINK": {
+      "train_observations": 527,
+      "holdout_observations": 143,
+      "holdout_accuracy": 0.4476,
+      "always_down_baseline_accuracy": 0.4476,
+      "holdout_logloss": 0.69648,
+      "model": "online_logistic_sgd",
+      "feature_names": [
+        "return_1",
+        "return_6",
+        "return_24",
+        "volatility_12",
+        "trend_12_48"
+      ],
+      "model_weights": [
+        -0.0168624,
+        -0.1259734,
+        -0.0445593,
+        -0.011987,
+        -0.0590058
+      ],
+      "model_bias": -0.0757177,
+      "test_predictions_sample": [
+        {
+          "timestamp": 1793008800,
+          "probability_up": 0.47944,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793012400,
+          "probability_up": 0.47898,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793016000,
+          "probability_up": 0.47786,
+          "realized_up": false
+        },
+        {
+          "timestamp": 1793019600,
+          "probability_up": 0.48138,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.4744,
+          "realized_up": false
+        }
+      ],
+      "holdout_model_frozen": true,
+      "signal_authorized": false
+    },
+    "LTC": {
+      "train_observations": 527,
+      "holdout_observations": 143,
+      "holdout_accuracy": 0.4545,
+      "always_down_baseline_accuracy": 0.4685,
       "holdout_logloss": 0.69737,
       "model": "online_logistic_sgd",
       "feature_names": [
@@ -174,298 +434,38 @@
         "trend_12_48"
       ],
       "model_weights": [
-        -0.0610349,
-        -0.1021523,
-        -0.0737955,
-        0.0595754,
-        -0.0808585
+        -0.0521356,
+        -0.0221105,
+        -0.1050343,
+        0.1143469,
+        -0.1787633
       ],
-      "model_bias": -0.1528828,
+      "model_bias": -0.0942649,
       "test_predictions_sample": [
         {
-          "timestamp": 1792918800,
-          "probability_up": 0.46904,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.47112,
+          "timestamp": 1793008800,
+          "probability_up": 0.4808,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.46478,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.46703,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.46897,
-          "realized_up": true
-        }
-      ],
-      "holdout_model_frozen": true,
-      "signal_authorized": false
-    },
-    "ADA": {
-      "train_observations": 527,
-      "holdout_observations": 143,
-      "holdout_accuracy": 0.5315,
-      "always_down_baseline_accuracy": 0.5245,
-      "holdout_logloss": 0.69035,
-      "model": "online_logistic_sgd",
-      "feature_names": [
-        "return_1",
-        "return_6",
-        "return_24",
-        "volatility_12",
-        "trend_12_48"
-      ],
-      "model_weights": [
-        -0.0762135,
-        -0.0859255,
-        -0.0857937,
-        0.0493611,
-        -0.101058
-      ],
-      "model_bias": -0.1892501,
-      "test_predictions_sample": [
-        {
-          "timestamp": 1792918800,
-          "probability_up": 0.46464,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.46698,
+          "timestamp": 1793012400,
+          "probability_up": 0.47992,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.45813,
+          "timestamp": 1793016000,
+          "probability_up": 0.48021,
           "realized_up": false
         },
         {
-          "timestamp": 1792929600,
-          "probability_up": 0.46305,
+          "timestamp": 1793019600,
+          "probability_up": 0.48273,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.47662,
           "realized_up": false
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.46292,
-          "realized_up": true
-        }
-      ],
-      "holdout_model_frozen": true,
-      "signal_authorized": false
-    },
-    "DOGE": {
-      "train_observations": 527,
-      "holdout_observations": 143,
-      "holdout_accuracy": 0.4615,
-      "always_down_baseline_accuracy": 0.4615,
-      "holdout_logloss": 0.6965,
-      "model": "online_logistic_sgd",
-      "feature_names": [
-        "return_1",
-        "return_6",
-        "return_24",
-        "volatility_12",
-        "trend_12_48"
-      ],
-      "model_weights": [
-        -0.0019067,
-        -0.0564092,
-        -0.0893396,
-        0.0634232,
-        -0.1555314
-      ],
-      "model_bias": -0.0693351,
-      "test_predictions_sample": [
-        {
-          "timestamp": 1792918800,
-          "probability_up": 0.49293,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.49357,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792926000,
-          "probability_up": 0.49091,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.49044,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.49063,
-          "realized_up": true
-        }
-      ],
-      "holdout_model_frozen": true,
-      "signal_authorized": false
-    },
-    "DOT": {
-      "train_observations": 527,
-      "holdout_observations": 143,
-      "holdout_accuracy": 0.4825,
-      "always_down_baseline_accuracy": 0.4825,
-      "holdout_logloss": 0.70095,
-      "model": "online_logistic_sgd",
-      "feature_names": [
-        "return_1",
-        "return_6",
-        "return_24",
-        "volatility_12",
-        "trend_12_48"
-      ],
-      "model_weights": [
-        0.0253064,
-        -0.1609652,
-        -0.1004676,
-        -0.0057528,
-        -0.1409635
-      ],
-      "model_bias": -0.268958,
-      "test_predictions_sample": [
-        {
-          "timestamp": 1792918800,
-          "probability_up": 0.45631,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.4576,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792926000,
-          "probability_up": 0.45311,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.44671,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.44927,
-          "realized_up": true
-        }
-      ],
-      "holdout_model_frozen": true,
-      "signal_authorized": false
-    },
-    "LINK": {
-      "train_observations": 527,
-      "holdout_observations": 143,
-      "holdout_accuracy": 0.4755,
-      "always_down_baseline_accuracy": 0.4755,
-      "holdout_logloss": 0.6963,
-      "model": "online_logistic_sgd",
-      "feature_names": [
-        "return_1",
-        "return_6",
-        "return_24",
-        "volatility_12",
-        "trend_12_48"
-      ],
-      "model_weights": [
-        -0.0145565,
-        -0.129704,
-        -0.0460504,
-        -0.0265703,
-        -0.0578935
-      ],
-      "model_bias": -0.1191437,
-      "test_predictions_sample": [
-        {
-          "timestamp": 1792918800,
-          "probability_up": 0.48041,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.48143,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792926000,
-          "probability_up": 0.47324,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.47269,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.47362,
-          "realized_up": true
-        }
-      ],
-      "holdout_model_frozen": true,
-      "signal_authorized": false
-    },
-    "LTC": {
-      "train_observations": 527,
-      "holdout_observations": 143,
-      "holdout_accuracy": 0.4895,
-      "always_down_baseline_accuracy": 0.5035,
-      "holdout_logloss": 0.69453,
-      "model": "online_logistic_sgd",
-      "feature_names": [
-        "return_1",
-        "return_6",
-        "return_24",
-        "volatility_12",
-        "trend_12_48"
-      ],
-      "model_weights": [
-        -0.0547291,
-        -0.0307833,
-        -0.1031966,
-        0.1159422,
-        -0.1672738
-      ],
-      "model_bias": -0.0920105,
-      "test_predictions_sample": [
-        {
-          "timestamp": 1792918800,
-          "probability_up": 0.4855,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.48659,
-          "realized_up": true
-        },
-        {
-          "timestamp": 1792926000,
-          "probability_up": 0.48251,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792929600,
-          "probability_up": 0.48443,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792933200,
-          "probability_up": 0.48485,
-          "realized_up": true
         }
       ],
       "holdout_model_frozen": true,
@@ -474,9 +474,9 @@
     "AVAX": {
       "train_observations": 527,
       "holdout_observations": 143,
-      "holdout_accuracy": 0.4825,
-      "always_down_baseline_accuracy": 0.4825,
-      "holdout_logloss": 0.70103,
+      "holdout_accuracy": 0.5035,
+      "always_down_baseline_accuracy": 0.5105,
+      "holdout_logloss": 0.69132,
       "model": "online_logistic_sgd",
       "feature_names": [
         "return_1",
@@ -486,37 +486,37 @@
         "trend_12_48"
       ],
       "model_weights": [
-        -0.083315,
-        -0.056468,
-        -0.0825478,
-        0.0068932,
-        -0.1473236
+        -0.0871645,
+        -0.0537221,
+        -0.0677959,
+        0.0199033,
+        -0.1475799
       ],
-      "model_bias": -0.2246652,
+      "model_bias": -0.1153895,
       "test_predictions_sample": [
         {
-          "timestamp": 1792918800,
-          "probability_up": 0.45096,
-          "realized_up": false
-        },
-        {
-          "timestamp": 1792922400,
-          "probability_up": 0.45348,
+          "timestamp": 1793008800,
+          "probability_up": 0.47028,
           "realized_up": true
         },
         {
-          "timestamp": 1792926000,
-          "probability_up": 0.44497,
+          "timestamp": 1793012400,
+          "probability_up": 0.46815,
           "realized_up": false
         },
         {
-          "timestamp": 1792929600,
-          "probability_up": 0.44958,
+          "timestamp": 1793016000,
+          "probability_up": 0.47091,
           "realized_up": false
         },
         {
-          "timestamp": 1792933200,
-          "probability_up": 0.45027,
+          "timestamp": 1793019600,
+          "probability_up": 0.47417,
+          "realized_up": true
+        },
+        {
+          "timestamp": 1793023200,
+          "probability_up": 0.46362,
           "realized_up": true
         }
       ],
