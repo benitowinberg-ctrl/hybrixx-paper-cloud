@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-01T10:39:03.868493+00:00",
+  "generated_utc": "2026-11-02T11:27:00.249622+00:00",
   "mode": "RESEARCH_ONLY_NO_ORDERS",
   "interval_minutes": 60,
   "assets": {
@@ -8,9 +8,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "eb580bc9d7602d7ecd905665bfbc829c92274e79653e869ae8d8f5676cfcd55f",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "898b11c457247237ff8627ca360921351200c89dd631811f7a89f51f859e17c7",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -40,10 +40,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -2.742,
-            "max_drawdown_pct": 3.172,
+            "return_pct": -1.54,
+            "max_drawdown_pct": 2.198,
             "trades": 6,
-            "ending_eur": 486.29
+            "ending_eur": 492.3
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -59,10 +59,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -2.42,
-            "max_drawdown_pct": 2.897,
+            "return_pct": -3.701,
+            "max_drawdown_pct": 3.353,
             "trades": 4,
-            "ending_eur": 487.9
+            "ending_eur": 481.49
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -73,7 +73,7 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -3.21,
+      "mean_holdout_return_pct": -3.237,
       "positive_fold_fraction": 0.0,
       "total_holdout_trades": 16,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
@@ -84,9 +84,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "aac74fb73a05bd8b47f75bfbf33cf0fefce28c826c219d1943e7b9c7c40abbb1",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "78c385b1d2fefc70ecabe9c34e5b4184f9fa2e80838314944eefcf25de949195",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -116,10 +116,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -2.449,
-            "max_drawdown_pct": 2.449,
-            "trades": 4,
-            "ending_eur": 487.76
+            "return_pct": -2.484,
+            "max_drawdown_pct": 3.25,
+            "trades": 8,
+            "ending_eur": 487.58
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -135,10 +135,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -7.201,
-            "max_drawdown_pct": 7.471,
-            "trades": 20,
-            "ending_eur": 463.99
+            "return_pct": -10.178,
+            "max_drawdown_pct": 10.178,
+            "trades": 22,
+            "ending_eur": 449.11
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -149,9 +149,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -4.818,
+      "mean_holdout_return_pct": -5.822,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 28,
+      "total_holdout_trades": 34,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -160,9 +160,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "c05b2b98aaa678ab8ac9b27b249e074775e5a772a152430a2565379cba550656",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "ffd65fe0debc1b148454793c780efeddd31e4cd5c2e6ff6839deeb7747264086",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -173,10 +173,10 @@
           "test_end_exclusive": 480,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -2.877,
-            "max_drawdown_pct": 4.479,
+            "return_pct": -2.728,
+            "max_drawdown_pct": 4.52,
             "trades": 4,
-            "ending_eur": 485.62
+            "ending_eur": 486.36
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -192,10 +192,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -4.688,
-            "max_drawdown_pct": 5.42,
+            "return_pct": -3.665,
+            "max_drawdown_pct": 5.689,
             "trades": 10,
-            "ending_eur": 476.56
+            "ending_eur": 481.68
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -211,10 +211,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -7.67,
-            "max_drawdown_pct": 9.252,
-            "trades": 12,
-            "ending_eur": 461.65
+            "return_pct": -8.119,
+            "max_drawdown_pct": 8.119,
+            "trades": 10,
+            "ending_eur": 459.41
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -225,9 +225,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -5.078,
+      "mean_holdout_return_pct": -4.837,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 26,
+      "total_holdout_trades": 24,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -236,9 +236,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "41658e392ba7bbb79f81cf472570905bdc772398bab2df05c3de9431843e70f5",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "cb0edb432620337731203e9051d7435538e6db70756289fbce99820d5e19f091",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -268,10 +268,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": 0.0,
-            "max_drawdown_pct": 0.0,
-            "trades": 0,
-            "ending_eur": 500.0
+            "return_pct": 0.92,
+            "max_drawdown_pct": 0.425,
+            "trades": 2,
+            "ending_eur": 504.6
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -287,10 +287,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -1.765,
-            "max_drawdown_pct": 3.407,
+            "return_pct": -3.108,
+            "max_drawdown_pct": 3.503,
             "trades": 2,
-            "ending_eur": 491.17
+            "ending_eur": 484.46
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -301,9 +301,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -1.038,
-      "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 6,
+      "mean_holdout_return_pct": -1.179,
+      "positive_fold_fraction": 0.333,
+      "total_holdout_trades": 8,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -312,9 +312,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "4c9c42f4e125d56d4516c5c1458468045022d39ba4cb39cfec61a75cafb3ccef",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "421b5fb1a88ba74afa0edab6802bf7289bb2c99aefdc84c89e1eab660f83cbc9",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -342,12 +342,12 @@
           "train_end_exclusive": 480,
           "test_start": 480,
           "test_end_exclusive": 600,
-          "selected_strategy": "momentum_24",
+          "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -10.289,
-            "max_drawdown_pct": 10.289,
-            "trades": 14,
-            "ending_eur": 448.56
+            "return_pct": -0.851,
+            "max_drawdown_pct": 2.045,
+            "trades": 4,
+            "ending_eur": 495.75
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -363,10 +363,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -13.619,
-            "max_drawdown_pct": 13.619,
-            "trades": 14,
-            "ending_eur": 431.9
+            "return_pct": -13.103,
+            "max_drawdown_pct": 13.103,
+            "trades": 12,
+            "ending_eur": 434.48
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -377,9 +377,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -9.817,
+      "mean_holdout_return_pct": -6.499,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 32,
+      "total_holdout_trades": 20,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -388,9 +388,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "c62521733bee63b7ecc79c6178f004f68cfce5b7d47bce140e4919bbd4d0f7dc",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "0b2d6f675cdbc09b37830c452886e7adac0d7f614e05a5c5bb209646235bb1ef",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -401,10 +401,10 @@
           "test_end_exclusive": 480,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -0.782,
-            "max_drawdown_pct": 2.301,
-            "trades": 6,
-            "ending_eur": 496.09
+            "return_pct": -1.622,
+            "max_drawdown_pct": 2.778,
+            "trades": 8,
+            "ending_eur": 491.89
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -420,10 +420,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -10.231,
-            "max_drawdown_pct": 10.231,
-            "trades": 18,
-            "ending_eur": 448.85
+            "return_pct": -8.479,
+            "max_drawdown_pct": 10.824,
+            "trades": 22,
+            "ending_eur": 457.61
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -439,10 +439,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": 0.033,
-            "max_drawdown_pct": 3.824,
+            "return_pct": -3.778,
+            "max_drawdown_pct": 3.778,
             "trades": 2,
-            "ending_eur": 500.17
+            "ending_eur": 481.11
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -453,9 +453,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -3.66,
-      "positive_fold_fraction": 0.333,
-      "total_holdout_trades": 26,
+      "mean_holdout_return_pct": -4.626,
+      "positive_fold_fraction": 0.0,
+      "total_holdout_trades": 32,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -464,9 +464,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "fc80544f12941a823988e0c1d6b6c5bd673b2f80a4444c27ef2aae21df1c5b2c",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "0ab25340e8f0efa74b6e1e6a66b70bdd09df535d808e9a542bc7c196b81c8db5",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -477,10 +477,10 @@
           "test_end_exclusive": 480,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -4.817,
-            "max_drawdown_pct": 6.74,
+            "return_pct": -2.572,
+            "max_drawdown_pct": 7.225,
             "trades": 4,
-            "ending_eur": 475.91
+            "ending_eur": 487.14
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -496,10 +496,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -10.879,
-            "max_drawdown_pct": 10.879,
-            "trades": 2,
-            "ending_eur": 445.61
+            "return_pct": -9.954,
+            "max_drawdown_pct": 9.818,
+            "trades": 4,
+            "ending_eur": 450.23
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -515,10 +515,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -6.654,
+            "return_pct": -6.735,
             "max_drawdown_pct": 6.968,
             "trades": 4,
-            "ending_eur": 466.73
+            "ending_eur": 466.32
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -529,9 +529,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -7.45,
+      "mean_holdout_return_pct": -6.42,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 10,
+      "total_holdout_trades": 12,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -540,9 +540,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "62c909718dd0d860c32f67d0e353d52aaa07ff85ac3e794dcbd8372e67a6450f",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "400ccfa582d5b276efce69ac5d5064c6aaf1aa005e543998cf9830d8a37a7788",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -551,12 +551,12 @@
           "train_end_exclusive": 360,
           "test_start": 360,
           "test_end_exclusive": 480,
-          "selected_strategy": "ma_12_48",
+          "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -4.185,
-            "max_drawdown_pct": 5.451,
-            "trades": 4,
-            "ending_eur": 479.08
+            "return_pct": -5.21,
+            "max_drawdown_pct": 5.615,
+            "trades": 10,
+            "ending_eur": 473.95
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -572,10 +572,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": 0.0,
-            "max_drawdown_pct": 0.0,
-            "trades": 0,
-            "ending_eur": 500.0
+            "return_pct": 1.737,
+            "max_drawdown_pct": 0.582,
+            "trades": 2,
+            "ending_eur": 508.68
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -591,10 +591,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": 0.021,
-            "max_drawdown_pct": 5.138,
+            "return_pct": -4.454,
+            "max_drawdown_pct": 5.1,
             "trades": 4,
-            "ending_eur": 500.1
+            "ending_eur": 477.73
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -605,9 +605,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -1.388,
+      "mean_holdout_return_pct": -2.642,
       "positive_fold_fraction": 0.333,
-      "total_holdout_trades": 8,
+      "total_holdout_trades": 16,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -616,9 +616,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "0b9885218412e6b0872e4c02d50653f96e89b45ed08d23cf233bdd40cc116177",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "cfe8b64279490987220d6ece9d53afbca8e48c0605b12010a0b5715dc715aef1",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -646,12 +646,12 @@
           "train_end_exclusive": 480,
           "test_start": 480,
           "test_end_exclusive": 600,
-          "selected_strategy": "ma_4_12",
+          "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -5.475,
-            "max_drawdown_pct": 5.776,
-            "trades": 12,
-            "ending_eur": 472.62
+            "return_pct": -1.797,
+            "max_drawdown_pct": 2.469,
+            "trades": 8,
+            "ending_eur": 491.01
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -665,12 +665,12 @@
           "train_end_exclusive": 600,
           "test_start": 600,
           "test_end_exclusive": 720,
-          "selected_strategy": "momentum_24",
+          "selected_strategy": "ma_4_12",
           "out_of_sample": {
-            "return_pct": -5.946,
-            "max_drawdown_pct": 8.285,
-            "trades": 14,
-            "ending_eur": 470.27
+            "return_pct": -17.187,
+            "max_drawdown_pct": 17.187,
+            "trades": 16,
+            "ending_eur": 414.07
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -681,9 +681,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -4.918,
+      "mean_holdout_return_pct": -7.439,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 40,
+      "total_holdout_trades": 38,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     },
@@ -692,9 +692,9 @@
         "candles": 720,
         "missing_intervals": 0,
         "coverage_pct": 100.0,
-        "start_utc": "2026-10-02T10:00:00+00:00",
-        "end_utc": "2026-11-01T09:00:00+00:00",
-        "sha256": "a7379f82bcc80f7248394f6a7f055a03180edf1fe51874a6a8bb6accd6db160b",
+        "start_utc": "2026-10-03T11:00:00+00:00",
+        "end_utc": "2026-11-02T10:00:00+00:00",
+        "sha256": "72e835297258d3e41f6de4f94bb814ec5cbc561ade9ba7accb16cc5a58c8b766",
         "sufficient_for_multi_year_validation": false
       },
       "folds": [
@@ -705,10 +705,10 @@
           "test_end_exclusive": 480,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -3.635,
-            "max_drawdown_pct": 4.376,
-            "trades": 16,
-            "ending_eur": 481.82
+            "return_pct": -4.583,
+            "max_drawdown_pct": 4.583,
+            "trades": 18,
+            "ending_eur": 477.09
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -724,10 +724,10 @@
           "test_end_exclusive": 600,
           "selected_strategy": "momentum_24",
           "out_of_sample": {
-            "return_pct": -4.636,
-            "max_drawdown_pct": 4.636,
+            "return_pct": -4.51,
+            "max_drawdown_pct": 4.567,
             "trades": 14,
-            "ending_eur": 476.82
+            "ending_eur": 477.45
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -743,10 +743,10 @@
           "test_end_exclusive": 720,
           "selected_strategy": "ma_12_48",
           "out_of_sample": {
-            "return_pct": -0.4,
-            "max_drawdown_pct": 3.694,
+            "return_pct": -3.555,
+            "max_drawdown_pct": 4.564,
             "trades": 6,
-            "ending_eur": 498.0
+            "ending_eur": 482.22
           },
           "cash_benchmark": {
             "return_pct": 0.0,
@@ -757,9 +757,9 @@
         }
       ],
       "fold_count": 3,
-      "mean_holdout_return_pct": -2.89,
+      "mean_holdout_return_pct": -4.216,
       "positive_fold_fraction": 0.0,
-      "total_holdout_trades": 36,
+      "total_holdout_trades": 38,
       "decision": "RESEARCH_ONLY_NOT_AUTHORIZED",
       "warning": "Short-window research; do not use to authorize paper or real trades."
     }
