@@ -1,6 +1,6 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-06T11:10:32.392665+00:00",
+  "source_generated_utc": "2026-11-07T10:27:54.340009+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
@@ -15,9 +15,10 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
+        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "momentum_24",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "XRP": {
@@ -31,8 +32,8 @@
     "SOL": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN"
+        "TOO_FEW_TEST_TRADES",
+        "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -40,8 +41,8 @@
     "ADA": {
       "decision": "NO_TRADE",
       "reasons": [
+        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
@@ -60,8 +61,7 @@
     "DOT": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN"
+        "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
