@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-11-08T10:35:40.930272+00:00",
+  "generated_utc": "2026-11-09T11:50:18.542708+00:00",
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-08T10:35:38.184038+00:00",
+  "source_generated_utc": "2026-11-09T11:50:15.626887+00:00",
   "assets": {
     "BTC": {
       "folds": 3,
-      "mean_fold_return_pct": -4.3903,
-      "median_fold_return_pct": -5.463,
-      "worst_fold_return_pct": -6.471,
-      "best_fold_return_pct": -1.237,
+      "mean_fold_return_pct": -7.2297,
+      "median_fold_return_pct": -6.471,
+      "worst_fold_return_pct": -8.947,
+      "best_fold_return_pct": -6.271,
       "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
-        -6.471,
-        -1.237
+        -8.947,
+        -6.271
       ],
       "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
@@ -21,14 +21,14 @@
     },
     "ETH": {
       "folds": 3,
-      "mean_fold_return_pct": -5.453,
-      "median_fold_return_pct": -5.311,
-      "worst_fold_return_pct": -8.478,
-      "best_fold_return_pct": -2.57,
+      "mean_fold_return_pct": -5.4757,
+      "median_fold_return_pct": -3.872,
+      "worst_fold_return_pct": -8.752,
+      "best_fold_return_pct": -3.803,
       "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
-        -8.478,
-        -2.57
+        -8.752,
+        -3.803
       ],
       "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
@@ -37,14 +37,14 @@
     },
     "XRP": {
       "folds": 3,
-      "mean_fold_return_pct": -3.92,
-      "median_fold_return_pct": -4.344,
-      "worst_fold_return_pct": -6.845,
-      "best_fold_return_pct": -0.571,
+      "mean_fold_return_pct": -4.34,
+      "median_fold_return_pct": -4.561,
+      "worst_fold_return_pct": -7.699,
+      "best_fold_return_pct": -0.76,
       "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
-        -6.845,
-        -0.571
+        -7.699,
+        -0.76
       ],
       "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
@@ -85,16 +85,16 @@
     },
     "DOGE": {
       "folds": 3,
-      "mean_fold_return_pct": -3.9837,
-      "median_fold_return_pct": 0.0,
-      "worst_fold_return_pct": -12.485,
-      "best_fold_return_pct": 0.534,
-      "nonpositive_folds": 2,
+      "mean_fold_return_pct": -6.5043,
+      "median_fold_return_pct": -6.669,
+      "worst_fold_return_pct": -8.741,
+      "best_fold_return_pct": -4.103,
+      "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
-        -12.485,
-        0.534
+        -8.741,
+        -4.103
       ],
-      "bootstrap_probability_mean_positive": 0.276,
+      "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
       "eligible_for_live_or_paper_authorization": false,
       "caveat": "Three overlapping-regime folds are too few for reliable inference; bootstrap cannot fix inadequate history."
@@ -133,14 +133,14 @@
     },
     "LTC": {
       "folds": 3,
-      "mean_fold_return_pct": -5.8587,
-      "median_fold_return_pct": -5.056,
+      "mean_fold_return_pct": -4.361,
+      "median_fold_return_pct": -2.569,
       "worst_fold_return_pct": -9.757,
-      "best_fold_return_pct": -2.763,
+      "best_fold_return_pct": -0.757,
       "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
         -9.757,
-        -2.763
+        -0.757
       ],
       "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
@@ -149,14 +149,14 @@
     },
     "AVAX": {
       "folds": 3,
-      "mean_fold_return_pct": -5.473,
-      "median_fold_return_pct": -7.139,
-      "worst_fold_return_pct": -8.033,
-      "best_fold_return_pct": -1.247,
+      "mean_fold_return_pct": -6.134,
+      "median_fold_return_pct": -4.75,
+      "worst_fold_return_pct": -9.002,
+      "best_fold_return_pct": -4.65,
       "nonpositive_folds": 3,
       "bootstrap_mean_ci95_pct": [
-        -8.033,
-        -1.247
+        -9.002,
+        -4.65
       ],
       "bootstrap_probability_mean_positive": 0.0,
       "bootstrap_method": "Resample independent walk-forward fold returns; exploratory only",
