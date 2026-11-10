@@ -1,6 +1,6 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-09T11:50:10.106612+00:00",
+  "source_generated_utc": "2026-11-10T11:25:36.349817+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
@@ -14,16 +14,15 @@
     "ETH": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
-        "INSUFFICIENT_BENCHMARK_EDGE"
+        "NONPOSITIVE_NET_RETURN"
       ],
-      "selected_strategy": "momentum_24",
+      "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "XRP": {
       "decision": "NO_TRADE",
       "reasons": [
+        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -60,6 +59,7 @@
     "DOT": {
       "decision": "NO_TRADE",
       "reasons": [
+        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
