@@ -1,57 +1,57 @@
 {
-  "generated_utc": "2026-11-10T11:26:33.125868+00:00",
+  "generated_utc": "2026-11-11T11:14:45.490003+00:00",
   "mode": "READ_ONLY_NO_ORDERS",
-  "data_candles_sha256": "414d09f5d427205527eee6a0abcb07a8a09dfd7aefe995ab26848fa3a6df5e61",
+  "data_candles_sha256": "b04e421ccd695aa43d46f4b77fb43c569731c3fadae4fcb7ef1dcf678e0eb32c",
   "market_dna": {
     "BTC": {
       "label": "SIDEWAYS",
-      "trend_48h_pct": -2.924,
-      "volatility_daily_pct": 2.278
+      "trend_48h_pct": 0.348,
+      "volatility_daily_pct": 2.027
     },
     "ETH": {
-      "label": "DOWNTREND",
-      "trend_48h_pct": -7.176,
-      "volatility_daily_pct": 3.693
+      "label": "SIDEWAYS",
+      "trend_48h_pct": -1.861,
+      "volatility_daily_pct": 2.794
     },
     "XRP": {
-      "label": "DOWNTREND",
-      "trend_48h_pct": -7.502,
-      "volatility_daily_pct": 4.076
+      "label": "SIDEWAYS",
+      "trend_48h_pct": -1.686,
+      "volatility_daily_pct": 3.491
     },
     "SOL": {
-      "label": "DOWNTREND",
-      "trend_48h_pct": -6.074,
-      "volatility_daily_pct": 3.593
+      "label": "SIDEWAYS",
+      "trend_48h_pct": -1.981,
+      "volatility_daily_pct": 2.923
     },
     "ADA": {
       "label": "SIDEWAYS",
-      "trend_48h_pct": -2.092,
-      "volatility_daily_pct": 4.207
+      "trend_48h_pct": 1.232,
+      "volatility_daily_pct": 3.107
     },
     "DOGE": {
       "label": "SIDEWAYS",
-      "trend_48h_pct": -2.94,
-      "volatility_daily_pct": 4.055
+      "trend_48h_pct": -0.184,
+      "volatility_daily_pct": 2.851
     },
     "DOT": {
-      "label": "DOWNTREND",
-      "trend_48h_pct": -6.006,
-      "volatility_daily_pct": 4.16
+      "label": "SIDEWAYS",
+      "trend_48h_pct": -0.496,
+      "volatility_daily_pct": 3.469
     },
     "LINK": {
-      "label": "DOWNTREND",
-      "trend_48h_pct": -3.531,
-      "volatility_daily_pct": 4.255
+      "label": "SIDEWAYS",
+      "trend_48h_pct": 0.307,
+      "volatility_daily_pct": 3.074
     },
     "LTC": {
       "label": "SIDEWAYS",
-      "trend_48h_pct": -2.214,
-      "volatility_daily_pct": 3.486
+      "trend_48h_pct": 0.772,
+      "volatility_daily_pct": 2.631
     },
     "AVAX": {
-      "label": "SIDEWAYS",
-      "trend_48h_pct": 1.04,
-      "volatility_daily_pct": 6.706
+      "label": "UPTREND",
+      "trend_48h_pct": 9.225,
+      "volatility_daily_pct": 5.951
     }
   },
   "correlation_breaker": {
@@ -61,28 +61,28 @@
           "BTC",
           "ETH"
         ],
-        "correlation": 0.901
+        "correlation": 0.903
       },
       {
         "pair": [
           "BTC",
           "XRP"
         ],
-        "correlation": 0.821
+        "correlation": 0.812
       },
       {
         "pair": [
           "BTC",
           "SOL"
         ],
-        "correlation": 0.876
+        "correlation": 0.877
       },
       {
         "pair": [
           "BTC",
           "ADA"
         ],
-        "correlation": 0.835
+        "correlation": 0.836
       },
       {
         "pair": [
@@ -96,14 +96,14 @@
           "BTC",
           "LINK"
         ],
-        "correlation": 0.817
+        "correlation": 0.82
       },
       {
         "pair": [
           "ETH",
           "XRP"
         ],
-        "correlation": 0.818
+        "correlation": 0.814
       },
       {
         "pair": [
@@ -117,7 +117,7 @@
           "ETH",
           "ADA"
         ],
-        "correlation": 0.859
+        "correlation": 0.857
       },
       {
         "pair": [
@@ -131,237 +131,237 @@
           "ETH",
           "LINK"
         ],
-        "correlation": 0.841
+        "correlation": 0.842
       },
       {
         "pair": [
           "XRP",
           "SOL"
         ],
-        "correlation": 0.861
+        "correlation": 0.856
       },
       {
         "pair": [
           "XRP",
           "ADA"
         ],
-        "correlation": 0.844
+        "correlation": 0.836
       },
       {
         "pair": [
           "XRP",
           "DOGE"
         ],
-        "correlation": 0.864
+        "correlation": 0.856
       },
       {
         "pair": [
           "XRP",
           "LINK"
-        ],
-        "correlation": 0.813
-      },
-      {
-        "pair": [
-          "SOL",
-          "ADA"
-        ],
-        "correlation": 0.901
-      },
-      {
-        "pair": [
-          "SOL",
-          "DOGE"
-        ],
-        "correlation": 0.901
-      },
-      {
-        "pair": [
-          "SOL",
-          "LINK"
-        ],
-        "correlation": 0.871
-      },
-      {
-        "pair": [
-          "SOL",
-          "LTC"
-        ],
-        "correlation": 0.824
-      },
-      {
-        "pair": [
-          "ADA",
-          "DOGE"
-        ],
-        "correlation": 0.917
-      },
-      {
-        "pair": [
-          "ADA",
-          "LINK"
-        ],
-        "correlation": 0.882
-      },
-      {
-        "pair": [
-          "ADA",
-          "LTC"
-        ],
-        "correlation": 0.849
-      },
-      {
-        "pair": [
-          "ADA",
-          "AVAX"
-        ],
-        "correlation": 0.845
-      },
-      {
-        "pair": [
-          "DOGE",
-          "LINK"
-        ],
-        "correlation": 0.868
-      },
-      {
-        "pair": [
-          "DOGE",
-          "LTC"
-        ],
-        "correlation": 0.854
-      },
-      {
-        "pair": [
-          "DOGE",
-          "AVAX"
-        ],
-        "correlation": 0.815
-      },
-      {
-        "pair": [
-          "LINK",
-          "LTC"
-        ],
-        "correlation": 0.809
-      },
-      {
-        "pair": [
-          "LINK",
-          "AVAX"
         ],
         "correlation": 0.806
+      },
+      {
+        "pair": [
+          "SOL",
+          "ADA"
+        ],
+        "correlation": 0.9
+      },
+      {
+        "pair": [
+          "SOL",
+          "DOGE"
+        ],
+        "correlation": 0.901
+      },
+      {
+        "pair": [
+          "SOL",
+          "LINK"
+        ],
+        "correlation": 0.87
+      },
+      {
+        "pair": [
+          "SOL",
+          "LTC"
+        ],
+        "correlation": 0.827
+      },
+      {
+        "pair": [
+          "ADA",
+          "DOGE"
+        ],
+        "correlation": 0.919
+      },
+      {
+        "pair": [
+          "ADA",
+          "LINK"
+        ],
+        "correlation": 0.884
+      },
+      {
+        "pair": [
+          "ADA",
+          "LTC"
+        ],
+        "correlation": 0.852
+      },
+      {
+        "pair": [
+          "ADA",
+          "AVAX"
+        ],
+        "correlation": 0.843
+      },
+      {
+        "pair": [
+          "DOGE",
+          "LINK"
+        ],
+        "correlation": 0.87
+      },
+      {
+        "pair": [
+          "DOGE",
+          "LTC"
+        ],
+        "correlation": 0.857
+      },
+      {
+        "pair": [
+          "DOGE",
+          "AVAX"
+        ],
+        "correlation": 0.818
+      },
+      {
+        "pair": [
+          "LINK",
+          "LTC"
+        ],
+        "correlation": 0.812
+      },
+      {
+        "pair": [
+          "LINK",
+          "AVAX"
+        ],
+        "correlation": 0.807
       }
     ],
     "correlations": {
       "BTC": {
-        "ETH": 0.901,
-        "XRP": 0.821,
-        "SOL": 0.876,
-        "ADA": 0.835,
+        "ETH": 0.903,
+        "XRP": 0.812,
+        "SOL": 0.877,
+        "ADA": 0.836,
         "DOGE": 0.854,
-        "DOT": 0.639,
-        "LINK": 0.817,
-        "LTC": 0.778,
-        "AVAX": 0.734
+        "DOT": 0.641,
+        "LINK": 0.82,
+        "LTC": 0.781,
+        "AVAX": 0.738
       },
       "ETH": {
-        "BTC": 0.901,
-        "XRP": 0.818,
+        "BTC": 0.903,
+        "XRP": 0.814,
         "SOL": 0.881,
-        "ADA": 0.859,
+        "ADA": 0.857,
         "DOGE": 0.877,
         "DOT": 0.656,
-        "LINK": 0.841,
+        "LINK": 0.842,
         "LTC": 0.788,
-        "AVAX": 0.77
+        "AVAX": 0.765
       },
       "XRP": {
-        "BTC": 0.821,
-        "ETH": 0.818,
-        "SOL": 0.861,
-        "ADA": 0.844,
-        "DOGE": 0.864,
-        "DOT": 0.677,
-        "LINK": 0.813,
-        "LTC": 0.778,
-        "AVAX": 0.771
+        "BTC": 0.812,
+        "ETH": 0.814,
+        "SOL": 0.856,
+        "ADA": 0.836,
+        "DOGE": 0.856,
+        "DOT": 0.672,
+        "LINK": 0.806,
+        "LTC": 0.773,
+        "AVAX": 0.765
       },
       "SOL": {
-        "BTC": 0.876,
+        "BTC": 0.877,
         "ETH": 0.881,
-        "XRP": 0.861,
-        "ADA": 0.901,
+        "XRP": 0.856,
+        "ADA": 0.9,
         "DOGE": 0.901,
-        "DOT": 0.7,
-        "LINK": 0.871,
-        "LTC": 0.824,
+        "DOT": 0.702,
+        "LINK": 0.87,
+        "LTC": 0.827,
         "AVAX": 0.794
       },
       "ADA": {
-        "BTC": 0.835,
-        "ETH": 0.859,
-        "XRP": 0.844,
-        "SOL": 0.901,
-        "DOGE": 0.917,
-        "DOT": 0.757,
-        "LINK": 0.882,
-        "LTC": 0.849,
-        "AVAX": 0.845
+        "BTC": 0.836,
+        "ETH": 0.857,
+        "XRP": 0.836,
+        "SOL": 0.9,
+        "DOGE": 0.919,
+        "DOT": 0.758,
+        "LINK": 0.884,
+        "LTC": 0.852,
+        "AVAX": 0.843
       },
       "DOGE": {
         "BTC": 0.854,
         "ETH": 0.877,
-        "XRP": 0.864,
+        "XRP": 0.856,
         "SOL": 0.901,
-        "ADA": 0.917,
-        "DOT": 0.748,
-        "LINK": 0.868,
-        "LTC": 0.854,
-        "AVAX": 0.815
+        "ADA": 0.919,
+        "DOT": 0.749,
+        "LINK": 0.87,
+        "LTC": 0.857,
+        "AVAX": 0.818
       },
       "DOT": {
-        "BTC": 0.639,
+        "BTC": 0.641,
         "ETH": 0.656,
-        "XRP": 0.677,
-        "SOL": 0.7,
-        "ADA": 0.757,
-        "DOGE": 0.748,
-        "LINK": 0.707,
-        "LTC": 0.704,
-        "AVAX": 0.706
+        "XRP": 0.672,
+        "SOL": 0.702,
+        "ADA": 0.758,
+        "DOGE": 0.749,
+        "LINK": 0.711,
+        "LTC": 0.708,
+        "AVAX": 0.709
       },
       "LINK": {
-        "BTC": 0.817,
-        "ETH": 0.841,
-        "XRP": 0.813,
-        "SOL": 0.871,
-        "ADA": 0.882,
-        "DOGE": 0.868,
-        "DOT": 0.707,
-        "LTC": 0.809,
-        "AVAX": 0.806
+        "BTC": 0.82,
+        "ETH": 0.842,
+        "XRP": 0.806,
+        "SOL": 0.87,
+        "ADA": 0.884,
+        "DOGE": 0.87,
+        "DOT": 0.711,
+        "LTC": 0.812,
+        "AVAX": 0.807
       },
       "LTC": {
-        "BTC": 0.778,
+        "BTC": 0.781,
         "ETH": 0.788,
-        "XRP": 0.778,
-        "SOL": 0.824,
-        "ADA": 0.849,
-        "DOGE": 0.854,
-        "DOT": 0.704,
-        "LINK": 0.809,
+        "XRP": 0.773,
+        "SOL": 0.827,
+        "ADA": 0.852,
+        "DOGE": 0.857,
+        "DOT": 0.708,
+        "LINK": 0.812,
         "AVAX": 0.773
       },
       "AVAX": {
-        "BTC": 0.734,
-        "ETH": 0.77,
-        "XRP": 0.771,
+        "BTC": 0.738,
+        "ETH": 0.765,
+        "XRP": 0.765,
         "SOL": 0.794,
-        "ADA": 0.845,
-        "DOGE": 0.815,
-        "DOT": 0.706,
-        "LINK": 0.806,
+        "ADA": 0.843,
+        "DOGE": 0.818,
+        "DOT": 0.709,
+        "LINK": 0.807,
         "LTC": 0.773
       }
     }
@@ -386,43 +386,43 @@
   },
   "drift_detector": {
     "BTC": {
-      "volatility_ratio": 1.261,
+      "volatility_ratio": 1.296,
       "flag": false
     },
     "ETH": {
-      "volatility_ratio": 1.137,
+      "volatility_ratio": 1.181,
       "flag": false
     },
     "XRP": {
-      "volatility_ratio": 1.139,
+      "volatility_ratio": 1.138,
       "flag": false
     },
     "SOL": {
-      "volatility_ratio": 1.068,
+      "volatility_ratio": 1.11,
       "flag": false
     },
     "ADA": {
-      "volatility_ratio": 1.052,
+      "volatility_ratio": 1.064,
       "flag": false
     },
     "DOGE": {
-      "volatility_ratio": 1.051,
+      "volatility_ratio": 1.068,
       "flag": false
     },
     "DOT": {
-      "volatility_ratio": 0.856,
+      "volatility_ratio": 0.859,
       "flag": false
     },
     "LINK": {
-      "volatility_ratio": 1.19,
+      "volatility_ratio": 1.201,
       "flag": false
     },
     "LTC": {
-      "volatility_ratio": 1.145,
+      "volatility_ratio": 1.155,
       "flag": false
     },
     "AVAX": {
-      "volatility_ratio": 1.102,
+      "volatility_ratio": 1.107,
       "flag": false
     }
   },
@@ -453,62 +453,62 @@
   "counterfactual_lab": {
     "BTC": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -11.601
+      "buy_hold_after_costs_pct": -11.564
     },
     "ETH": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -17.366
+      "buy_hold_after_costs_pct": -19.463
     },
     "XRP": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -23.198
+      "buy_hold_after_costs_pct": -24.404
     },
     "SOL": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -23.734
+      "buy_hold_after_costs_pct": -24.775
     },
     "ADA": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -28.802
+      "buy_hold_after_costs_pct": -29.819
     },
     "DOGE": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -19.54
+      "buy_hold_after_costs_pct": -21.993
     },
     "DOT": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -31.521
+      "buy_hold_after_costs_pct": -32.965
     },
     "LINK": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -19.748
+      "buy_hold_after_costs_pct": -22.268
     },
     "LTC": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -20.287
+      "buy_hold_after_costs_pct": -21.512
     },
     "AVAX": {
       "cash_pct": 0,
-      "buy_hold_after_costs_pct": -21.167
+      "buy_hold_after_costs_pct": -21.102
     }
   },
   "reality_twin": {
     "reversion_12": {
-      "normal_net_pct": -4.357,
-      "stress_cost_proxy_pct_points": 15.5,
-      "stress_adjusted_proxy_pct": -19.857,
+      "normal_net_pct": -2.661,
+      "stress_cost_proxy_pct_points": 15.1,
+      "stress_adjusted_proxy_pct": -17.761,
       "method": "conservative extra 0.5 percentage points per order; proxy only"
     },
     "reversion_48": {
-      "normal_net_pct": -4.784,
-      "stress_cost_proxy_pct_points": 21.8,
-      "stress_adjusted_proxy_pct": -26.584,
+      "normal_net_pct": -5.037,
+      "stress_cost_proxy_pct_points": 21.7,
+      "stress_adjusted_proxy_pct": -26.737,
       "method": "conservative extra 0.5 percentage points per order; proxy only"
     },
     "reversion_24": {
-      "normal_net_pct": -6.101,
-      "stress_cost_proxy_pct_points": 21.7,
-      "stress_adjusted_proxy_pct": -27.801,
+      "normal_net_pct": -5.767,
+      "stress_cost_proxy_pct_points": 21.2,
+      "stress_adjusted_proxy_pct": -26.967,
       "method": "conservative extra 0.5 percentage points per order; proxy only"
     }
   },
@@ -604,14 +604,14 @@
       "security_passed": true,
       "decision": "REJECT_PENDING_INDEPENDENT_VALIDATION"
     },
-    "trend_8_32": {
+    "trend_6_24": {
       "research_positive": false,
       "risk_check": false,
       "independent_holdout_passed": false,
       "security_passed": true,
       "decision": "REJECT_PENDING_INDEPENDENT_VALIDATION"
     },
-    "trend_6_24": {
+    "trend_8_32": {
       "research_positive": false,
       "risk_check": false,
       "independent_holdout_passed": false,
@@ -688,7 +688,7 @@
       "AVAX": 720
     },
     "arena_strategy_count": 20,
-    "input_sha256": "414d09f5d427205527eee6a0abcb07a8a09dfd7aefe995ab26848fa3a6df5e61",
+    "input_sha256": "b04e421ccd695aa43d46f4b77fb43c569731c3fadae4fcb7ef1dcf678e0eb32c",
     "method": "Exploratory in-sample diagnostics; no unseen holdout"
   },
   "trade_authorization": false,
