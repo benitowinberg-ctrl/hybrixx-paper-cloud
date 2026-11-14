@@ -3432,6 +3432,18 @@
         "Donchian": -3.6775
       },
       "mode": "RESEARCH_ONLY"
+    },
+    {
+      "last_candle_utc": "2026-11-14T18:00:00+00:00",
+      "data_points": 720,
+      "strategy_mean_oos_pct": {
+        "Momentum": -2.1906,
+        "MA": -2.5858,
+        "Breakout": -3.5743,
+        "Donchian": -4.1053,
+        "RSI": -4.4385
+      },
+      "mode": "RESEARCH_ONLY"
     }
   ]
 }
