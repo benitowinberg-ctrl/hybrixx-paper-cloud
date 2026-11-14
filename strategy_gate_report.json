@@ -1,6 +1,6 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-13T11:15:14.654870+00:00",
+  "source_generated_utc": "2026-11-14T10:40:42.427001+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
@@ -40,8 +40,7 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
-        "INSUFFICIENT_BENCHMARK_EDGE"
+        "EXCESSIVE_DRAWDOWN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -66,8 +65,7 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
-        "INSUFFICIENT_BENCHMARK_EDGE"
+        "EXCESSIVE_DRAWDOWN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
