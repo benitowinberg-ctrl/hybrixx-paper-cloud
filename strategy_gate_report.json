@@ -1,10 +1,11 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-16T11:45:30.865305+00:00",
+  "source_generated_utc": "2026-11-17T12:06:10.400771+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
       "reasons": [
+        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -30,7 +31,6 @@
     "SOL": {
       "decision": "NO_TRADE",
       "reasons": [
-        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -39,7 +39,6 @@
     "ADA": {
       "decision": "NO_TRADE",
       "reasons": [
-        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -48,7 +47,6 @@
     "DOGE": {
       "decision": "NO_TRADE",
       "reasons": [
-        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -57,7 +55,6 @@
     "DOT": {
       "decision": "NO_TRADE",
       "reasons": [
-        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
@@ -66,6 +63,7 @@
     "LINK": {
       "decision": "NO_TRADE",
       "reasons": [
+        "TOO_FEW_TEST_TRADES",
         "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
