@@ -1,11 +1,11 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-25T13:12:33.736235+00:00",
+  "source_generated_utc": "2026-11-26T12:53:04.625343+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
       "reasons": [
-        "TOO_FEW_TEST_TRADES"
+        "NONPOSITIVE_NET_RETURN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -22,6 +22,7 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
+        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
@@ -48,7 +49,8 @@
     "DOGE": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN"
+        "NONPOSITIVE_NET_RETURN",
+        "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -56,7 +58,8 @@
     "DOT": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN"
+        "NONPOSITIVE_NET_RETURN",
+        "EXCESSIVE_DRAWDOWN"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
@@ -64,7 +67,8 @@
     "LINK": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN"
+        "NONPOSITIVE_NET_RETURN",
+        "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
