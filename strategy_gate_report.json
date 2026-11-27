@@ -1,13 +1,13 @@
 {
   "mode": "RESEARCH_ONLY_NO_ORDERS",
-  "source_generated_utc": "2026-11-26T12:53:04.625343+00:00",
+  "source_generated_utc": "2026-11-27T12:47:28.607807+00:00",
   "assets": {
     "BTC": {
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN"
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "ma_4_12",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "ETH": {
@@ -15,14 +15,13 @@
       "reasons": [
         "NONPOSITIVE_NET_RETURN"
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "ma_4_12",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "XRP": {
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
@@ -40,7 +39,6 @@
       "decision": "NO_TRADE",
       "reasons": [
         "NONPOSITIVE_NET_RETURN",
-        "EXCESSIVE_DRAWDOWN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
@@ -67,17 +65,14 @@
     "LINK": {
       "decision": "NO_TRADE",
       "reasons": [
-        "NONPOSITIVE_NET_RETURN",
         "INSUFFICIENT_BENCHMARK_EDGE"
       ],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
     },
     "LTC": {
-      "decision": "NO_TRADE",
-      "reasons": [
-        "NONPOSITIVE_NET_RETURN"
-      ],
+      "decision": "RESEARCH_CANDIDATE",
+      "reasons": [],
       "selected_strategy": "ma_12_48",
       "note": "Research screening only, never an automatic trading authorization."
     },
@@ -86,7 +81,7 @@
       "reasons": [
         "NONPOSITIVE_NET_RETURN"
       ],
-      "selected_strategy": "ma_12_48",
+      "selected_strategy": "ma_4_12",
       "note": "Research screening only, never an automatic trading authorization."
     }
   },
